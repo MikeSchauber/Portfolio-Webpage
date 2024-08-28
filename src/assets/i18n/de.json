@@ -1,0 +1,14 @@
+{
+    "menu": {
+      "aboutMe": "Über mich",
+      "skills": "Fähigkeiten",
+      "projects": "Projekte"
+    },
+    "headline": {
+      "title": "Frontend Entwickler",
+      "name": "Mike Schauber",
+      "checkWork": "Schau meine Arbeit an",
+      "contactMe": "Kontaktiere mich"
+    }
+  }
+  

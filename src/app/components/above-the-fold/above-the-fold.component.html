@@ -2,12 +2,18 @@
 
     <div class="menubar">
         <menu class="menu-links">
-            <div class="switch-button">
+            <label class="switch">
                 <input type="checkbox">
-            </div>
-            <a href="#">About me</a>
-            <a href="#">Skills</a>
-            <a href="#">Projects</a>
+                <span  class="slider" (click)="this.toggleLanguage()" 
+                [ngClass]="{de: this.isGerman}"></span>
+                <div>
+                    <span>EN</span>
+                    <span>DE</span>
+                </div>
+            </label>
+            <a href="#">{{ 'menu.aboutMe'  }}</a>
+            <a href="#">{{ 'menu.skills'  }}</a>
+            <a href="#">{{ 'menu.projects' }}</a>
         </menu>
         <img src="assets/img/logo-name.png" alt="">
     </div>
