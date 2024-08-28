@@ -1,5 +1,13 @@
 @import "../../../mixins.scss";
 
+.hide-mobile {
+  display: flex;
+}
+
+.show-mobile {
+  display: none !important;
+}
+
 .above-container {
   font-family: "Fira Code";
   @include dFlex();
@@ -9,20 +17,170 @@
 }
 
 .menubar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    @include dFlex($jc: space-between , $fd: row, );
-    >menu {
-        @include dFlex($fd: row, $g: 25px, );
-      > nav {
-        text-decoration: none;
-        color: #ffffff;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  @include dFlex($jc: space-between, $fd: row);
+  > menu {
+    @include dFlex($fd: row, $g: 25px);
+    > a {
+      text-decoration: none;
+      color: #ffffff;
+      cursor: pointer;
+      transition: all 100ms ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+        color: #3dcfb6;
       }
     }
-    > img {
-      width: 200px;
-      height: auto;
+  }
+  > img {
+    width: 200px;
+    height: auto;
+  }
+}
+
+.headline {
+  width: 100%;
+  @include dFlex();
+  color: #d9d9d9;
+  text-align: center;
+  > h2 {
+    font-family: "fira code";
+    font-weight: 400;
+    font-size: 40px;
+  }
+}
+
+.action-btn {
+  @include dFlex($fd: column, $g: 40px);
+  width: 100%;
+  color: #d9d9d9;
+  text-align: center;
+  > h1 {
+    font-family: "karla";
+    font-weight: 700;
+    font-size: 128px;
+  }
+  > .btn {
+    @include dFlex($fd: row, $g: 48px);
+    > a {
+      @include dFlex();
+      height: 48px;
+      text-decoration: none;
+      color: #FFFFFF;
+      font-family: "karla";
+      font-size: 18px;
+      font-weight: 400;
+      border: 1px solid #ffffff;
+      border-radius: 100px;
+      padding: 0px 24px;
+      cursor: pointer;
+      transition: all 125ms ease-in-out;
+      &:hover {
+        background-color: #08463b3f;
+        transform: scale(1.05);
+      }
     }
   }
+}
+
+.socials-and-nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  @include dFlex($fd: row, $jc: space-between, $ai: flex-end);
+}
+
+.bottom-nav {
+  @include dFlex($fd: column, $g: 24px);
+  > a {
+    @include dFlex();
+    height: 48px;
+    width: 30px;
+    border: 1px solid #3dcfb6;
+    border-radius: 32px;
+    transition: all 125ms ease-in-out;
+    &:hover {
+      background-color: #08463ba4;
+    }
+  }
+  > div {
+    height: 240px;
+    border: 1px solid #3dcfb6;
+  }
+}
+
+.socials {
+  @include dFlex($fd: column, $g: 24px);
+  > .mail {
+    font-family: "karla";
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: none;
+    color: #ffffff;
+    transform: rotate(-90deg);
+    width: 100%;
+    position: relative;
+    bottom: 110px;
+    transition: all 125ms ease-in-out;
+    &:hover {
+      color: #3dcfb6;
+    }
+  }
+  > a {
+    > img {
+      transition: all 125ms ease-in-out;
+      &:hover {
+        transform: scale(1.15);
+        filter: drop-shadow(-2px 2px 1px #304440);
+      }
+    }
+  }
+  > div {
+    height: 186px;
+    border: 1px solid #ffffff;
+  }
+}
+
+@media (max-width: 1119px) {
+  .hide-mobile {
+    display: none;
+  }
+
+  .show-mobile {
+    display: flex !important;
+  }
+
+  .headline {
+    > h2 {
+      font-size: 24px;
+    }
+  }
+
+  .action-btn {
+    gap: 32px;
+    > h1 {
+      font-size: 62px;
+    }
+  }
+
+  .bottom-nav {
+    > div {
+      height: 224px;
+    }
+  }
+
+  .socials {
+    .mail {
+      transform: rotate(0deg);
+      bottom: 0px;
+    }
+
+    > div {
+      height: 112px;
+    }
+  }
+}
