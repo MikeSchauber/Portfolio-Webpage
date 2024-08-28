@@ -1,20 +1,28 @@
-@import url("../../../mixins.scss");
+@import "../../../mixins.scss";
 
 .above-container {
-    @include dFlex();
-    position: relative;
+  font-family: "Fira Code";
+  @include dFlex();
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.menubar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    @include dFlex($jc: space-between , $fd: row, );
     >menu {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
+        @include dFlex($fd: row, $g: 25px, );
+      > nav {
+        text-decoration: none;
+        color: #ffffff;
+      }
     }
-}
-
-.menu-links {
-    
-}
-
-p {
-    font-family: "fira code";
-}
+    > img {
+      width: 200px;
+      height: auto;
+    }
+  }
