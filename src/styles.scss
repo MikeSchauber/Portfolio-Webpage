@@ -1,13 +1,18 @@
+@import "./mixins.scss";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
+html {
+    @include dFlex();
+}
 
 body {
   overflow-x: hidden;
+  width: 100%;
   max-width: 1920px;
   background: linear-gradient(35deg, #1c1c1c 38%, #08463b 100%);
   padding: 0px 96px;

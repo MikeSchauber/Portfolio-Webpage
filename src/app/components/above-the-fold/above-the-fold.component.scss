@@ -8,6 +8,14 @@
   display: none !important;
 }
 
+.mail-desktop {
+    display: block;
+}
+
+.mail-mobile {
+    display: none;
+}
+
 .above-container {
   font-family: "Fira Code";
   @include dFlex();
@@ -122,9 +130,9 @@
     text-decoration: none;
     color: #ffffff;
     transform: rotate(-90deg);
-    width: 100%;
     position: relative;
-    bottom: 110px;
+    width: 22px;
+    bottom: 0px;
     transition: all 125ms ease-in-out;
     &:hover {
       color: #3dcfb6;
@@ -143,6 +151,22 @@
     height: 186px;
     border: 1px solid #ffffff;
   }
+}
+
+@media (max-width: 1380px) {
+    .mail-desktop {
+        display: none;
+    }
+    
+    .mail-mobile {
+        display: block;
+        transform: rotate(0) !important;
+        bottom: 0!important;
+    }
+
+    .mail {
+        width: 100% !important;
+    }
 }
 
 @media (max-width: 1119px) {
@@ -177,6 +201,7 @@
     .mail {
       transform: rotate(0deg);
       bottom: 0px;
+      width: 100%;
     }
 
     > div {
