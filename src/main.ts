@@ -17,7 +17,7 @@ window.onload = () => {
         cursor.style.top = `${y}px`;
         cursor.style.left = `${x}px`;
         cursor.style.display = 'block';
-      }, 50);
+      }, 100);
     });
 
     document.addEventListener('mouseout', () => {

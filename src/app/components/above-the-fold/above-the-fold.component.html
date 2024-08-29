@@ -4,18 +4,24 @@
         <menu class="menu-links">
             <label class="switch">
                 <input type="checkbox">
-                <span  class="slider" (click)="this.toggleLanguage()" 
-                [ngClass]="{de: this.isGerman}"></span>
+                <span class="slider" (click)="this.toggleLanguage()" [ngClass]="{de: this.isGerman}"></span>
                 <div>
                     <span>EN</span>
                     <span>DE</span>
                 </div>
             </label>
-            <a href="#">{{ 'menu.aboutMe' | translate  }}
-                <img src="/assets/icons/dot.png" alt="">
+            <a (mouseover)="mouseover('about');" (mouseout)="mouseout('about');" href="#">{{
+                'menu.aboutMe' | translate }}
+                <img [ngStyle]="{'opacity': this.about ? 1 : 0}" class="dot" src="/assets/icons/dot.png" alt="">
             </a>
-            <a href="#">{{ 'menu.skills' | translate }}</a>
-            <a href="#">{{ 'menu.projects' | translate }}</a>
+            <a (mouseover)="mouseover('skills');" (mouseout)="mouseout('skills');" href="#">{{ 'menu.skills' | translate
+                }}
+                <img [ngStyle]="{'opacity': this.skills ? 1 : 0}" class="dot" src="/assets/icons/dot.png" alt="">
+            </a>
+            <a (mouseover)="mouseover('projects');" (mouseout)="mouseout('projects');" href="#">{{ 'menu.projects' |
+                translate }}
+                <img [ngStyle]="{'opacity': this.projects ? 1 : 0}" class="dot" src="/assets/icons/dot.png" alt="">
+            </a>
         </menu>
         <img src="assets/img/logo-name.png" alt="">
     </div>
@@ -41,14 +47,20 @@
         </div>
         <div class="socials">
             <a class="mail mail-desktop" href="mailto:mike.schauber96@gmail.com">mike.schauber96&#64;gmail.com</a>
-            <a class="mail mail-mobile" href="mailto:mike.schauber96@gmail.com">
+            <a (mouseover)="mouseover('projects');" (mouseout)="mouseout('projects');" class="mail mail-mobile"
+                href="mailto:mike.schauber96@gmail.com">
                 <img src="assets/icons/mail.png" alt="">
+                <img class="social-dot" src="assets/icons/dot.png" alt="">
             </a>
-            <a href="https://github.com/MikeSchauber" target="_blank">
+            <a (mouseover)="mouseover('projects');" (mouseout)="mouseout('projects');"
+                href="https://github.com/MikeSchauber" target="_blank">
                 <img src="assets/icons/github.png" alt="">
+                <img class="social-dot" src="assets/icons/dot.png" alt="">
             </a>
-            <a href="https://www.linkedin.com/in/mike-schauber-b17328303/" target="_blank">
+            <a (mouseover)="mouseover('projects');" (mouseout)="mouseout('projects');"
+                href="https://www.linkedin.com/in/mike-schauber-b17328303/" target="_blank">
                 <img src="assets/icons/linkedin.png" alt="">
+                <img class="social-dot" src="assets/icons/dot.png" alt="">
             </a>
             <div></div>
         </div>
@@ -62,14 +74,20 @@
             <div></div>
         </div>
         <div class="socials">
-            <a class="mail" href="mailto:mike.schauber96@gmail.com">
+            <a (mouseover)="mouseover('projects');" (mouseout)="mouseout('projects');" class="mail"
+                href="mailto:mike.schauber96@gmail.com">
                 <img src="assets/icons/mail.png" alt="">
+                <img class="social-dot" src="assets/icons/dot.png" alt="">
             </a>
-            <a href="https://github.com/MikeSchauber" target="_blank">
+            <a (mouseover)="mouseover('projects');" (mouseout)="mouseout('projects');"
+                href="https://github.com/MikeSchauber" target="_blank">
                 <img src="assets/icons/github.png" alt="">
+                <img class="social-dot" src="assets/icons/dot.png" alt="">
             </a>
-            <a href="https://www.linkedin.com/in/mike-schauber-b17328303/" target="_blank">
+            <a (mouseover)="mouseover('projects');" (mouseout)="mouseout('projects');"
+                href="https://www.linkedin.com/in/mike-schauber-b17328303/" target="_blank">
                 <img src="assets/icons/linkedin.png" alt="">
+                <img class="social-dot" src="assets/icons/dot.png" alt="">
             </a>
             <div></div>
         </div>

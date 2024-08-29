@@ -16,6 +16,10 @@
     display: none;
 }
 
+.dot {
+  transition: all 125ms ease-in-out;
+}
+
 .above-container {
   font-family: "Fira Code";
   @include dFlex();
@@ -34,13 +38,17 @@
   > menu {
     @include dFlex($fd: row, $g: 25px);
     > a {
+      @include dFlex($g: 5px);
       text-decoration: none;
       color: #ffffff;
       cursor: pointer;
       transition: all 100ms ease-in-out;
       &:hover {
-        transform: scale(1.05);
-        color: #3dcfb6;
+        transform: scale(1.1);
+      }
+      >img {
+        position: absolute;
+        top: 110%;
       }
     }
   }
@@ -141,7 +149,10 @@
     }
   }
   > a {
-    > img {
+    position: relative;
+    > img:first-of-type {
+      height: 26px;
+      width: 26px;
       transition: all 125ms ease-in-out;
       &:hover {
         transform: scale(1.15);
@@ -152,6 +163,12 @@
     height: 186px;
     border: 1px solid #ffffff;
   }
+}
+
+.social-dot {
+  position: absolute;
+  right: -20px;
+  top: 9px;
 }
 
 @media (max-width: 1215px) {
