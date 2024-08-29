@@ -1,42 +1,7 @@
 <div class="above-container">
+    <app-navbar></app-navbar>
 
-    <div class="menubar">
-        <menu class="menu-links">
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider" (click)="this.toggleLanguage()" [ngClass]="{de: this.isGerman}"></span>
-                <div>
-                    <span>EN</span>
-                    <span>DE</span>
-                </div>
-            </label>
-            <a (mouseover)="mouseover('about');" (mouseout)="mouseout('about');" href="#">{{
-                'menu.aboutMe' | translate }}
-                <img [ngStyle]="{'opacity': this.about ? 1 : 0}" class="dot" src="/assets/icons/dot.png" alt="">
-            </a>
-            <a (mouseover)="mouseover('skills');" (mouseout)="mouseout('skills');" href="#">{{ 'menu.skills' | translate
-                }}
-                <img [ngStyle]="{'opacity': this.skills ? 1 : 0}" class="dot" src="/assets/icons/dot.png" alt="">
-            </a>
-            <a (mouseover)="mouseover('projects');" (mouseout)="mouseout('projects');" href="#">{{ 'menu.projects' |
-                translate }}
-                <img [ngStyle]="{'opacity': this.projects ? 1 : 0}" class="dot" src="/assets/icons/dot.png" alt="">
-            </a>
-        </menu>
-        <img src="assets/img/logo-name.png" alt="">
-    </div>
-
-    <div class="headline">
-        <h2>{{ 'headline.title' | translate }}</h2>
-        <div class="action-btn">
-            <h1>Mike Schauber</h1>
-            <div class="btn">
-                <a href="https://mike-schauber.developerakademie.net/developer-akademie/projekt-website/index.html"
-                    target="_blank">{{ 'headline.checkWork' | translate }}</a>
-                <a>{{ 'headline.contactMe' | translate }}</a>
-            </div>
-        </div>
-    </div>
+    <app-headline></app-headline>
 
     <div class="socials-and-nav hide-mobile">
         <div class="bottom-nav">

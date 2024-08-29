@@ -4,5 +4,4 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 
 export const routes: Routes = [
     { path: '', component: MainPageComponent},
-    { path: 'aboutme', component: AboutMeComponent}
 ];

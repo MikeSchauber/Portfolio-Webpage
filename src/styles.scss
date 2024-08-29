@@ -12,6 +12,7 @@
 
 html {
   @include dFlex();
+  scroll-behavior: smooth;
 }
 
 body {
@@ -20,7 +21,7 @@ body {
   max-width: 1920px;
   background: linear-gradient(35deg, #1c1c1c 55%, #08463b 100%);
   padding: 0px 96px;
-  cursor: url("/assets/cursor.png"), auto;
+  cursor: url("../src/assets/cursor.png"), auto;
 }
 
 .mover {
