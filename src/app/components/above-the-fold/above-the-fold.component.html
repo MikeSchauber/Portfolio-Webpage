@@ -11,7 +11,9 @@
                     <span>DE</span>
                 </div>
             </label>
-            <a href="#">{{ 'menu.aboutMe' | translate  }}</a>
+            <a href="#">{{ 'menu.aboutMe' | translate  }}
+                <img src="/assets/icons/dot.png" alt="">
+            </a>
             <a href="#">{{ 'menu.skills' | translate }}</a>
             <a href="#">{{ 'menu.projects' | translate }}</a>
         </menu>
@@ -19,13 +21,13 @@
     </div>
 
     <div class="headline">
-        <h2>Frontend Developer</h2>
+        <h2>{{ 'headline.title' | translate }}</h2>
         <div class="action-btn">
             <h1>Mike Schauber</h1>
             <div class="btn">
                 <a href="https://mike-schauber.developerakademie.net/developer-akademie/projekt-website/index.html"
-                    target="_blank">Check my work</a>
-                <a>Contact me</a>
+                    target="_blank">{{ 'headline.checkWork' | translate }}</a>
+                <a>{{ 'headline.contactMe' | translate }}</a>
             </div>
         </div>
     </div>
@@ -71,6 +73,10 @@
             </a>
             <div></div>
         </div>
+    </div>
+
+    <div>
+
     </div>
 
 </div>

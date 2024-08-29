@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-above-the-fold',
@@ -12,15 +12,19 @@ import { TranslateModule } from '@ngx-translate/core';
 export class AboveTheFoldComponent {
   isGerman: boolean = false;
 
-  constructor(public translate: TranslateModule) {
+  constructor(public translate: TranslateService) {
 
   }
 
   toggleLanguage() {
     if (this.isGerman) {
       this.isGerman = false;
+      this.translate.use("en");
     } else {
       this.isGerman = true;
+      this.translate.use("de");
     }
+
+    
   }
 }

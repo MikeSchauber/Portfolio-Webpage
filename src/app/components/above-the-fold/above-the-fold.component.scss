@@ -145,7 +145,6 @@
       transition: all 125ms ease-in-out;
       &:hover {
         transform: scale(1.15);
-        filter: drop-shadow(-2px 2px 1px #304440);
       }
     }
   }
@@ -155,7 +154,7 @@
   }
 }
 
-@media (max-width: 1380px) {
+@media (max-width: 1215px) {
     .mail-desktop {
         display: none;
     }
