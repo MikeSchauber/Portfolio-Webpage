@@ -1,14 +1,19 @@
 {
-    "menu": {
-      "aboutMe": "Über mich",
-      "skills": "Fähigkeiten",
-      "projects": "Projekte"
-    },
-    "headline": {
-      "title": "Frontend Entwickler",
-      "name": "Mike Schauber",
-      "checkWork": "Schau meine Arbeit an",
-      "contactMe": "Kontaktiere mich"
-    }
+  "menu": {
+    "aboutMe": "Über mich",
+    "skills": "Fähigkeiten",
+    "projects": "Projekte"
+  },
+  "headline": {
+    "title": "Frontend Entwickler",
+    "name": "Mike Schauber",
+    "checkWork": "Schau meine Arbeit an",
+    "contactMe": "Kontaktiere mich"
+  },
+  "banner": {
+    "1": "Offen für Remote-Arbeit",
+    "2": "Frontend-Entwickler",
+    "3": "Ansässig in Tübingen",
+    "4": "Offen für eine Stelle"
   }
-  
+}

@@ -9,6 +9,12 @@
       "name": "Mike Schauber",
       "checkWork": "Check my work",
       "contactMe": "Contact me"
+    },
+    "banner": {
+      "1": "Available for remote work",
+      "2": "Frontend Developer",
+      "3": "Based in Tübingen",
+      "4": "Open to work"
     }
   }
   

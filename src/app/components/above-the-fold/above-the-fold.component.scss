@@ -174,7 +174,8 @@
   position: absolute;
   @include dFlex($fd: row, $g: 56px);
   bottom: 50px;
-  width: 150%;
+  left: -100px;
+  right: -100px;
   height: 64px;
   background-color: rgba(128, 128, 128, 0.466);
   transform: rotate(-3deg);
