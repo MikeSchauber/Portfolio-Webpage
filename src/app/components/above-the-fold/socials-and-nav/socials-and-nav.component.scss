@@ -1,0 +1,146 @@
+@import "../../../../mixins.scss";
+
+.hide-mobile {
+    display: flex;
+  }
+  
+  .show-mobile {
+    display: none !important;
+  }
+  
+  .mail-desktop {
+    display: block;
+  }
+  
+  .mail-mobile {
+    display: none;
+  }
+  
+  .dot {
+    transition: all 125ms ease-in-out;
+  }
+
+.socials-and-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    @include dFlex($fd: row, $jc: space-between, $ai: flex-end);
+  }
+  
+  .bottom-nav {
+    @include dFlex($fd: column, $g: 24px);
+    > a {
+      @include dFlex();
+      height: 48px;
+      width: 30px;
+      border: 1px solid #3dcfb6;
+      border-radius: 32px;
+      transition: all 125ms ease-in-out;
+      &:hover {
+        background-color: #08463ba4;
+      }
+    }
+    > div {
+      height: 240px;
+      border: 1px solid #3dcfb6;
+    }
+  }
+  
+  .socials {
+    @include dFlex($fd: column, $g: 24px);
+    > .mail {
+      font-family: "karla";
+      font-weight: 400;
+      font-size: 18px;
+      text-decoration: none;
+      color: #ffffff;
+      transform: rotate(-90deg);
+      position: relative;
+      width: 22px;
+      bottom: 0px;
+      transition: all 125ms ease-in-out;
+      &:hover {
+        color: #3dcfb6;
+      }
+    }
+    > a {
+      position: relative;
+      > img:first-of-type {
+        transition: all 125ms ease-in-out;
+        &:hover {
+          transform: scale(1.15);
+          filter: brightness(100);
+        }
+      }
+    }
+    > div {
+      height: 186px;
+      border: 1px solid #ffffff;
+    }
+  }
+  
+  .social-dot {
+    position: absolute;
+    right: -20px;
+    top: 9px;
+  }
+
+  @media (max-width: 1215px) {
+    .mail-desktop {
+      display: none;
+    }
+  
+    .mail-mobile {
+      display: block;
+      transform: rotate(0) !important;
+      bottom: 0 !important;
+    }
+  
+    .mail {
+      width: 100% !important;
+    }
+  }
+  
+  @media (max-width: 1119px) {
+    .hide-mobile {
+      display: none;
+    }
+  
+    .show-mobile {
+      display: flex !important;
+    }
+  
+    .headline {
+      > h2 {
+        font-size: 24px;
+      }
+    }
+  
+    .action-btn {
+      gap: 32px;
+      > h1 {
+        font-size: 62px;
+      }
+    }
+  
+    .bottom-nav {
+      > div {
+        height: 224px;
+      }
+    }
+  
+    .socials {
+      .mail {
+        transform: rotate(0deg);
+        bottom: 0px;
+        width: 100%;
+      }
+  
+      > div {
+        height: 112px;
+      }
+    }
+  }
+  
+  

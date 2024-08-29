@@ -1,0 +1,56 @@
+<div class="socials-and-nav hide-mobile">
+    <div class="bottom-nav">
+        <a href="#aboutme">
+            <img src="assets/above-section/above-arrow.png" alt="">
+        </a>
+        <div></div>
+    </div>
+    <div class="socials">
+        <a class="mail mail-desktop" href="mailto:mike.schauber96@gmail.com">mike.schauber96&#64;gmail.com</a>
+        <a (mouseover)="mouseover('mail');" (mouseout)="mouseout('mail');" class="mail mail-mobile"
+            href="mailto:mike.schauber96@gmail.com">
+            <img src="assets/icons/mail.png" alt="">
+            <img [ngStyle]="{'opacity': this.mail ? 1 : 0}" class="social-dot" src="assets/icons/dot.png" alt="">
+        </a>
+        <a (mouseover)="mouseover('github');" (mouseout)="mouseout('github');"
+            href="https://github.com/MikeSchauber" target="_blank">
+            <img src="assets/icons/github.png" alt="">
+            <img [ngStyle]="{'opacity': this.github ? 1 : 0}" class="social-dot" src="assets/icons/dot.png" alt="">
+        </a>
+        <a (mouseover)="mouseover('linkedin');" (mouseout)="mouseout('linkedin');"
+            href="https://www.linkedin.com/in/mike-schauber-b17328303/" target="_blank">
+            <img src="assets/icons/linkedin.png" alt="">
+            <img [ngStyle]="{'opacity': this.linkedin ? 1 : 0}" class="social-dot" src="assets/icons/dot.png"
+                alt="">
+        </a>
+        <div></div>
+    </div>
+</div>
+
+<div class="socials-and-nav show-mobile">
+    <div class="bottom-nav">
+        <a href="#">
+            <img src="assets/above-section/above-arrow.png" alt="">
+        </a>
+        <div></div>
+    </div>
+    <div class="socials">
+        <a (mouseover)="mouseover('mail');" (mouseout)="mouseout('mail');" class="mail"
+            href="mailto:mike.schauber96@gmail.com">
+            <img src="assets/icons/mail.png" alt="">
+            <img [ngStyle]="{'opacity': this.mail ? 1 : 0}" class="social-dot" src="assets/icons/dot.png" alt="">
+        </a>
+        <a (mouseover)="mouseover('github');" (mouseout)="mouseout('github');"
+            href="https://github.com/MikeSchauber" target="_blank">
+            <img src="assets/icons/github.png" alt="">
+            <img [ngStyle]="{'opacity': this.github ? 1 : 0}" class="social-dot" src="assets/icons/dot.png" alt="">
+        </a>
+        <a (mouseover)="mouseover('linkedin');" (mouseout)="mouseout('linkedin');"
+            href="https://www.linkedin.com/in/mike-schauber-b17328303/" target="_blank">
+            <img src="assets/icons/linkedin.png" alt="">
+            <img [ngStyle]="{'opacity': this.linkedin ? 1 : 0}" class="social-dot" src="assets/icons/dot.png"
+                alt="">
+        </a>
+        <div></div>
+    </div>
+</div>

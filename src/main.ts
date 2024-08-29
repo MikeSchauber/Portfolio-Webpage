@@ -11,19 +11,12 @@ window.onload = () => {
 
   if (cursor) {
     document.addEventListener('mousemove', (e) => {
-      let x = e.pageX;
-      let y = e.pageY;
+      let x = e.x;
+      let y = e.y;
       setTimeout(() => {
         cursor.style.top = `${y}px`;
         cursor.style.left = `${x}px`;
-        cursor.style.display = 'block';
-      }, 100);
-    });
-
-    document.addEventListener('mouseout', () => {
-      setTimeout(() => {
-        cursor.style.display = 'none';
-      }, 101);
+      }, 70);
     });
   } else {
     console.error("cursor with class 'mover' is not supported");

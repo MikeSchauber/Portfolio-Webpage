@@ -1,5 +1,7 @@
 @import "../../../../mixins.scss";
 
+
+
 .headline {
     width: 100%;
     @include dFlex();
@@ -46,3 +48,62 @@
       }
     }
   }
+
+  @media (max-width: 1215px) {
+    .mail-desktop {
+      display: none;
+    }
+  
+    .mail-mobile {
+      display: block;
+      transform: rotate(0) !important;
+      bottom: 0 !important;
+    }
+  
+    .mail {
+      width: 100% !important;
+    }
+  }
+  
+  @media (max-width: 1119px) {
+    .hide-mobile {
+      display: none;
+    }
+  
+    .show-mobile {
+      display: flex !important;
+    }
+  
+    .headline {
+      > h2 {
+        font-size: 24px;
+      }
+    }
+  
+    .action-btn {
+      gap: 32px;
+      > h1 {
+        font-size: 62px;
+      }
+    }
+  
+    .bottom-nav {
+      > div {
+        height: 224px;
+      }
+    }
+  
+    .socials {
+      .mail {
+        transform: rotate(0deg);
+        bottom: 0px;
+        width: 100%;
+      }
+  
+      > div {
+        height: 112px;
+      }
+    }
+  }
+  
+  

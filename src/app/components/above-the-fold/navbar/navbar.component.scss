@@ -1,5 +1,9 @@
 @import "../../../../mixins.scss";
 
+.dot {
+    transition: all 125ms ease-in-out;
+  }
+
 .menubar {
   position: absolute;
   top: 48px;
