@@ -21,7 +21,9 @@ window.onload = () => {
     });
 
     document.addEventListener('mouseout', () => {
-      cursor.style.display = 'none';
+      setTimeout(() => {
+        cursor.style.display = 'none';
+      }, 101);
     });
   } else {
     console.error("cursor with class 'mover' is not supported");

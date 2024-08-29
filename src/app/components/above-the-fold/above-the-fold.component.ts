@@ -32,19 +32,21 @@ export class AboveTheFoldComponent {
   }
 
   mouseover(e: string) {
-    e == 'about' ? (this.about = true) : null;
-    e == 'skills' ? (this.skills = true) : null;
-    e == 'projects' ? (this.projects = true) : null;
-    e == 'mail' ? (this.about = true) : null;
-    e == 'github' ? (this.about = true) : null;
-    e == 'linkedin' ? (this.about = true) : null;
+    e === 'about' ? (this.about = true) : null;
+    e === 'skills' ? (this.skills = true) : null;
+    e === 'projects' ? (this.projects = true) : null;
+    e === 'mail' ? (this.mail = true) : null;
+    e === 'github' ? (this.github = true) : null;
+    e === 'linkedin' ? (this.linkedin = true) : null;
+    
+    console.log(e);
   }
   mouseout(e: string) {
-    e == 'about' ? (this.about = false) : null;
-    e == 'skills' ? (this.skills = false) : null;
-    e == 'projects' ? (this.projects = false) : null;
-    e == 'mail' ? (this.about = false) : null;
-    e == 'github' ? (this.about = false) : null;
-    e == 'linkedin' ? (this.about = false) : null;
+    e === 'about' ? (this.about = false) : null;
+    e === 'skills' ? (this.skills = false) : null;
+    e === 'projects' ? (this.projects = false) : null;
+    e === 'mail' ? (this.mail = false) : null;
+    e === 'github' ? (this.github = false) : null;
+    e === 'linkedin' ? (this.linkedin = false) : null;
   }
 }
