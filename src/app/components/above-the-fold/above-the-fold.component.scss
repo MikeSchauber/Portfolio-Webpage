@@ -9,11 +9,11 @@
 }
 
 .mail-desktop {
-    display: block;
+  display: block;
 }
 
 .mail-mobile {
-    display: none;
+  display: none;
 }
 
 .dot {
@@ -46,7 +46,7 @@
       &:hover {
         transform: scale(1.1);
       }
-      >img {
+      > img {
         position: absolute;
         top: 110%;
       }
@@ -88,7 +88,7 @@
       height: 48px;
       width: auto;
       text-decoration: none;
-      color: #FFFFFF;
+      color: #ffffff;
       font-family: "karla";
       font-size: 18px;
       font-weight: 400;
@@ -151,7 +151,6 @@
   > a {
     position: relative;
     > img:first-of-type {
-
       transition: all 125ms ease-in-out;
       &:hover {
         transform: scale(1.15);
@@ -171,20 +170,34 @@
   top: 9px;
 }
 
-@media (max-width: 1215px) {
-    .mail-desktop {
-        display: none;
-    }
-    
-    .mail-mobile {
-        display: block;
-        transform: rotate(0) !important;
-        bottom: 0!important;
-    }
+.banner {
+  position: absolute;
+  @include dFlex($fd: row, $g: 56px);
+  bottom: 50px;
+  width: 150%;
+  height: 64px;
+  background-color: rgba(128, 128, 128, 0.466);
+  transform: rotate(-3deg);
+  color: white;
+  font-family: "karla";
+  font-weight: 400;
+  font-size: 32px;
+}
 
-    .mail {
-        width: 100% !important;
-    }
+@media (max-width: 1215px) {
+  .mail-desktop {
+    display: none;
+  }
+
+  .mail-mobile {
+    display: block;
+    transform: rotate(0) !important;
+    bottom: 0 !important;
+  }
+
+  .mail {
+    width: 100% !important;
+  }
 }
 
 @media (max-width: 1119px) {
@@ -228,7 +241,7 @@
   }
 }
 
-/* From Uiverse.io by gharsh11032000 */ 
+/* From Uiverse.io by gharsh11032000 */
 /* The switch - the box around the slider */
 .switch {
   font-family: "karla";
@@ -236,11 +249,11 @@
   display: inline-block;
   width: 84px;
   height: 28px;
-  >div {
+  > div {
     position: absolute;
     top: 5px;
     width: 100%;
-    @include dFlex($fd:row, $jc: space-between,);
+    @include dFlex($fd: row, $jc: space-between);
     padding: 0px 11px;
     color: rgba(255, 255, 255, 0.5);
   }
@@ -260,7 +273,7 @@
   cursor: pointer;
   inset: 0;
   background: #9fccfa00;
-  border: 2px solid #3DCFB6;
+  border: 2px solid #3dcfb6;
   border-radius: 100px;
   transition: all 125ms ease-in-out;
 }
@@ -276,9 +289,9 @@
   height: 24px;
   width: 44px;
   inset: 0;
-  background-color: #3DCFB6;
+  background-color: #3dcfb6;
   border-radius: 50px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   transition: all 100ms ease-in-out;
 }
 

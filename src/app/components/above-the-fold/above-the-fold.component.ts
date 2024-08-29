@@ -38,8 +38,6 @@ export class AboveTheFoldComponent {
     e === 'mail' ? (this.mail = true) : null;
     e === 'github' ? (this.github = true) : null;
     e === 'linkedin' ? (this.linkedin = true) : null;
-    
-    console.log(e);
   }
   mouseout(e: string) {
     e === 'about' ? (this.about = false) : null;

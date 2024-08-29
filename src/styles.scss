@@ -18,18 +18,18 @@ body {
   overflow-x: hidden;
   width: 100%;
   max-width: 1920px;
-  background: linear-gradient(35deg, #1c1c1c 38%, #08463b 100%);
+  background: linear-gradient(35deg, #1c1c1c 55%, #08463b 100%);
   padding: 0px 96px;
-  cursor: url('/assets/cursor.png'), auto;
+  cursor: url("/assets/cursor.png"), auto;
 }
 
 .mover {
   position: fixed;
   background-color: hsla(170, 60%, 53%, 0.5);
   width: 60px;
-  height:60px;
+  height: 60px;
   border-radius: 50%;
-opacity: 0.2;
+  opacity: 0.2;
   filter: blur(10px);
   box-shadow: 0 0 20px #3dcfb6, 0 0 40px #3dcfb6, 0 0 60px #3dcfb6;
   transform: translate(-50%, -50%);
