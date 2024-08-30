@@ -35,7 +35,7 @@ export class BannerComponent implements OnInit{
 
   startBannerMovement(): void {
     setInterval(() => {
-      this.positionSpeed += 5;
+      this.positionSpeed += 0.7;
       this.transform = `translateX(${this.positionSpeed}px)`;
       if (this.positionSpeed >= 1800) {
         this.positionSpeed = -1800;
