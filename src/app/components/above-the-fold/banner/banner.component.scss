@@ -18,7 +18,7 @@ $blur: 4px;
   -webkit-backdrop-filter: blur($blur);
   backdrop-filter: blur($blur);
   overflow: hidden;
-  transform: rotate(-1deg);
+  transform: rotate(-3deg);
   > div {
     @include dFlex($fd: row, $g: 56px);
     height: 100%;
