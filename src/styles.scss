@@ -12,7 +12,7 @@
 
 html {
   @include dFlex();
-  scroll-behavior: smooth;
+  scroll-behavior: smooth;  
 }
 
 body {
@@ -34,6 +34,12 @@ body {
   filter: blur(10px);
   box-shadow: 0 0 20px #3dcfb6, 0 0 40px #3dcfb6, 0 0 60px #3dcfb6;
   transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1000px) {
+  body {
+    padding: 0px 16px;
+  }
 }
 
 /* karla-300 - latin */

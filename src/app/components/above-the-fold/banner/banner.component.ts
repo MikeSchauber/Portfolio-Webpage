@@ -15,14 +15,9 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './banner.component.html',
   styleUrl: './banner.component.scss',
 })
-export class BannerComponent implements OnInit{
-  banners: string[] = [
-    'banner.1',
-    'banner.2',
-    'banner.3',
-    'banner.4',
-  ];
-  positionSpeed: number = -1800;
+export class BannerComponent implements OnInit {
+  banners: string[] = ['banner.1', 'banner.2', 'banner.3', 'banner.4'];
+  positionSpeed: number = 0;
   transform: string = 'translateX(-0px)';
   bannerWidth: number = 0;
   containerWidth: number = 0;
@@ -30,17 +25,29 @@ export class BannerComponent implements OnInit{
   constructor(private translate: TranslateModule) {}
 
   ngOnInit(): void {
+    this.getInnerWidth();
     this.startBannerMovement();
   }
 
   startBannerMovement(): void {
     setInterval(() => {
-      this.positionSpeed += 0.7;
+      this.positionSpeed += 5;
       this.transform = `translateX(${this.positionSpeed}px)`;
-      if (this.positionSpeed >= 1800) {
-        this.positionSpeed = -1800;
+      if (this.positionSpeed >= this.containerWidth) {
+        this.positionSpeed -= this.containerWidth * 2;
       }
     }, 1000 / 60);
+  }
+
+  getInnerWidth(): void {
+    if (window.innerWidth <= 1100) {
+      this.containerWidth = window.innerWidth * 2;
+      this.positionSpeed -= this.containerWidth + 100;
+    } else {
+      this.containerWidth = window.innerWidth;
+      this.positionSpeed -= this.containerWidth + 100;
+    }
+
   }
 
   getTransform(i: number) {

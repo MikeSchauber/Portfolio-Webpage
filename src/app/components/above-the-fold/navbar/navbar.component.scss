@@ -103,4 +103,10 @@
   .switch input:checked + .slider:before {
     transform: translateX(36px);
   }
+
+  @media (max-width: 1000px) {
+    .menubar {
+      display: block;
+    }
+  }
   
