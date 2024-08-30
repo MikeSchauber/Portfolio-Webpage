@@ -23,9 +23,11 @@
       font-family: "karla";
       font-weight: 700;
       font-size: 128px;
+      min-width: fit-content;
     }
     > .btn {
       @include dFlex($fd: row, $g: 48px);
+      min-width: fit-content;
       > a {
         @include dFlex();
         z-index: 2;
@@ -36,6 +38,7 @@
         font-family: "karla";
         font-size: 18px;
         font-weight: 400;
+        min-width: fit-content;
         border: 1px solid #ffffff;
         border-radius: 100px;
         padding: 0px 24px;

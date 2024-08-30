@@ -16,7 +16,7 @@ window.onload = () => {
       setTimeout(() => {
         cursor.style.top = `${y}px`;
         cursor.style.left = `${x}px`;
-      }, 70);
+      }, 50);
     });
   } else {
     console.error("cursor with class 'mover' is not supported");

@@ -1,10 +1,9 @@
 <div class="banner">
-    <img src="assets/icons/dot.png" alt="">
-    <span>{{ 'banner.1' | translate }}</span>
-    <img src="assets/icons/dot.png" alt="">
-    <span>{{ 'banner.2' | translate }}</span>
-    <img src="assets/icons/dot.png" alt="">
-    <span>{{ 'banner.3' | translate }}</span>
-    <img src="assets/icons/dot.png" alt="">
-    <span>{{ 'banner.4' | translate }}</span>
+    @for (banner of banners; track $index; let i = $index) {
+    <div [ngStyle]="{'transform': getTransform(i)}">
+        <img src="assets/icons/dot.png" alt="">
+        <span>{{ banner | translate }}</span>
+    </div>
+    }
+
 </div>
