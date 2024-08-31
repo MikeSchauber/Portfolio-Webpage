@@ -36,7 +36,7 @@
     @include dFlex($fd: row, $g: 48px);
     z-index: 2;
     height: 48px;
-    width: 200px;
+    width: auto;
     text-decoration: none;
     color: #ffffff;
     font-family: "karla";
@@ -54,40 +54,39 @@
 .btn-content {
   @include dFlex($fd: row, $g: 70px);
   width: 100%;
-  transform: translateX(-50%);
   > span {
     width: 100%;
     min-width: fit-content;
   }
 }
 
-.btn-animation {
-  animation: moveForward 305ms ease-in-out;
-  transform: translateX(150%);
-}
+// .btn-animation {
+//   animation: moveForward 305ms ease-in-out;
+//   transform: translateX(150%);
+// }
 
-.btn-animation-reverse {
-  animation: moveBackward 305ms ease-in-out;
-  transform: translateX(50%);
-}
+// .btn-animation-reverse {
+//   animation: moveBackward 305ms ease-in-out;
+//   transform: translateX(50%);
+// }
 
-@keyframes moveForward {
-  0% {
-    transform: translateX(50%);
-  }
-  100% {
-    transform: translateX(150%);
-  }
-}
+// @keyframes moveForward {
+//   0% {
+//     transform: translateX(50%);
+//   }
+//   100% {
+//     transform: translateX(150%);
+//   }
+// }
 
-@keyframes moveBackward {
-  0% {
-    transform: translateX(150%);
-  }
-  100% {
-    transform: translateX(50%);
-  }
-}
+// @keyframes moveBackward {
+//   0% {
+//     transform: translateX(150%);
+//   }
+//   100% {
+//     transform: translateX(50%);
+//   }
+// }
 
 @media (max-width: 1215px) {
   .mail-desktop {

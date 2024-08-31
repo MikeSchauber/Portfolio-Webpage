@@ -4,22 +4,17 @@
         <h1>Mike Schauber</h1>
         <div class="btn">
             <div class="btn-container">
-                <a (mouseover)="mouseOver('work')" (mouseleave)="mouseOver('leave')"
+                <a (mouseenter)="animationForward()" (mouseleave)="animationReverse()"
                     href="https://mike-schauber.developerakademie.net/developer-akademie/projekt-website/index.html"
                     target="_blank">
-                    <div class="btn-content" [ngClass]="{'btn-animation': this.workEntered, 
-                    'btn-animation-reverse': !this.workEntered && this.animation}">
-                        <span> {{ 'headline.checkWork' |translate }}</span>
-                        <span>
-                            {{ 'headline.checkWork' |
-                            translate }}
-                        </span>
+                    <div class="btn-content">
+                        <span [ngStyle]="{'transform': this.transformX}"> {{ 'headline.checkWork' |translate }}</span>
                     </div>
                 </a>
             </div>
             <div class="btn-container">
-                <a (mouseover)="mouseOver('contact')" (mouseleave)="mouseOver('leave')"><span
-                        [ngClass]="{'.btn-animation': contactEntered}">{{ 'headline.contactMe' | translate }}</span></a>
+                <a (mouseover)="mouseOver()"><span>{{ 'headline.contactMe' | translate
+                        }}</span></a>
             </div>
         </div>
     </div>

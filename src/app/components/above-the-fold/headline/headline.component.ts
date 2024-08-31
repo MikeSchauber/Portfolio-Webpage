@@ -10,26 +10,48 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './headline.component.scss',
 })
 export class HeadlineComponent {
-  workEntered: boolean = false;
-  contactEntered: boolean = false;
-  animation: boolean = false;
+  transformX: string = 'translateX(-0px)';
+  positionSpeed: number = 0;
+  overWork: boolean = false;
+  forward: boolean = false;
+  interval: any[] = [];
 
-  mouseOver(btn: string) {
-    console.log('mouse is ' + btn);
-    if (btn === 'contact') {
-      this.animation = true;
-      this.contactEntered = true;
-      this.workEntered = false;
-    } else if (btn === 'work') {
-      this.animation = true;
-      this.workEntered = true;
-      this.contactEntered = false;
+  animationForward() {
+    this.forward = true;
+    this.setAnimation();
+  }
+
+  animationReverse() {
+    this.forward = false;
+    this.setAnimation();
+  }
+
+  setAnimation() {
+    if (this.forward) {
+      this.mouseOver();
     } else {
-      this.contactEntered = false;
-      this.workEntered = false;
+      this.mouseOut();
     }
-    console.log('work ' + this.workEntered);
-    console.log('contact ' + this.contactEntered);
-    console.log('Animation ' + this.animation);
+  }
+
+  mouseOver() {
+    let interval = setInterval(() => {
+      this.positionSpeed += 2;
+      this.transformX = `translateX(${this.positionSpeed}px)`;
+      if (this.positionSpeed >= 200) {
+        this.positionSpeed -= 400;
+      }
+      if (this.positionSpeed == 0) {
+        this.positionSpeed = 0;
+      }
+      console.log(this.positionSpeed);
+    }, 1000 / 60);
+    this.interval.push(interval);
+  }
+
+  mouseOut() {
+    this.interval.forEach((e) => {
+      clearInterval(e);
+    });
   }
 }
