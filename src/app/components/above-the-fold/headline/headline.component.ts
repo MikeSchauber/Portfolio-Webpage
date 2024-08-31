@@ -12,6 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
 export class HeadlineComponent {
   transformX: string = 'translateX(-0px)';
   positionSpeed: number = 0;
+  roadPassed: number = 0;
   overWork: boolean = false;
   forward: boolean = false;
   interval: any[] = [];
@@ -36,14 +37,15 @@ export class HeadlineComponent {
 
   mouseOver() {
     let interval = setInterval(() => {
-      this.positionSpeed += 2;
-      this.transformX = `translateX(${this.positionSpeed}px)`;
+      this.positionSpeed += 4;
+      this.roadPassed += 4;
+      if (this.roadPassed >= 400) {
+        this.positionSpeed = 0;
+      }
       if (this.positionSpeed >= 200) {
         this.positionSpeed -= 400;
       }
-      if (this.positionSpeed == 0) {
-        this.positionSpeed = 0;
-      }
+      this.transformX = `translateX(${this.positionSpeed}px)`;
       console.log(this.positionSpeed);
     }, 1000 / 60);
     this.interval.push(interval);
@@ -53,5 +55,8 @@ export class HeadlineComponent {
     this.interval.forEach((e) => {
       clearInterval(e);
     });
+    this.positionSpeed = 0;
+    this.roadPassed = 0;
+    this.transformX = `translateX(0px)`;
   }
 }
