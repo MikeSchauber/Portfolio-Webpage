@@ -16,18 +16,12 @@ import { CommonModule } from '@angular/common';
 export class MainPageComponent {
   dialogOpen: boolean = false
 
-  public dialogData = inject(DialogDataService);
+  public dialogService = inject(DialogDataService);
 
   constructor() {
   
   }
 
-closeDialog() {
-  this.dialogData.translationX = "translateY(-150%";
-  this.dialogData.opacity = "0";
-  setTimeout(() => {
-    this.dialogData.open = false;
-  }, 125);
-}
+
 
 }

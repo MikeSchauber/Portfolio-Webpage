@@ -152,7 +152,7 @@
   .burger {
     width: 32px;
     height: auto;
-
+    transition: all 125ms ease-in-out;
     &:hover {
       filter: brightness(100);
     }

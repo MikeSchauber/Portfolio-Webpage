@@ -23,6 +23,10 @@ body {
   cursor: url("../src/assets/cursor.png"), auto;
 }
 
+.noScroll {
+  overflow: hidden;
+}
+
 .mover {
   position: fixed;
   background-color: hsla(170, 60%, 53%, 0.5);
@@ -40,6 +44,20 @@ body {
   .mover {
     display: none;
   }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B4A49;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1AB394;
+  border-radius: 10px;
+  border: 3px solid #0B4A49;
 }
 
 /* karla-300 - latin */

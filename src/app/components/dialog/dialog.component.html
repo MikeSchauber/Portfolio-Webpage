@@ -1,12 +1,12 @@
 <div (click)="stopProp($event)" class="responsive-menu" [ngStyle]="{'transform' : this.dialogService.translationX}">
     <div>
-        <a href="">
+        <a (click)="this.dialogService.closeDialog()" href="#aboutme">
             {{ 'menu.aboutMe' | translate }}
         </a>
-        <a href="">
+        <a (click)="this.dialogService.closeDialog()" href="">
             {{ 'menu.skills' | translate }}
         </a>
-        <a href="">
+        <a (click)="this.dialogService.closeDialog()" href="">
             {{ 'menu.projects' | translate }}
         </a>
         <label class="switch">

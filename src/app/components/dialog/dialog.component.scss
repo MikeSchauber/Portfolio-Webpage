@@ -95,7 +95,7 @@
     font-size: 18px;
     transition: all 125ms ease-in-out;
     border: 1px solid #3DCFB6;
-    box-shadow: -4px 6px 8px 2px rgba(0, 0, 0, 0.753), 4px -4px 6px 1px #0427206f;
+    box-shadow: -4px 6px 8px 2px rgba(0, 0, 0, 0.753), 4px -4px 6px 1px #0427208a;
 
     >div {
       @include dFlex($g: 24px);
@@ -104,6 +104,11 @@
         text-decoration: none;
         color: white;
         font-size: 18px;
+        transition: all 125ms ease-in-out;
+
+        &:hover {
+          color: #3dcfb6;
+        }
       }
     }
   }

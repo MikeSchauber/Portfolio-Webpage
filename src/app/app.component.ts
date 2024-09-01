@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { DialogDataService } from '../services/dialog-data.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
+    CommonModule,
     RouterOutlet,
     TranslateModule
   ],
@@ -14,6 +17,8 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
   title = 'portfolio';
+
+  public dialogService = inject(DialogDataService)
 
   constructor(private translate: TranslateService) {
     this.translate.setDefaultLang('en');

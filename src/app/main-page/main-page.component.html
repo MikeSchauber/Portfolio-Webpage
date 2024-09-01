@@ -5,4 +5,4 @@
     <app-footer></app-footer>
 </div>
 
-<app-dialog (click)="closeDialog()" [ngClass]="{'d-none': !this.dialogData.open}" [ngStyle]="{opacity: this.dialogData.opacity}" class="dialog"></app-dialog>
+<app-dialog (click)="this.dialogService.closeDialog()" [ngClass]="{'d-none': !this.dialogService.open}" [ngStyle]="{opacity: this.dialogService.opacity}" class="dialog"></app-dialog>
