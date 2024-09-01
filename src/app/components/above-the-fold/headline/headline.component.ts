@@ -10,53 +10,84 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './headline.component.scss',
 })
 export class HeadlineComponent {
-  transformX: string = 'translateX(-0px)';
+  cntTransformX: string = 'translateX(-0px)';
+  workTransformX: string = 'translateX(-0px)';
   positionSpeed: number = 0;
   roadPassed: number = 0;
   overWork: boolean = false;
   forward: boolean = false;
   interval: any[] = [];
 
-  animationForward() {
+  animationForward(btn: string) {
     this.forward = true;
-    this.setAnimation();
+    this.setAnimation(btn);
   }
 
-  animationReverse() {
+  animationReverse(btn: string) {
     this.forward = false;
-    this.setAnimation();
+    this.setAnimation(btn);
   }
 
-  setAnimation() {
-    if (this.forward) {
-      this.mouseOver();
+  setAnimation(btn: string) {
+    if (btn == "work") {
+      if (this.forward) {
+        this.mouseOverWork();
+      } else {
+        this.mouseOutWork();
+      }
     } else {
-      this.mouseOut();
+      if (this.forward) {
+        this.mouseOverCnt();
+      } else {
+        this.mouseOutCnt();
+      }
     }
   }
 
-  mouseOver() {
+  mouseOverWork() {
     let interval = setInterval(() => {
-      this.positionSpeed += 4;
-      this.roadPassed += 4;
-      if (this.roadPassed >= 400) {
-        this.positionSpeed = 0;
-      }
-      if (this.positionSpeed >= 200) {
-        this.positionSpeed -= 400;
-      }
-      this.transformX = `translateX(${this.positionSpeed}px)`;
-      console.log(this.positionSpeed);
+      this.positionSpeed -= 5;
+      this.roadPassed += 5;
+      this.checkAndSetPosition();
+      this.workTransformX = `translateX(${this.positionSpeed}px)`;
     }, 1000 / 60);
     this.interval.push(interval);
   }
 
-  mouseOut() {
+  mouseOutWork() {
     this.interval.forEach((e) => {
       clearInterval(e);
     });
     this.positionSpeed = 0;
     this.roadPassed = 0;
-    this.transformX = `translateX(0px)`;
+    this.workTransformX = `translateX(0px)`;
+  }
+
+  mouseOverCnt() {
+    let interval = setInterval(() => {
+      this.positionSpeed -= 5;
+      this.roadPassed += 5;
+      this.checkAndSetPosition();
+      this.cntTransformX = `translateX(${this.positionSpeed}px)`;
+    }, 1000 / 60);
+    this.interval.push(interval);
+  }
+
+  mouseOutCnt() {
+    this.interval.forEach((e) => {
+      clearInterval(e);
+    });
+    this.positionSpeed = 0;
+    this.roadPassed = 0;
+    this.cntTransformX = `translateX(0px)`;
+  }
+
+  checkAndSetPosition() {
+    if (this.roadPassed >= 400) {
+      this.positionSpeed = 0;
+    }
+    if (this.positionSpeed <= -200) {
+      this.positionSpeed = 200;
+    }
   }
 }

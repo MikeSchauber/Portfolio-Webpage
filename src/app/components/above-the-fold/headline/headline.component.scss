@@ -60,34 +60,6 @@
   }
 }
 
-// .btn-animation {
-//   animation: moveForward 305ms ease-in-out;
-//   transform: translateX(150%);
-// }
-
-// .btn-animation-reverse {
-//   animation: moveBackward 305ms ease-in-out;
-//   transform: translateX(50%);
-// }
-
-// @keyframes moveForward {
-//   0% {
-//     transform: translateX(50%);
-//   }
-//   100% {
-//     transform: translateX(150%);
-//   }
-// }
-
-// @keyframes moveBackward {
-//   0% {
-//     transform: translateX(150%);
-//   }
-//   100% {
-//     transform: translateX(50%);
-//   }
-// }
-
 @media (max-width: 1215px) {
   .mail-desktop {
     display: none;
@@ -102,9 +74,7 @@
   .mail {
     width: 100% !important;
   }
-}
 
-@media (max-width: 1119px) {
   .hide-mobile {
     display: none;
   }
@@ -143,4 +113,8 @@
       height: 112px;
     }
   }
+}
+
+@media (max-width: 1119px) {
+  
 }

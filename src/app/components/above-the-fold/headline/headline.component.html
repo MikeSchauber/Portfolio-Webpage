@@ -4,16 +4,19 @@
         <h1>Mike Schauber</h1>
         <div class="btn">
             <div class="btn-container">
-                <a (mouseenter)="animationForward()" (mouseleave)="animationReverse()"
+                <a (mouseenter)="animationForward('work')" (mouseleave)="animationReverse('work')"
                     href="https://mike-schauber.developerakademie.net/developer-akademie/projekt-website/index.html"
                     target="_blank">
                     <div class="btn-content">
-                        <span [ngStyle]="{'transform': this.transformX}"> {{ 'headline.checkWork' |translate }}</span>
+                        <span [ngStyle]="{'transform': this.workTransformX}"> {{ 'headline.checkWork' |translate
+                            }}</span>
                     </div>
                 </a>
             </div>
             <div class="btn-container">
-                <a (mouseover)="mouseOver()"><span>{{ 'headline.contactMe' | translate
+                <a (mouseenter)="animationForward('cnt')" (mouseleave)="animationReverse('cnt')" href="#"><span
+                        [ngStyle]="{'transform': this.cntTransformX}">{{
+                        'headline.contactMe' | translate
                         }}</span></a>
             </div>
         </div>
