@@ -22,8 +22,23 @@
   }
 }
 
+.dialog {
+  display: none;
+}
+
 @media (max-width: 1000px) {
   .main-content {
     padding: 0px 16px;
+  }
+
+  .dialog {
+    @include dFlex();
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000006c;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }

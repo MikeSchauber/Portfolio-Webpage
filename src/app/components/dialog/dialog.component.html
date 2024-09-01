@@ -1,31 +1,21 @@
-<div class="dialog">
-    <div class="mobile-view">
-        <div class="mobile-bar">
-            <img class="logo" src="assets/img/logo.png" alt="">
-            <img class="burger" src="assets/icons/menu-green.png" alt="">
-        </div>
-
-
-        <div class="responsive-menu" [ngStyle]="{'transform' : this.translateX}">
+<div class="responsive-menu" [ngStyle]="{'transform' : this.translateX}">
+    <div>
+        <a href="">
+            {{ 'menu.aboutMe' | translate }}
+        </a>
+        <a href="">
+            {{ 'menu.skills' | translate }}
+        </a>
+        <a href="">
+            {{ 'menu.projects' | translate }}
+        </a>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider" (click)="this.toggleLanguage()" [ngClass]="{de: this.isGerman}"></span>
             <div>
-                <a href="">
-                    {{ 'menu.aboutMe' | translate }}
-                </a>
-                <a href="">
-                    {{ 'menu.skills' | translate }}
-                </a>
-                <a href="">
-                    {{ 'menu.projects' | translate }}
-                </a>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider" (click)="this.toggleLanguage()" [ngClass]="{de: this.isGerman}"></span>
-                    <div>
-                        <span>EN</span>
-                        <span>DE</span>
-                    </div>
-                </label>
+                <span>EN</span>
+                <span>DE</span>
             </div>
-        </div>
+        </label>
     </div>
 </div>
