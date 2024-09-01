@@ -20,7 +20,6 @@ body {
   width: 100%;
   max-width: 1920px;
   background: linear-gradient(35deg, #1c1c1c 55%, #08463b 100%);
-  padding: 0px 96px;
   cursor: url("../src/assets/cursor.png"), auto;
 }
 
@@ -37,9 +36,6 @@ body {
 }
 
 @media (max-width: 1000px) {
-  body {
-    padding: 0px 16px;
-  }
 
   .mover {
     display: none;

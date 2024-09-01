@@ -1,0 +1,70 @@
+@import "../../../mixins.scss";
+
+.mobile-view {
+    display: none;
+}
+
+
+@media (max-width: 100px) {
+
+.mobile-view {
+    display: block;
+    position: absolute;
+    top: 32px;
+    height: 50px;
+    left: 0;
+    width: 100%;
+  }
+
+  .mobile-bar {
+    @include dFlex($fd: row, $jc: space-between);
+    width: 100%;
+
+    >img {
+      cursor: pointer;
+    }
+  }
+
+  .logo {
+    width: auto;
+    height: 48px;
+  }
+
+  .burger {
+    width: 32px;
+    height: auto;
+
+    &:hover {
+      filter: brightness(100);
+    }
+  }
+
+  .dialog {
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000007f;
+    z-index: 999;
+    @include dFlex();
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .responsive-menu {
+    background: linear-gradient(35deg, #1c1c1c 50%, #08463b 100%);
+    padding: 40px 77px;
+    @include dFlex();
+    border-radius: 30px;
+    height: 252px;
+    width: 238px;
+    >div {
+      @include dFlex($g: 24px);
+
+      >a {
+        text-decoration: none;
+        color: white; 
+        font-size: 18px;
+      }
+    }
+  }
+}

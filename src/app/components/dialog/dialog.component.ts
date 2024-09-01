@@ -3,18 +3,21 @@ import { Component } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'app-dialog',
   standalone: true,
-  imports: [TranslateModule, CommonModule],
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss',
+  imports: [ TranslateModule, CommonModule],
+  templateUrl: './dialog.component.html',
+  styleUrl: './dialog.component.scss'
 })
-export class NavbarComponent {
+export class DialogComponent {
+
   isGerman: boolean = false;
 
   about: boolean = false;
   skills: boolean = false;
   projects: boolean = false;
+
+  translateX: string = "translateX(0%)"
 
   constructor(public translate: TranslateService) {}
 
@@ -38,4 +41,5 @@ export class NavbarComponent {
     e === 'skills' ? (this.skills = false) : null;
     e === 'projects' ? (this.projects = false) : null;
   }
+
 }
