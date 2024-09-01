@@ -114,8 +114,10 @@
     }
 
     .mobile-view {
+      display: block;
       position: absolute;
-      top: 0;
+      top: 32px;
+      height: 50px;
       left: 0;
       width: 100%;
     }
@@ -123,6 +125,9 @@
     .mobile-bar {
       @include dFlex($fd: row, $jc: space-between);
       width: 100%;
+      >img {
+        cursor: pointer;
+      }
     }
 
     .logo {
@@ -133,6 +138,9 @@
     .burger {
       width: 32px;
       height: auto;
+      &:hover {
+        filter: brightness(100);
+      }
     }
   }
   
