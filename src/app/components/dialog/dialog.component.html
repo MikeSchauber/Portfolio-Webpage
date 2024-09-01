@@ -1,4 +1,4 @@
-<div class="responsive-menu" [ngStyle]="{'transform' : this.translateX}">
+<div (click)="stopProp($event)" class="responsive-menu" [ngStyle]="{'transform' : this.dialogService.translationX}">
     <div>
         <a href="">
             {{ 'menu.aboutMe' | translate }}

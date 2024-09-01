@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { DialogDataService } from '../../../../services/dialog-data.service';
 
 @Component({
   selector: 'app-navbar',
@@ -16,7 +17,22 @@ export class NavbarComponent {
   skills: boolean = false;
   projects: boolean = false;
 
-  constructor(public translate: TranslateService) {}
+  dialogOpen: boolean = false;
+
+  public dialogData = inject(DialogDataService);
+
+  constructor(public translate: TranslateService) {
+    this.dialogOpen = this.dialogData.open;
+  }
+
+  openDialog() {
+    this.dialogData.open = true;
+    setTimeout(() => {
+      this.dialogData.opacity = "1";
+      this.dialogData.translationX = "translateY(-00px)";
+    }, 20);
+
+  }
 
   toggleLanguage() {
     if (this.isGerman) {
