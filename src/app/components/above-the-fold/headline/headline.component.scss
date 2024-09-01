@@ -5,7 +5,8 @@
   @include dFlex();
   color: #d9d9d9;
   text-align: center;
-  > h2 {
+
+  >h2 {
     font-family: "fira code";
     font-weight: 400;
     font-size: 40px;
@@ -17,7 +18,8 @@
   width: 100%;
   color: #d9d9d9;
   text-align: center;
-  > h1 {
+
+  >h1 {
     font-family: "karla";
     font-weight: 700;
     font-size: 128px;
@@ -32,7 +34,8 @@
 .btn-container {
   @include dFlex($fd: row, $g: 48px);
   min-width: fit-content;
-  > a {
+
+  >a {
     @include dFlex($fd: row, $g: 48px);
     z-index: 2;
     height: 48px;
@@ -54,7 +57,8 @@
 .btn-content {
   @include dFlex($fd: row, $g: 70px);
   width: 100%;
-  > span {
+
+  >span {
     width: 100%;
     min-width: fit-content;
   }
@@ -84,20 +88,35 @@
   }
 
   .headline {
-    > h2 {
-      font-size: 24px;
+    >h2 {
+      font-size: 20px;
+      font-weight: 400;
     }
   }
 
   .action-btn {
     gap: 32px;
-    > h1 {
-      font-size: 62px;
+
+    >h1 {
+      font-size: 48px;
     }
   }
 
+  .btn {
+    @include dFlex($fd: row, $g: 24px);
+  }
+
+  .btn-container {
+    @include dFlex($fd: row, $g: 48px);
+    min-width: fit-content;
+  }
+
+  .btn-content {
+    font-size: 18px;
+  }
+
   .bottom-nav {
-    > div {
+    >div {
       height: 224px;
     }
   }
@@ -109,12 +128,14 @@
       width: 100%;
     }
 
-    > div {
+    >div {
       height: 112px;
     }
   }
 }
 
-@media (max-width: 1119px) {
-  
+@media (max-width: 400px) {
+.btn {
+  flex-direction: column;
+}
 }

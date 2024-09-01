@@ -33,7 +33,9 @@ $blur: 4px;
 @media (max-width: 1000px) {
   .banner {
     font-size: 24px;
-    left: -50px;
-    right: -50px;
+    left: -15px;
+    right: -15px;
+    overflow: hidden;
+    box-shadow: 22px 0px 0px 0px rgba(75, 75, 75, 0.226), -22px 0px 0px 0px rgba(75, 75, 75, 0.226);
   }
 }
