@@ -6,8 +6,8 @@ $blur: 4px;
   padding: 12px 24px;
   position: absolute;
   bottom: 50px;
-  left: -100px;
-  right: -100px;
+  left: -95px;
+  right: -95px;
   max-height: 60px;
   color: white;
   font-family: "karla";
@@ -36,6 +36,14 @@ $blur: 4px;
     left: -15px;
     right: -15px;
     overflow: hidden;
-    box-shadow: 22px 0px 0px 0px rgba(75, 75, 75, 0.226), -22px 0px 0px 0px rgba(75, 75, 75, 0.226);
+    box-shadow: 22px 0px 0px 0px rgba(75, 75, 75, 0.226),
+      -22px 0px 0px 0px rgba(75, 75, 75, 0.226);
+  }
+}
+
+@media (max-width: 450px) {
+  .banner {
+    left: 0px;
+    right: 0px;
   }
 }

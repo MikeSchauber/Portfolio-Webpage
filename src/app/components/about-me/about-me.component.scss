@@ -1,6 +1,7 @@
 @import "../../../mixins.scss";
 
 .about-me-container {
+  padding: 0px 96px;
   height: 100vh;
   width: 100%;
   @include dFlex($fd: row);
@@ -31,7 +32,6 @@
   width: 100%;
   max-width: 568px;
   height: 100%;
-
   @include dFlex($g: 40px, $jc: flex-end);
 }
 
@@ -117,20 +117,33 @@
 }
 
 @media (max-width: 1000px) {
-    .about-me-container {
-        height: auto;
-        > div {
-          @include dFlex($fd: column, $g: 40px);
-        }
-      }
+  .about-me-container {
+    padding: 0px 16px;
+    height: calc(100vh * 1.5);
+    > div {
+      height: 100%;
+      @include dFlex($fd: column, $g: 40px, $jc: center);
+    }
+  }
 
-      .img-cont {
-        > img {
-          height: auto;
-          width: 100%;
-          height: 100%;
-          max-height: 568px;
-          max-width: 568px;
-        }
-      }
+  .img-cont {
+    @include dFlex($jc: center, $ai: center);
+    > img {
+      height: auto;
+      width: 100%;
+      height: 100%;
+      max-height: 568px;
+      max-width: 568px;
+    }
+  }
+  .aboutme-cont {
+    height: auto;
+  }
+}
+
+@media (max-height: 770px) {
+  .about-me-container {
+    padding: 0px 16px;
+    height: calc(100vh * 2);
+  }
 }

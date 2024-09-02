@@ -5,6 +5,7 @@
 }
 
 .menubar {
+  padding: 0px 96px;
   position: absolute;
   top: 48px;
   left: 0;
@@ -124,9 +125,11 @@
 @media (max-width: 1000px) {
   .menubar {
     display: none;
+
   }
 
   .mobile-view {
+    padding: 0px 16px;
     display: block;
     position: absolute;
     top: 32px;

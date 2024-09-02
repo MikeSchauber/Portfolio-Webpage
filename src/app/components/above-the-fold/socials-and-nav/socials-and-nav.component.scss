@@ -21,6 +21,7 @@
 }
 
 .socials-and-nav {
+  padding: 0px 96px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -31,7 +32,7 @@
 .bottom-nav {
   @include dFlex($fd: column, $g: 24px);
 
-  >a {
+  > a {
     @include dFlex();
     height: 48px;
     width: 30px;
@@ -46,7 +47,7 @@
     //   transform: translateY(0%);
     //   animation-play-state: paused;
     // }
-    >img {
+    > img {
       animation: moveDown 1.5s infinite;
       transition: all 100ms ease-in-out;
       &:hover {
@@ -54,7 +55,7 @@
       }
     }
   }
-  >div {
+  > div {
     height: 240px;
     border: 1px solid #3dcfb6;
   }
@@ -73,7 +74,7 @@
 .socials {
   @include dFlex($fd: column, $g: 24px);
 
-  >.mail {
+  > .mail {
     font-family: "karla";
     font-weight: 400;
     font-size: 18px;
@@ -90,10 +91,10 @@
     }
   }
 
-  >a {
+  > a {
     position: relative;
 
-    >img:first-of-type {
+    > img:first-of-type {
       transition: all 125ms ease-in-out;
 
       &:hover {
@@ -103,7 +104,7 @@
     }
   }
 
-  >div {
+  > div {
     height: 186px;
     border: 1px solid #ffffff;
   }
@@ -141,7 +142,7 @@
   }
 
   .headline {
-    >h2 {
+    > h2 {
       font-size: 24px;
     }
   }
@@ -149,13 +150,13 @@
   .action-btn {
     gap: 32px;
 
-    >h1 {
+    > h1 {
       font-size: 62px;
     }
   }
 
   .bottom-nav {
-    >div {
+    > div {
       height: 224px;
     }
   }
@@ -167,8 +168,14 @@
       width: 100%;
     }
 
-    >div {
+    > div {
       height: 112px;
     }
+  }
+}
+
+@media (max-width: 1000px) {
+  .socials-and-nav {
+    padding: 0px 16px;
   }
 }

@@ -20,10 +20,33 @@
   transition: all 125ms ease-in-out;
 }
 
+@import "../../../mixins.scss";
+
+.hide-mobile {
+  display: flex;
+}
+
+.show-mobile {
+  display: none !important;
+}
+
+.mail-desktop {
+  display: block;
+}
+
+.mail-mobile {
+  display: none;
+}
+
+.dot {
+  transition: all 125ms ease-in-out;
+}
+
 .above-container {
   font-family: "Fira Code";
   @include dFlex();
   position: relative;
   height: 100vh;
   width: 100%;
+
 }

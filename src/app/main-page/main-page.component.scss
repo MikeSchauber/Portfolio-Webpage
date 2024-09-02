@@ -1,7 +1,7 @@
 @import "../../mixins.scss";
 
 .main-content {
-  padding: 0px 96px;
+
 }
 
 .block {
@@ -31,9 +31,6 @@
 }
 
 @media (max-width: 1000px) {
-  .main-content {
-    padding: 0px 16px;
-  }
 
   .dialog {
     @include dFlex();
