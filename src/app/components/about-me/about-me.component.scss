@@ -118,7 +118,7 @@
 
 @media (max-width: 1000px) {
     .about-me-container {
-        height: 100%;
+        height: auto;
         > div {
           @include dFlex($fd: column, $g: 40px);
         }
