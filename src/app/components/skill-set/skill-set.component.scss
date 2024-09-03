@@ -113,6 +113,54 @@
   }
 }
 
+.speech-cont {
+  position: relative;
+  @include dFlex();
+}
+
+.speech {
+  width: auto;
+  height: auto;
+  padding: 11px !important;
+  @include dFlex($g: 8px);
+  position: absolute;
+  top: -145px;
+  left: -19px;
+  background-color: white;
+  border-radius: 16px;
+  color: rgba(61, 207, 182, 1);
+  font-size: 16px;
+
+  transition: all 125ms ease-in-out;
+  > span {
+    width: 172px;
+    letter-spacing: -1px;
+  }
+  > div {
+    @include dFlex($fd: row, $g: 16px);
+  }
+  opacity: 0;
+  z-index: -2;
+}
+
+.sb:before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: white;
+  border-radius: 7px;
+  transform: rotate(45deg);
+  right: 50%;
+  bottom: -9px;
+  z-index: -1;
+}
+
+.speech-show {
+  opacity: 1;
+  z-index: 999;
+}
+
 @media (max-width: 1375px) {
   .skill-background {
     height: calc(100vh * 1.4);
@@ -197,6 +245,4 @@
   .skill-background {
     height: calc(100vh * 2.2);
   }
-
 }
-

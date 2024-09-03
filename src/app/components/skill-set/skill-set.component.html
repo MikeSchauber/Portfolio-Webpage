@@ -7,10 +7,10 @@
                 <div>
                     <p>{{ 'skillset.description' | translate }}</p>
                     <h3 class="another-c">
-                        {{ 'skillset.anotherSkillText' | translate }} 
+                        {{ 'skillset.anotherSkillText' | translate }}
                         <span>{{ 'skillset.anotherSkillSpan' | translate }}</span>
                     </h3>
-                    
+
                     <p class="last-text">{{ 'skillset.contactText' | translate }}</p>
                 </div>
                 <a (mouseenter)="animationForward()" (mouseleave)="animationReverse()" href="#">
@@ -30,9 +30,18 @@
                 <div><img src="assets/skill-icons/white/git.png" alt="">GIT</div>
                 <div><img src="assets/skill-icons/white/api.png" alt="">Rest-Api</div>
                 <div><img src="assets/skill-icons/white/scrum.png" alt="">Scrum</div>
-                <div><img src="assets/skill-icons/green/growth.png" alt="">Growth mindset</div>
+                <div class="speech-cont">
+                    <div [ngClass]="{'speech-show': this.mind}" class="speech sb">
+                        <span>I have a special interest in learning</span>
+                        <div>
+                            <img src="assets/skill-icons/green/react.png" alt="">
+                            <img src="assets/skill-icons/green/vue.png" alt="">
+                        </div>
+                    </div>
+                    <img (mouseover)="hover('in')" (mouseout)="hover('out')" src="assets/skill-icons/green/growth.png" alt="">
+                    Growth mindset
+                </div>
             </div>
         </div>
     </div>
-
 </div>

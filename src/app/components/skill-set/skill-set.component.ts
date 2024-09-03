@@ -18,6 +18,16 @@ export class SkillSetComponent {
   overWork: boolean = false;
   forward: boolean = false;
   interval: any[] = [];
+  mind: boolean = false;
+
+  hover(movement: string) {
+    if (movement == "in") {
+      this.mind = true;
+    } else {
+      this.mind = false;
+    }
+
+  }
 
   animationForward() {
     this.forward = true;
