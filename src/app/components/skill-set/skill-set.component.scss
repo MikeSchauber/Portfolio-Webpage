@@ -1,3 +1,5 @@
+@import "../../../mixins.scss";
+
 .skill-background {
   height: 100vh;
   width: 100%;
@@ -9,11 +11,185 @@
 }
 
 .container {
-    padding: 0px 96px;
+  padding: 0px 96px;
+  width: 100%;
+  height: 100%;
+  @include dFlex($g: 20px);
+  > p {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    color: rgba(61, 207, 182, 1);
+  }
+}
+
+.maincont {
+  width: 100%;
+  @include dFlex($fd: row, $jc: space-between, $ai: flex-start);
+}
+
+.text {
+  max-width: 503px;
+  background-color: rgba(61, 207, 182, 0.1);
+  @include dFlex($g: 40px, $ai: flex-start);
+  padding: 32px;
+  border: 1px solid rgba(61, 207, 182, 1);
+  border-radius: 30px;
+  color: rgba(61, 207, 182, 1);
+  > h2 {
+    font-size: 64px;
+    font-weight: 700;
+    font-family: "fira code";
+  }
+  > div {
+    color: white;
+    @include dFlex($g: 32px, $ai: flex-start);
+    > p {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+  > a {
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 1);
+    font-size: 18px;
+    border-radius: 100px;
+    padding: 0px 24px !important;
+    height: 48px;
+    @include dFlex();
+    overflow: hidden;
+    transition: all 125ms ease-in-out;
+    &:hover {
+      color: rgba(61, 207, 182, 1);
+      border-color: rgba(61, 207, 182, 1);
+    }
+  }
+}
+
+.last-text {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.another-c {
+  font-size: 24px;
+  font-family: "fira code";
+  > span {
+    color: rgba(61, 207, 182, 1);
+  }
+}
+
+.icons {
+  width: 100%;
+  height: 100%;
+  max-width: 632px;
+  max-height: 428px;
+  @include dFlex($g: 72px, $fd: row, $jc: flex-start, $ai: flex-start);
+  flex-wrap: wrap;
+  color: white;
+  font-size: 18px;
+  font-family: "fira code";
+  > div {
+    @include dFlex($g: 8px);
+    width: 100%;
+    height: 100%;
+    max-width: 104px;
+    max-height: 116px;
+    text-align: center;
+    > img {
+      z-index: 9;
+      height: 60px;
+      width: 60px;
+      cursor: pointer;
+      transition: all 125ms ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+@media (max-width: 1375px) {
+  .skill-background {
+    height: calc(100vh * 1.4);
+  }
+
+  .container {
+    padding: 0;
+    height: 100%;
+    justify-content: flex-start;
+    > p {
+      align-items: center;
+      max-width: 568px;
+    }
+  }
+
+  .maincont {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 568px;
+  }
+
+  .icons {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 1000px) {
-    .container {
-        padding: 0px 16px;
+  .container {
+    padding: 0px 16px;
+  }
+  .text {
+    max-width: 568px;
+    > h2 {
+      font-size: 56px;
     }
+    > div {
+      > p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .icons {
+    font-size: 16px;
+    > img {
+      height: 48px;
+      width: 48px;
+    }
+  }
 }
+
+@media (max-width: 500px) {
+  .icons {
+    gap: 16px;
+  }
+
+  .text {
+    > h2 {
+      font-size: 48px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .skill-background {
+    height: calc(100vh * 2);
+  }
+
+  .icons {
+    > div {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-height: 700px) {
+  .skill-background {
+    height: calc(100vh * 2.2);
+  }
+
+}
+
