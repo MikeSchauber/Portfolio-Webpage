@@ -10,14 +10,14 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './skill-set.component.scss',
 })
 export class SkillSetComponent {
+  constructor(public translate: TranslateService) {}
+
   transformX: string = 'translateX(-0px)';
   positionSpeed: number = 0;
   roadPassed: number = 0;
   overWork: boolean = false;
   forward: boolean = false;
   interval: any[] = [];
-
-  constructor(public translate: TranslateService) {}
 
   animationForward() {
     this.forward = true;

@@ -12,11 +12,11 @@
             'menu.aboutMe' | translate }}
             <img [ngStyle]="{'opacity': this.about ? 1 : 0}" class="dot" src="assets/icons/dot.png" alt="">
         </a>
-        <a (mouseover)="mouseover('skills');" (mouseout)="mouseout('skills');" href="#">{{ 'menu.skills' | translate
+        <a (mouseover)="mouseover('skills');" (mouseout)="mouseout('skills');" href="#skills">{{ 'menu.skills' | translate
             }}
             <img [ngStyle]="{'opacity': this.skills ? 1 : 0}" class="dot" src="assets/icons/dot.png" alt="">
         </a>
-        <a (mouseover)="mouseover('projects');" (mouseout)="mouseout('projects');" href="#">{{ 'menu.projects' |
+        <a (mouseover)="mouseover('projects');" (mouseout)="mouseout('projects');" href="#projects">{{ 'menu.projects' |
             translate }}
             <img [ngStyle]="{'opacity': this.projects ? 1 : 0}" class="dot" src="assets/icons/dot.png" alt="">
         </a>
