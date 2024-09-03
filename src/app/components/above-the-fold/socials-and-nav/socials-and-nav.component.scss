@@ -42,13 +42,8 @@
     &:hover {
       background-color: #08463ba4;
     }
-    // &:hover>img {
-    //   transition: all 100ms ease-in-out;
-    //   transform: translateY(0%);
-    //   animation-play-state: paused;
-    // }
     > img {
-      animation: moveDown 1.5s infinite;
+      animation: moveDown 2s infinite;
       transition: all 100ms ease-in-out;
       &:hover {
         transform: translateY(0%);
@@ -63,11 +58,13 @@
 
 @keyframes moveDown {
   0% {
-    transform: translateY(-50%);
+    transform: translateY(-10%);
   }
-
-  100% {
+  40% {
     transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(-10%);
   }
 }
 
