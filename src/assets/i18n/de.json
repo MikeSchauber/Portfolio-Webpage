@@ -26,11 +26,12 @@
   },
   "skillset": {
     "skills": "Technologien",
-    "skillSet": "Fähigkeiten",
+    "skillSet": "Stärken",
     "description": "Mein Weg hat mich durch verschiedene Projekte geführt, bei denen ich eine Reihe von Frontend-Technologien und Konzepten angewendet habe. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Welt der Webentwicklung vorne zu bleiben.",
     "anotherSkillText": "Brauchen Sie",
     "anotherSkillSpan": "andere Fähigkeiten ?",
     "contactText": "Kontaktieren Sie mich gerne. Ich freue mich darauf, mein Wissen zu erweitern.",
-    "letsTalk": "Lass uns reden"
+    "letsTalk": "Lass uns reden",
+    "interest": "Ich habe ein besonderes Interesse diese Technologien zu erlernen."
   }
 }
