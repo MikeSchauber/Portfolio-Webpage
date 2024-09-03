@@ -46,8 +46,8 @@ export class HeadlineComponent {
 
   mouseOverWork() {
     let interval = setInterval(() => {
-      this.positionSpeed -= 5;
-      this.roadPassed += 5;
+      this.positionSpeed -= 4;
+      this.roadPassed += 4;
       this.checkAndSetPosition();
       this.workTransformX = `translateX(${this.positionSpeed}px)`;
     }, 1000 / 60);
@@ -65,8 +65,8 @@ export class HeadlineComponent {
 
   mouseOverCnt() {
     let interval = setInterval(() => {
-      this.positionSpeed -= 5;
-      this.roadPassed += 5;
+      this.positionSpeed -= 4;
+      this.roadPassed += 4;
       this.checkAndSetPosition();
       this.cntTransformX = `translateX(${this.positionSpeed}px)`;
     }, 1000 / 60);

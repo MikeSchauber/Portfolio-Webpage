@@ -51,6 +51,11 @@
     padding: 0px 24px;
     cursor: pointer;
     overflow: hidden;
+    transition: all 125ms ease-in-out;
+    &:hover {
+      color: rgba(61, 207, 182, 1);
+      border-color: rgba(61, 207, 182, 1);
+    }
   }
 }
 
