@@ -3,18 +3,19 @@
         <p>Technologies</p>
         <div class="maincont">
             <div class="text">
-                <h2>Skill Set</h2>
+                <h2>{{ 'skillset.skillSet' | translate }}</h2>
                 <div>
-                    <p>My journey has involved working on diverse projects, employing a range of frontend technologies
-                        and concepts. I am open to embracing new technologies and methodologies to Continously enhance
-                        my skills and stay ahead in the ever-evolving landscape of web development.</p>
-                    <h3 class="another-c">You need <span>another skill?</span></h3>
-                    <p class="last-text">Feel free to contact me. I look forward to expanding on my previous knowledge.
-                    </p>
+                    <p>{{ 'skillset.description' | translate }}</p>
+                    <h3 class="another-c">
+                        {{ 'skillset.anotherSkillText' | translate }} 
+                        <span>{{ 'skillset.anotherSkillSpan' | translate }}</span>
+                    </h3>
+                    
+                    <p class="last-text">{{ 'skillset.contactText' | translate }}</p>
                 </div>
                 <a (mouseenter)="animationForward()" (mouseleave)="animationReverse()" href="#">
                     <span [ngStyle]="{transform: transformX}">
-                        Lets Talk
+                        {{ 'skillset.letsTalk' | translate }}
                     </span>
                 </a>
             </div>
