@@ -3,7 +3,9 @@
     <app-above-the-fold class="padding-above"></app-above-the-fold>
     <app-about-me id="aboutme" class="padding-about"></app-about-me>
     <app-skill-set id="skills" class="padding-skills"></app-skill-set>
+    <app-portfolio id="portfolio"></app-portfolio>
     <app-footer class="padding-"></app-footer>
 </div>
 
-<app-dialog (click)="this.dialogService.closeDialog()" [ngClass]="{'d-none': !this.dialogService.open}" [ngStyle]="{opacity: this.dialogService.opacity}" class="dialog"></app-dialog>
+<app-dialog (click)="this.dialogService.closeDialog()" [ngClass]="{'d-none': !this.dialogService.open}"
+    [ngStyle]="{opacity: this.dialogService.opacity}" class="dialog"></app-dialog>

@@ -1,0 +1,39 @@
+@import "../../../../mixins.scss";
+
+$width: 1000px;
+$width-resp: 100%;
+
+
+.projects-cont {
+    @include dFlex();
+    width: 100%;
+}
+
+.project {
+    width: $width;
+    padding: 40px 32px;
+    border-bottom: 1px solid #3DCFB6;
+    @include dFlex($fd: row, $jc: space-between);
+    color: white;
+
+    >h3 {
+        font-family: "fira code";
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    >div {
+        >span {
+            font-family: "karla";
+            font-size: 18px;
+            font-weight: 400;
+            border-right: 1px solid #3DCFB6;
+            padding: 0px 8px;
+        }
+
+        >span:last-of-type {
+            border: 0;
+        }
+    }
+
+}

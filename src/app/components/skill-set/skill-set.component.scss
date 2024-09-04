@@ -169,7 +169,9 @@
   .container {
     padding: 0;
     height: 100%;
-    justify-content: center;
+    justify-content: flex-start;
+    position: relative;
+    top: -50px;
     > p {
       align-items: center;
       max-width: 568px;
@@ -252,6 +254,6 @@
 
 @media (max-height: 700px) {
   .skill-background {
-    height: calc(100vh * 2.2);
+    height: calc(100vh * 2.4);
   }
 }
