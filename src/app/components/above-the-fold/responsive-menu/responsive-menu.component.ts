@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { DialogDataService } from '../../../services/dialog-data.service';
+import { DialogDataService } from '../../../../services/dialog-data.service';
 
 @Component({
   selector: 'app-responsive-menu',

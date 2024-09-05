@@ -6,7 +6,7 @@ import { DialogDataService } from '../../services/dialog-data.service';
 import { CommonModule } from '@angular/common';
 import { SkillSetComponent } from '../components/skill-set/skill-set.component';
 import { PortfolioComponent } from '../components/portfolio/portfolio.component';
-import { ResponsiveMenuComponent } from '../components/responsive-menu/responsive-menu.component';
+import { ResponsiveMenuComponent } from '../components/above-the-fold/responsive-menu/responsive-menu.component';
 
 @Component({
   selector: 'app-main-page',
