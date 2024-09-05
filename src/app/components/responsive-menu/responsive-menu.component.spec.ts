@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DialogComponent } from './dialog.component';
+import { ResponsiveMenuComponent } from './responsive-menu.component';
 
-describe('DialogComponent', () => {
-  let component: DialogComponent;
-  let fixture: ComponentFixture<DialogComponent>;
+describe('ResponsiveMenuComponent', () => {
+  let component: ResponsiveMenuComponent;
+  let fixture: ComponentFixture<ResponsiveMenuComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DialogComponent]
+      imports: [ResponsiveMenuComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DialogComponent);
+    fixture = TestBed.createComponent(ResponsiveMenuComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

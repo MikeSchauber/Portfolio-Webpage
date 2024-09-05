@@ -4,13 +4,13 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { DialogDataService } from '../../../services/dialog-data.service';
 
 @Component({
-  selector: 'app-dialog',
+  selector: 'app-responsive-menu',
   standalone: true,
   imports: [TranslateModule, CommonModule],
-  templateUrl: './dialog.component.html',
-  styleUrl: './dialog.component.scss'
+  templateUrl: './responsive-menu.component.html',
+  styleUrl: './responsive-menu.component.scss'
 })
-export class DialogComponent {
+export class ResponsiveMenuComponent {
   isGerman: boolean = false;
   about: boolean = false;
   skills: boolean = false;

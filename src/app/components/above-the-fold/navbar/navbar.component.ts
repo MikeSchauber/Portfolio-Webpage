@@ -29,9 +29,9 @@ export class NavbarComponent {
     this.dialogData.open = true;
     setTimeout(() => {
       this.dialogData.opacity = "1";
-      this.dialogData.translationX = "translateY(-00px)";
+      this.dialogData.translationX = "translateY(0px)";
       this.dialogData.toggleScrollBehav();
-    }, 20);
+    }, 21);
   }
 
   toggleLanguage() {
