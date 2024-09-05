@@ -28,20 +28,18 @@
 }
 
 .dialog {
-  display: none;
+  @include dFlex();
+  width: 100vw;
+  height: 100vh;
+  background-color: #0000006c;
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 125ms ease-in-out;
 }
 
 @media (max-width: 1000px) {
 
-  .dialog {
-    @include dFlex();
-    width: 100vw;
-    height: 100vh;
-    background-color: #0000006c;
-    z-index: 999;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all 125ms ease-in-out;
-  }
+
 }

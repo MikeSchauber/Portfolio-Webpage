@@ -15,7 +15,12 @@ $width-resp: 100%;
     border-bottom: 1px solid #3DCFB6;
     @include dFlex($fd: row, $jc: space-between);
     color: white;
-
+    z-index: 5;
+    cursor: pointer;
+    transition: all 125ms ease-in-out;
+    &:hover {
+        background-color: rgba(61, 207, 182, 0.3);
+    }
     >h3 {
         font-family: "fira code";
         font-size: 24px;
