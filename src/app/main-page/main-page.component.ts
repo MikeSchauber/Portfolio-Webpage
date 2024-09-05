@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { SkillSetComponent } from '../components/skill-set/skill-set.component';
 import { PortfolioComponent } from '../components/portfolio/portfolio.component';
 import { ResponsiveMenuComponent } from '../components/above-the-fold/responsive-menu/responsive-menu.component';
+import { ProjectDialogComponent } from '../components/portfolio/project-dialog/project-dialog.component';
 
 @Component({
   selector: 'app-main-page',
@@ -14,6 +15,7 @@ import { ResponsiveMenuComponent } from '../components/above-the-fold/responsive
   imports: [
     CommonModule,
     ResponsiveMenuComponent,
+    ProjectDialogComponent,
     FooterComponent,
     AboveTheFoldComponent,
     AboutMeComponent,
