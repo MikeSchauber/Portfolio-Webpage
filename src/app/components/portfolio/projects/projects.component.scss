@@ -1,16 +1,14 @@
 @import "../../../../mixins.scss";
 
-$width: 1000px;
-$width-resp: 100%;
-
 
 .projects-cont {
-    @include dFlex();
+    @include dFlex($ai: flex-start);
     width: 100%;
 }
 
 .project {
-    width: $width;
+    width: 100%;
+    max-width: 1000px;
     padding: 40px 32px;
     border-bottom: 1px solid #3DCFB6;
     @include dFlex($fd: row, $jc: space-between);
@@ -18,9 +16,11 @@ $width-resp: 100%;
     z-index: 5;
     cursor: pointer;
     transition: all 125ms ease-in-out;
+
     &:hover {
         background-color: rgba(61, 207, 182, 0.3);
     }
+
     >h3 {
         font-family: "fira code";
         font-size: 24px;
@@ -35,6 +35,9 @@ $width-resp: 100%;
             border-right: 1px solid #3DCFB6;
             padding: 0px 8px;
         }
+        >span:first-of-type {
+            padding-left: 0;
+        }
 
         >span:last-of-type {
             border: 0;
@@ -42,6 +45,8 @@ $width-resp: 100%;
     }
 }
 
-.dialog {
-    
+@media (max-width: 700px) {
+    .project {
+        @include dFlex($fd: column, $ai: flex-start, $jc: space-between);
+    }
 }

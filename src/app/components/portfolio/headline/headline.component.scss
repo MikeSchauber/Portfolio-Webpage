@@ -1,21 +1,22 @@
 @import "../../../../mixins.scss";
 
-$width: 1000px;
-$width-resp: 100%;
 
 div {
-    width: $width;
+    width: 100%;
+    max-width: 1000px;
     @include dFlex($g: 20px, $ai: flex-start);
     color: #3DCFB6;
     font-family: "karla";
     border-bottom: 1px solid #3DCFB6;
 
     >span {
+        width: 100%;
         font-size: 24px;
         font-weight: 700;
     }
 
     >h2 {
+        width: 100%;
         font-family: "fira code";
         font-size: 64px;
         font-weight: 700;
@@ -23,12 +24,27 @@ div {
     }
 
     >p {
+        width: 100%;
         margin-top: 21px;
         margin-bottom: 41px;
         width: 100%;
-        color:#FFFFFF;
+        color: #FFFFFF;
         font-size: 18px;
         max-width: 456px;
         text-align: justify;
     }
+}
+
+@media (max-width: 1000px) {
+div {
+    >span {
+        font-size: 18px;
+    }
+    >h2 {
+        font-size: 56px;
+    }
+    >p {
+        font-size: 16px;
+    }
+}
 }
