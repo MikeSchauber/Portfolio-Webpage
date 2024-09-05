@@ -27,6 +27,7 @@ export class NavbarComponent {
 
   openDialog() {
     this.dialogData.open = true;
+    this.dialogData.noScroll = true;
     setTimeout(() => {
       this.dialogData.opacity = "1";
       this.dialogData.translationX = "translateY(0px)";

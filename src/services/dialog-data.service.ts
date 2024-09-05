@@ -5,6 +5,7 @@ import { Injectable, Renderer2, RendererFactory2 } from '@angular/core';
 })
 export class DialogDataService {
   open: boolean = false;
+  noScroll: boolean = false;
   translationX: string = "translateY(-150%)";
   opacity: string = "0";
   private renderer: Renderer2;
@@ -14,7 +15,7 @@ export class DialogDataService {
   }
 
   toggleScrollBehav() {
-    if (this.open) {
+    if (this.noScroll) {
       this.renderer.addClass(document.body, 'noScroll');
     } else {
       this.renderer.removeClass(document.body, 'noScroll');
@@ -26,6 +27,7 @@ export class DialogDataService {
     this.opacity = "0";
     setTimeout(() => {
       this.open = false;
+      this.noScroll = false;
       this.toggleScrollBehav();
     }, 125);
   }
