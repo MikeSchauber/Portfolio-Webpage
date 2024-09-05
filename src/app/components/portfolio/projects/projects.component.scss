@@ -28,6 +28,8 @@
     }
 
     >div {
+        @include dFlex($fd: row);
+
         >span {
             font-family: "karla";
             font-size: 18px;
@@ -35,6 +37,7 @@
             border-right: 1px solid #3DCFB6;
             padding: 0px 8px;
         }
+
         >span:first-of-type {
             padding-left: 0;
         }
@@ -45,8 +48,18 @@
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
     .project {
         @include dFlex($fd: column, $ai: flex-start, $jc: space-between);
+
+        >div {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            >span {
+               margin: 4px 0px;
+            }
+        }
+
     }
 }
