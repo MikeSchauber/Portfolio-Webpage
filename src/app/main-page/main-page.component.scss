@@ -2,7 +2,6 @@
 
 .main-content {
   width: 100%;
-
 }
 
 .block {
@@ -31,15 +30,16 @@
   @include dFlex();
   width: 100vw;
   height: 100vh;
-  background-color: #0000006c;
+  background-color: #0000003d;
   z-index: 999;
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 0;
   transition: all 125ms ease-in-out;
+  padding: 0px 96px;
 }
 
 @media (max-width: 1000px) {
-
-
+  .dialog {
+    padding: 0px 16px;
+  }
 }

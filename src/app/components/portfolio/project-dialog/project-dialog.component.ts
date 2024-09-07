@@ -6,8 +6,10 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './project-dialog.component.html',
-  styleUrl: './project-dialog.component.scss'
+  styleUrl: './project-dialog.component.scss',
 })
 export class ProjectDialogComponent {
-
+  event(event: Event): void {
+    event.preventDefault();
+  }
 }

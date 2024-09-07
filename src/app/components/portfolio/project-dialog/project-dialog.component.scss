@@ -1,0 +1,127 @@
+@import "../../../../mixins.scss";
+
+.p-dialog {
+  color: white;
+  background: linear-gradient(55.22deg, #1c1c1c 36.26%, #08463b 93.28%);
+  @include dFlex($fd: row, $jc: space-between);
+  padding: 91px 80px;
+  width: 100%;
+  max-width: 1248px;
+  height: 656px;
+  border: 1px solid rgba(61, 207, 182, 1);
+  border-radius: 30px;
+}
+
+img {
+  max-width: 300px;
+  max-height: 200px;
+}
+
+.text-container {
+  @include dFlex($ai: flex-start, $g: 40px);
+  max-width: 480px;
+}
+
+.name-container {
+  @include dFlex($ai: flex-start, $g: 24px);
+  > h1 {
+    font-size: 128px;
+    font-weight: 700px;
+    color: rgba(61, 207, 182, 1);
+    line-height: 100px;
+    letter-spacing: -2px;
+  }
+
+  > h2 {
+    font-size: 64px;
+    font-family: "fira code";
+    line-height: 51px;
+    letter-spacing: -3px;
+  }
+}
+
+.about-container {
+  @include dFlex($ai: flex-start, $g: 32px);
+  > h3 {
+    font-size: 24px;
+    line-height: 28.8px;
+    font-weight: 700;
+    font-family: "fira code";
+    color: rgba(61, 207, 182, 1);
+  }
+  > p {
+    font-size: 18px;
+    line-height: 21.6px;
+  }
+  > div {
+    @include dFlex($fd: row, $g: 16px);
+    > span {
+      @include dFlex($fd: row, $g: 4px);
+    }
+  }
+}
+
+.btn-container {
+  @include dFlex($fd: row, $g: 32px);
+}
+
+.btn {
+  @include dFlex($fd: row, $g: 10px);
+  z-index: 2;
+  height: 48px;
+  width: auto;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "karla";
+  font-size: 18px;
+  font-weight: 400;
+  min-width: fit-content;
+  border: 1px solid #ffffff;
+  border-radius: 100px;
+  padding: 0px 24px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 125ms ease-in-out;
+  &:hover {
+    color: rgba(61, 207, 182, 1);
+    border-color: rgba(61, 207, 182, 1);
+  }
+}
+
+.img-container {
+  @include dFlex($ai: flex-end, $jc: space-between);
+  height: 100%;
+  > div {
+    cursor: pointer;
+    @include dFlex($fd: row, $g: 8px);
+    transition: all 125ms ease-in-out;
+    color: rgba(61, 207, 182, 1);
+    font-size: 18px;
+    &:hover {
+      color: white;
+      > img {
+        transform: translateX(5px) scale(1.1);
+      }
+    }
+    > img {
+      transition: all 125ms ease-in-out;
+      height: 18px;
+      width: 18px;
+    }
+  }
+}
+
+.close {
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.project {
+  height: auto;
+  max-width: 520px;
+  border-radius: 30px;
+}
