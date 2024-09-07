@@ -38,5 +38,11 @@
     "about": "Worum geht es bei diesem Projekt?",
     "description": "Task-Manager, inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.",
     "next": "Nächstes Projekt"
+  },
+  "join": {
+    "description": "Task-Manager, inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu."
+  },
+  "sharky": {
+    
   }
 }

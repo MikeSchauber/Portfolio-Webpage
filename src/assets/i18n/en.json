@@ -36,7 +36,9 @@
   },
   "projects": {
     "about": "What is this project about ?",
-    "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
     "next": "Next project"
+  },
+  "join": {
+    "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
   }
 }
