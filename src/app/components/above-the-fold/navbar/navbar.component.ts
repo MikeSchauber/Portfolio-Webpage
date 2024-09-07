@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { DialogDataService } from '../../../../services/dialog-data.service';
+import { DialogDataService } from '../../../services/dialog-data.service';
 
 @Component({
   selector: 'app-navbar',
@@ -29,7 +29,7 @@ export class NavbarComponent {
     this.dialogData.open = true;
     setTimeout(() => {
       this.dialogData.opacity = "1";
-      this.dialogData.translationX = "translateY(0px)";
+      this.dialogData.translationY = "translateY(0px)";
       this.dialogData.toggleScrollBehav();
     }, 21);
   }

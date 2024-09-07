@@ -3,12 +3,13 @@
     <app-above-the-fold class="padding-above"></app-above-the-fold>
     <app-about-me id="aboutme" class="padding-about"></app-about-me>
     <app-skill-set id="skills" class="padding-skills"></app-skill-set>
-    <app-portfolio id="portfolio"></app-portfolio>
+    <app-portfolio id="projects"></app-portfolio>
     <app-footer class="padding-"></app-footer>
 </div>
 
 <app-responsive-menu (click)="this.dialogService.closeDialog()" [ngClass]="{'d-none': !this.dialogService.open}"
     [ngStyle]="{opacity: this.dialogService.opacity}" class="dialog"></app-responsive-menu>
 
-<app-project-dialog [ngClass]="{'d-none': !this.dialogService.openProjects}" (click)="this.dialogService.closeDialog()"
+<app-project-dialog [ngClass]="{'d-none': !this.dialogService.openProjects}"
+    [ngStyle]="{opacity: this.dialogService.opacity}" (click)="this.dialogService.closeDialog()"
     class="dialog"></app-project-dialog>

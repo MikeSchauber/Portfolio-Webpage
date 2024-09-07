@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DialogDataService } from '../../../../services/dialog-data.service';
+import { DialogDataService } from '../../../services/dialog-data.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -13,7 +13,11 @@ export class ProjectsComponent {
   constructor(public dialogService: DialogDataService) {}
 
   openDialog() {
-    this.dialogService.openProjects = true;
     this.dialogService.toggleScrollBehav();
+    this.dialogService.openProjects = true;
+    setTimeout(() => {
+      this.dialogService.opacity = '1';
+      this.dialogService.translationX = 'translateX(0px)';
+    }, 21);
   }
 }

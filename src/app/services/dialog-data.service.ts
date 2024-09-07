@@ -5,9 +5,10 @@ import { Injectable, Renderer2, RendererFactory2 } from '@angular/core';
 })
 export class DialogDataService {
   open: boolean = false;
-  openProjects: boolean = true;
+  openProjects: boolean = false;
   noScroll: boolean = false;
-  translationX: string = 'translateY(-150%)';
+  translationY: string = 'translateY(-150%)';
+  translationX: string = 'translateX(150%)';
   opacity: string = '0';
   private renderer: Renderer2;
 
@@ -26,12 +27,14 @@ export class DialogDataService {
   }
 
   closeDialog() {
-    this.translationX = 'translateY(-150%)';
+    this.toggleScrollBehav();
+    this.translationY = 'translateY(-150%)';
+    this.translationX = 'translateX(-150%)';
     this.opacity = '0';
     setTimeout(() => {
       this.open = false;
       this.openProjects = false;
-      this.toggleScrollBehav();
+      this.translationX = 'translateX(150%)';
     }, 125);
   }
 }

@@ -1,4 +1,4 @@
-<div (click)="stopProp($event)" class="responsive-menu" [ngStyle]="{'transform' : this.dialogService.translationX}">
+<div (click)="stopProp($event)" class="responsive-menu" [ngStyle]="{'transform' : this.dialogService.translationY}">
     <div>
         <a (click)="this.dialogService.closeDialog()" href="#aboutme">
             {{ 'menu.aboutMe' | translate }}
@@ -6,7 +6,7 @@
         <a (click)="this.dialogService.closeDialog()" href="#skills">
             {{ 'menu.skills' | translate }}
         </a>
-        <a (click)="this.dialogService.closeDialog()" href="#portfolio">
+        <a (click)="this.dialogService.closeDialog()" href="#projects">
             {{ 'menu.projects' | translate }}
         </a>
         <label class="switch">

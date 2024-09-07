@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { DialogDataService } from '../services/dialog-data.service';
+import { DialogDataService } from './services/dialog-data.service';
 import { CommonModule } from '@angular/common';
 
 @Component({

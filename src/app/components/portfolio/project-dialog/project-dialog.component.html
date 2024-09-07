@@ -1,13 +1,12 @@
-<div (click)="event($event)" class="p-dialog">
+<div (click)="handleClick($event)" [ngStyle]="{'transform': dialogService.translationX}" class="p-dialog">
     <div class="text-container">
         <div class="name-container">
             <h1>01</h1>
             <h2>Join</h2>
         </div>
         <div class="about-container">
-            <h3>What is this project about ?</h3>
-            <p>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions,
-                assign users and categories. </p>
+            <h3>{{ "projects.about" | translate}}</h3>
+            <p>{{ "projects.description" | translate}}</p>
             <div>
                 <span>
                     <img src="assets/skill-icons/green/css.png" alt="">
@@ -39,10 +38,10 @@
         </div>
     </div>
     <div class="img-container">
-        <img class="close" src="assets/icons/close.png" alt="">
+        <img (click)="dialogService.closeDialog()" class="close" src="assets/icons/close.png" alt="">
         <img class="project" src="assets/img/join.png" alt="">
         <div>
-            <span>Next project</span>
+            <span>{{ "projects.next" | translate}}</span>
             <img src="assets/icons/arrow-forward.png" alt="">
         </div>
     </div>
