@@ -24,11 +24,13 @@ export class ProjectDialogComponent {
   }
 
   nextProject() {
-    this.projectData.currentProject++;
-    this.dialogService.closeDialog();
-    let project =
-      this.projectData.availableProjects[this.projectData.currentProject];
-    this.openDialog(project, this.projectData.currentProject);
+    let maxIndex = this.projectData.availableProjects.length;
+    let currentIndex = this.projectData.currentProject;
+
+    // this.dialogService.closeDialog();
+    // let project =
+    //   this.projectData.availableProjects[this.projectData.currentProject];
+    // this.openDialog(project, this.projectData.currentProject);
   }
 
   openDialog(project: string, index: number) {
