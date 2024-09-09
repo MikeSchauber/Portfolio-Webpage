@@ -40,5 +40,11 @@
   },
   "join": {
     "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+  },
+  "sharky": {
+    "description": "A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale."
+  },
+  "pokedex": {
+    "description": "Based on the PokéAPI a simple library that provides and catalogues pokemon information."
   }
 }

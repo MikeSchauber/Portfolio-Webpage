@@ -1,10 +1,9 @@
-export interface ProjectInterface {
-    active: boolean;
+export interface ActiveProject {
     name: string;
     description: string;
-    technologies: number[];
+    technologies: string[];
+    techIconUrl: string[];
     imgUrl: string;
     githubUrl: string;
     liveTestUrl: string;
 }
-

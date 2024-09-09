@@ -2,45 +2,35 @@
     <div class="text-container">
         <div class="name-container">
             <h1>01</h1>
-            <h2>Join</h2>
+            <h2>{{this.projectData.activeProject.name}}</h2>
         </div>
         <div class="about-container">
             <h3>{{ "projects.about" | translate}}</h3>
-            <p>{{ "projects.description" | translate}}</p>
+            <p>{{ this.projectData.activeProject.description| translate}}</p>
             <div>
+                @for (technologie of this.projectData.activeProject.technologies; track $index; let i = $index) {
                 <span>
-                    <img src="assets/skill-icons/green/css.png" alt="">
-                    CSS
+                    <img [src]="this.projectData.activeProject.techIconUrl[i]" alt="">
+                    {{ technologie }}
                 </span>
-                <span>
-                    <img src="assets/skill-icons/green/html.png" alt="">
-                    HTML
-                </span>
-                <span>
-                    <img src="assets/skill-icons/green/firebase.png" alt="">
-                    Firebase
-                </span>
-                <span>
-                    <img src="assets/skill-icons/green/javascript.png" alt="">
-                    JavaScript
-                </span>
+                }
             </div>
         </div>
         <div class="btn-container">
-            <div class="btn">
+            <a [href]="this.projectData.activeProject.githubUrl" class="btn">
                 <span>Github</span>
                 <img src="assets/icons/arrow-outward.png" alt="">
-            </div>
-            <div class="btn">
+            </a>
+            <a [href]="this.projectData.activeProject.liveTestUrl" class="btn">
                 <span>Live Test</span>
                 <img src="assets/icons/arrow-outward.png" alt="">
-            </div>
+            </a>
         </div>
     </div>
     <div class="img-container">
         <img (click)="dialogService.closeDialog()" class="close" src="assets/icons/close.png" alt="">
-        <img class="project" src="assets/img/join.png" alt="">
-        <div>
+        <img class="project" [src]="this.projectData.activeProject.imgUrl" alt="">
+        <div (click)="nextProject()">
             <span>{{ "projects.next" | translate}}</span>
             <img src="assets/icons/arrow-forward.png" alt="">
         </div>

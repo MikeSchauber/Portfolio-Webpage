@@ -1,4 +1,5 @@
 import { Injectable, Renderer2, RendererFactory2 } from '@angular/core';
+import { ProjectServiceService } from './project-data.service';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +13,10 @@ export class DialogDataService {
   opacity: string = '0';
   private renderer: Renderer2;
 
-  constructor(rendererFactory: RendererFactory2) {
+  constructor(
+    public rendererFactory: RendererFactory2,
+    public projectData: ProjectServiceService
+  ) {
     this.renderer = rendererFactory.createRenderer(null, null);
   }
 
@@ -36,5 +40,18 @@ export class DialogDataService {
       this.openProjects = false;
       this.translationX = 'translateX(150%)';
     }, 125);
+    this.disableActiveProjects();
+  }
+
+  disableActiveProjects() {
+    this.projectData.activeProject = {
+      name: '',
+      description: '',
+      technologies: [],
+      techIconUrl: [],
+      imgUrl: '',
+      githubUrl: '',
+      liveTestUrl: '',
+    };
   }
 }

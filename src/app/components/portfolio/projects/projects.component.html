@@ -1,5 +1,5 @@
 <div class="projects-cont">
-    <div (click)="openDialog()"  class="project">
+    <div (click)="openDialog('join', 0)"  class="project">
         <h3>Join</h3>
         <div>
             <span>JavaScript</span>
@@ -8,7 +8,7 @@
             <span>Firebase</span>
         </div>
     </div>
-    <div class="project">
+    <div (click)="openDialog('sharky', 1)" class="project">
         <h3>Sharky</h3>
         <div>
             <span>JavaScript</span>
@@ -16,7 +16,7 @@
             <span>CSS</span>
         </div>
     </div>
-    <div class="project">
+    <div (click)="openDialog('pokedex', 2)" class="project">
         <h3>Pokédex</h3>
         <div>
             <span>Javascript</span>
