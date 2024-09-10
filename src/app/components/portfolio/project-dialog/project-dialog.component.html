@@ -1,7 +1,7 @@
 <div (click)="handleClick($event)" [ngStyle]="{
     'transform': dialogService.translationX,
     'opacity': dialogService.containerOpacity
-}" class="p-dialog">
+}" class="p-dialog hide-mobile">
     <div class="text-container">
         <div class="name-container">
             <h1>{{this.projectData.activeProject.number}}</h1>
@@ -39,3 +39,50 @@
         </div>
     </div>
 </div>
+
+<!-- Mobile version : -->
+
+<div (click)="handleClick($event)" [ngStyle]="{
+    'transform': dialogService.translationX,
+    'opacity': dialogService.containerOpacity
+    }" class="p-dialog show-mobile">
+    <div class="close-cont">
+        <img (click)="dialogService.closeDialog()" class="close" src="assets/icons/close.png" alt="">
+    </div>
+    <img class="project" [src]="this.projectData.activeProject.imgUrl" alt="">
+    <div class="text-container">
+        <div class="name-container">
+            <h1>{{this.projectData.activeProject.number}}</h1>
+            <h2>{{this.projectData.activeProject.name}}</h2>
+        </div>
+        <div class="about-container">
+            <h3>{{ "projects.about" | translate}}</h3>
+            <p>{{ this.projectData.activeProject.description| translate}}</p>
+            <div>
+                @for (technologie of this.projectData.activeProject.technologies; track $index; let i = $index) {
+                <span>
+                    <img [src]="this.projectData.activeProject.techIconUrl[i]" alt="">
+                    {{ technologie }}
+                </span>
+                }
+            </div>
+        </div>
+        <div class="btn-container">
+            <a [href]="this.projectData.activeProject.githubUrl" class="btn">
+                <span>Github</span>
+                <img src="assets/icons/arrow-outward.png" alt="">
+            </a>
+            <a [href]="this.projectData.activeProject.liveTestUrl" class="btn">
+                <span>Live Test</span>
+                <img src="assets/icons/arrow-outward.png" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="img-container">
+
+       
+        <div (click)="nextProject()">
+            <span>{{ "projects.next" | translate}}</span>
+            <img src="assets/icons/arrow-forward.png" alt="">
+        </div>
+    </div>

@@ -13,6 +13,7 @@
 html {
   @include dFlex();
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
