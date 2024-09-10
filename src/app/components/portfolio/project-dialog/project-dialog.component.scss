@@ -83,7 +83,7 @@ img {
   cursor: pointer;
   overflow: hidden;
   transition: all 125ms ease-in-out;
-  >img {
+  > img {
     transition: all 125ms ease-in-out;
   }
   &:hover {
@@ -97,6 +97,7 @@ img {
 
 .img-container {
   @include dFlex($ai: flex-end, $jc: space-between);
+  width: auto;
   height: 100%;
   > div {
     cursor: pointer;
@@ -129,7 +130,6 @@ img {
 }
 
 .project {
-  height: auto;
-  max-width: 520px;
+
   border-radius: 30px;
 }

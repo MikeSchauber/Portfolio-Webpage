@@ -25,7 +25,7 @@ export class ProjectsComponent {
       this.dialogService.translationX = 'translateX(0px)';
     }, 21);
     this.projectData.currentProject = index;
-    this.projectData.setProjectDataInDialog(project);
+    this.projectData.setProjectDataInDialog(project, index);
   }
 
  

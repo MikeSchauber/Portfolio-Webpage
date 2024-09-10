@@ -7,11 +7,10 @@ import { ActiveProject } from '../interfaces/active-project';
 })
 export class ProjectServiceService {
   currentProject: number = 0;
-
   availableProjects: string[] = ['join', 'sharky', 'pokedex'];
 
   activeProject: ActiveProject = {
-    index: '',
+    number: '',
     name: '',
     description: '',
     technologies: [],
@@ -40,7 +39,7 @@ export class ProjectServiceService {
   ];
 
   join: ProjectInterface = {
-    index: "01",
+    number: "01",
     name: 'Join',
     description: 'join.description',
     technologies: [0, 1, 2, 3],
@@ -51,7 +50,7 @@ export class ProjectServiceService {
   };
 
   sharky: ProjectInterface = {
-    index: "02",
+    number: "02",
     name: 'Sharky',
     description: 'sharky.description',
     technologies: [0, 1, 2],
@@ -62,7 +61,7 @@ export class ProjectServiceService {
   };
 
   pokedex: ProjectInterface = {
-    index: "03",
+    number: "03",
     name: 'Pokédex',
     description: 'pokedex.description',
     technologies: [0, 1, 2],
@@ -74,7 +73,8 @@ export class ProjectServiceService {
 
   constructor() { }
 
-  setProjectDataInDialog(project: string) {
+  setProjectDataInDialog(project: string, index: number){
+    this.currentProject = index;
     if (project === 'join') {
       this.SetJoinData();
     } else if (project === 'sharky') {
@@ -99,7 +99,7 @@ export class ProjectServiceService {
   SetJoinData() {
     let techNumbers = this.join.technologies;
     this.setTech(techNumbers);
-    this.activeProject.index = this['join'].index;
+    this.activeProject.number = this['join'].number;
     this.activeProject.name = this['join'].name;
     this.activeProject.description =
       this['join'].description;
@@ -113,7 +113,7 @@ export class ProjectServiceService {
   setPokedexData() {
     let techNumbers = this.pokedex.technologies;
     this.setTech(techNumbers);
-    this.activeProject.index = this['pokedex'].index;
+    this.activeProject.number = this['pokedex'].number;
     this.activeProject.name = this['pokedex'].name;
     this.activeProject.description =
       this['pokedex'].description;
@@ -127,7 +127,7 @@ export class ProjectServiceService {
   setSharkyData() {
     let techNumbers = this.sharky.technologies;
     this.setTech(techNumbers);
-    this.activeProject.index = this['sharky'].index;
+    this.activeProject.number = this['sharky'].number;
     this.activeProject.name = this['sharky'].name;
     this.activeProject.description =
       this['sharky'].description;

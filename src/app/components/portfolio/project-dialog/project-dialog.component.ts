@@ -24,23 +24,44 @@ export class ProjectDialogComponent {
   }
 
   nextProject() {
-    let maxIndex = this.projectData.availableProjects.length;
-    let currentIndex = this.projectData.currentProject;
+    this.projectData.currentProject++;
+    let index =
+      this.projectData.currentProject %
+      this.projectData.availableProjects.length;
 
-    // this.dialogService.closeDialog();
-    // let project =
-    //   this.projectData.availableProjects[this.projectData.currentProject];
-    // this.openDialog(project, this.projectData.currentProject);
+    this.projectData.currentProject = index;
+    this.moveProjectContainer(this.projectData.currentProject);
   }
 
-  openDialog(project: string, index: number) {
-    this.dialogService.toggleScrollBehav();
-    this.dialogService.openProjects = true;
+  moveProjectContainer(index: number) {
+    this.dialogService.translationX = 'translateX(-150%)';
+    this.movingAnimation(index);
+  }
+
+  movingAnimation(index: number) {
     setTimeout(() => {
-      this.dialogService.opacity = '1';
-      this.dialogService.translationX = 'translateX(0px)';
-    }, 21);
-    this.projectData.currentProject = index;
-    this.projectData.setProjectDataInDialog(project);
+      this.dialogService.containerOpacity = '0';
+      setTimeout(() => {
+        this.dialogService.translationX = 'translateX(150%)';
+        setTimeout(() => {
+          this.dialogService.containerOpacity = '1';
+          this.dialogService.disableActiveProjects();
+          this.checkAndSetProject(index);
+          setTimeout(() => {
+            this.dialogService.translationX = 'translateX(0%)';
+          }, 75);
+        }, 75);
+      }, 75);
+    }, 75);
+  }
+
+  checkAndSetProject(index: number) {
+    index === 0
+      ? this.projectData.setProjectDataInDialog('join', index)
+      : index === 1
+      ? this.projectData.setProjectDataInDialog('sharky', index)
+      : index === 2
+      ? this.projectData.setProjectDataInDialog('pokedex', index)
+      : console.error('No next Project exists!');
   }
 }

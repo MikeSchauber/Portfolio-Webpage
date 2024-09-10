@@ -1,7 +1,10 @@
-<div (click)="handleClick($event)" [ngStyle]="{'transform': dialogService.translationX}" class="p-dialog">
+<div (click)="handleClick($event)" [ngStyle]="{
+    'transform': dialogService.translationX,
+    'opacity': dialogService.containerOpacity
+}" class="p-dialog">
     <div class="text-container">
         <div class="name-container">
-            <h1>{{this.projectData.activeProject.index}}</h1>
+            <h1>{{this.projectData.activeProject.number}}</h1>
             <h2>{{this.projectData.activeProject.name}}</h2>
         </div>
         <div class="about-container">

@@ -11,6 +11,7 @@ export class DialogDataService {
   translationY: string = 'translateY(-150%)';
   translationX: string = 'translateX(150%)';
   opacity: string = '0';
+  containerOpacity: string = "";
   private renderer: Renderer2;
 
   constructor(
@@ -45,7 +46,7 @@ export class DialogDataService {
 
   disableActiveProjects() {
     this.projectData.activeProject = {
-      index: '',
+      number: '',
       name: '',
       description: '',
       technologies: [],

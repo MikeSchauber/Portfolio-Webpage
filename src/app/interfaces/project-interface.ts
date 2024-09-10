@@ -1,5 +1,5 @@
 export interface ProjectInterface {
-    index: string;
+    number: string;
     name: string;
     description: string;
     technologies: number[];

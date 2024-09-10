@@ -1,5 +1,5 @@
 export interface ActiveProject {
-    index: string;
+    number: string;
     name: string;
     description: string;
     technologies: string[];
