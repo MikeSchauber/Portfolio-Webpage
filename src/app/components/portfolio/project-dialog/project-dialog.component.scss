@@ -148,14 +148,26 @@
   }
 
   .p-dialog {
+    height: auto;
+    max-height: 100vh;
     flex-direction: column;
     padding: 16px 12px;
+    gap: 32px;
+    overflow-x: hidden;
+
+    
+  }
+  .p-dialog::-webkit-scrollbar {
+    display: none;
   }
 
   .close-cont {
     width: 100%;
-    height: 48px;
     @include dFlex($fd: row, $jc: flex-end);
+    >div {
+      height: 48px;
+      @include dFlex();
+    }
   }
 
   .project {

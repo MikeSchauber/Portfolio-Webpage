@@ -47,7 +47,9 @@
     'opacity': dialogService.containerOpacity
     }" class="p-dialog show-mobile">
     <div class="close-cont">
-        <img (click)="dialogService.closeDialog()" class="close" src="assets/icons/close.png" alt="">
+        <div>
+            <img (click)="dialogService.closeDialog()" class="close" src="assets/icons/close.png" alt="">
+        </div>
     </div>
     <img class="project" [src]="this.projectData.activeProject.imgUrl" alt="">
     <div class="text-container">
@@ -80,7 +82,7 @@
     </div>
     <div class="img-container">
 
-       
+
         <div (click)="nextProject()">
             <span>{{ "projects.next" | translate}}</span>
             <img src="assets/icons/arrow-forward.png" alt="">
