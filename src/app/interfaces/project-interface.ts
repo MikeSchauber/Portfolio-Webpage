@@ -1,5 +1,5 @@
 export interface ProjectInterface {
-    active: boolean;
+    index: string;
     name: string;
     description: string;
     technologies: number[];

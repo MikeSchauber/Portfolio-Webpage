@@ -57,7 +57,7 @@ img {
   > div {
     @include dFlex($fd: row, $g: 16px);
     > span {
-      @include dFlex($fd: row, $g: 4px);
+      @include dFlex($fd: row, $g: 6px);
     }
   }
 }

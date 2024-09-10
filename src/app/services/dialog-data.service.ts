@@ -45,6 +45,7 @@ export class DialogDataService {
 
   disableActiveProjects() {
     this.projectData.activeProject = {
+      index: '',
       name: '',
       description: '',
       technologies: [],

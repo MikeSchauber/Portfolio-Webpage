@@ -11,6 +11,7 @@ export class ProjectServiceService {
   availableProjects: string[] = ['join', 'sharky', 'pokedex'];
 
   activeProject: ActiveProject = {
+    index: '',
     name: '',
     description: '',
     technologies: [],
@@ -39,7 +40,7 @@ export class ProjectServiceService {
   ];
 
   join: ProjectInterface = {
-    active: false,
+    index: "01",
     name: 'Join',
     description: 'join.description',
     technologies: [0, 1, 2, 3],
@@ -50,7 +51,7 @@ export class ProjectServiceService {
   };
 
   sharky: ProjectInterface = {
-    active: false,
+    index: "02",
     name: 'Sharky',
     description: 'sharky.description',
     technologies: [0, 1, 2],
@@ -61,7 +62,7 @@ export class ProjectServiceService {
   };
 
   pokedex: ProjectInterface = {
-    active: false,
+    index: "03",
     name: 'Pokédex',
     description: 'pokedex.description',
     technologies: [0, 1, 2],
@@ -71,9 +72,9 @@ export class ProjectServiceService {
       'https://mike-schauber.developerakademie.net/developer-akademie/pokedex/index.html',
   };
 
-  constructor() {}
+  constructor() { }
 
-   setProjectDataInDialog(project: string) {
+  setProjectDataInDialog(project: string) {
     if (project === 'join') {
       this.SetJoinData();
     } else if (project === 'sharky') {
@@ -98,6 +99,7 @@ export class ProjectServiceService {
   SetJoinData() {
     let techNumbers = this.join.technologies;
     this.setTech(techNumbers);
+    this.activeProject.index = this['join'].index;
     this.activeProject.name = this['join'].name;
     this.activeProject.description =
       this['join'].description;
@@ -111,6 +113,7 @@ export class ProjectServiceService {
   setPokedexData() {
     let techNumbers = this.pokedex.technologies;
     this.setTech(techNumbers);
+    this.activeProject.index = this['pokedex'].index;
     this.activeProject.name = this['pokedex'].name;
     this.activeProject.description =
       this['pokedex'].description;
@@ -124,6 +127,7 @@ export class ProjectServiceService {
   setSharkyData() {
     let techNumbers = this.sharky.technologies;
     this.setTech(techNumbers);
+    this.activeProject.index = this['sharky'].index;
     this.activeProject.name = this['sharky'].name;
     this.activeProject.description =
       this['sharky'].description;
