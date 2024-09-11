@@ -1,66 +1,87 @@
 @import "../../../../mixins.scss";
 
-
 .projects-cont {
-    @include dFlex($ai: flex-start);
-    width: 100%;
-
+  @include dFlex($ai: center, $jc: flex-start);
+  width: 100%;
+  border-top: 2px solid #3dcfb6;
+  border-bottom: 1px solid #3dcfb6;
+  max-width: 1000px;
+  max-height: 342px;
+  overflow-y: auto;
 }
 
 .project {
-    width: 100%;
-    max-width: 1000px;
-    padding: 40px 32px;
-    border-bottom: 1px solid #3DCFB6;
-    @include dFlex($fd: row, $jc: space-between);
-    color: white;
-    z-index: 5;
-    cursor: pointer;
-    transition: all 125ms ease-in-out;
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  padding: 40px 32px;
+  border-bottom: 1px solid #3dcfb6;
+  @include dFlex($fd: row, $jc: space-between);
+  color: white;
+  z-index: 5;
+  cursor: pointer;
+  transition: all 125ms ease-in-out;
 
-    &:hover {
-        background-color: rgba(61, 207, 182, 0.3);
+  &:hover {
+    background-color: rgba(61, 207, 182, 0.3);
+  }
+
+  > h3 {
+    font-family: "fira code";
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  > div {
+    @include dFlex($fd: row);
+
+    > span {
+      font-family: "karla";
+      font-size: 18px;
+      font-weight: 400;
+      border-right: 1px solid #3dcfb6;
+      padding: 0px 8px;
     }
 
-    >h3 {
-        font-family: "fira code";
-        font-size: 24px;
-        font-weight: 700;
+    > span:first-of-type {
+      padding-left: 0;
     }
 
-    >div {
-        @include dFlex($fd: row);
-
-        >span {
-            font-family: "karla";
-            font-size: 18px;
-            font-weight: 400;
-            border-right: 1px solid #3DCFB6;
-            padding: 0px 8px;
-        }
-
-        >span:first-of-type {
-            padding-left: 0;
-        }
-
-        >span:last-of-type {
-            border: 0;
-        }
+    > span:last-of-type {
+      border: 0;
     }
+  }
 }
 
 @media (max-width: 600px) {
-    .project {
-        @include dFlex($fd: column, $ai: flex-start, $jc: space-between);
+  .projects-cont {
+    max-height: 432px;
+  }
+  .project {
+    @include dFlex($fd: column, $ai: flex-start, $jc: space-between);
+    > div {
+      flex-wrap: wrap;
+      justify-content: flex-start;
 
-        >div {
-            flex-wrap: wrap;
-            justify-content: flex-start;
-
-            >span {
-               margin: 4px 0px;
-            }
-        }
-
+      > span {
+        margin: 4px 0px;
+      }
     }
+  }
+}
+
+@media (max-width: 410px) {
+  .projects-cont {
+    max-height: 462px;
+  }
+}
+@media (max-width: 400px) {
+  .projects-cont {
+    max-height: 492px;
+  }
+}
+@media (max-width: 324px) {
+  .projects-cont {
+    max-height: 522px;
+  }
 }

@@ -27,10 +27,10 @@ export class NavbarComponent {
 
   openDialog() {
     this.dialogData.open = true;
+    this.dialogData.toggleScrollBehav();
     setTimeout(() => {
       this.dialogData.opacity = "1";
       this.dialogData.translationY = "translateY(0px)";
-      this.dialogData.noScroll = true;
     }, 21);
   }
 

@@ -7,7 +7,6 @@ div {
     @include dFlex($g: 20px, $ai: flex-start);
     color: #3DCFB6;
     font-family: "karla";
-    border-bottom: 1px solid #3DCFB6;
 
     >span {
         width: 100%;

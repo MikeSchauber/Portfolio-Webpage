@@ -42,7 +42,7 @@
 
 <!-- Mobile version : -->
 
-<div (click)="handleClick($event)" [ngStyle]="{
+<div #scrollContainer (click)="handleClick($event)" [ngStyle]="{
     'transform': dialogService.translationX,
     'opacity': dialogService.containerOpacity
     }" class="p-dialog show-mobile">

@@ -10,6 +10,10 @@
   display: none !important;
 }
 
+.noScroll {
+  overflow: hidden !important;
+}
+
 html {
   @include dFlex();
   scroll-behavior: smooth;
@@ -25,10 +29,6 @@ body {
   background-repeat: no-repeat;
   cursor: url("../src/assets/cursor.png"), auto;
   font-family: "karla";
-}
-
-.noScroll {
-  overflow: hidden;
 }
 
 .mover {

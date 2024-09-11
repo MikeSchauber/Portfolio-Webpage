@@ -1,4 +1,4 @@
-import { Injectable, Renderer2, RendererFactory2 } from '@angular/core';
+import { Injectable, OnChanges, Renderer2, RendererFactory2, SimpleChanges } from '@angular/core';
 import { ProjectServiceService } from './project-data.service';
 
 @Injectable({
@@ -21,8 +21,18 @@ export class DialogDataService {
     this.renderer = rendererFactory.createRenderer(null, null);
   }
 
+  toggleScrollBehav() {
+    if (!this.noScroll) {
+      this.noScroll = true;
+      this.renderer.addClass(document.documentElement, 'noScroll');
+    } else {
+      this.noScroll = false;
+      this.renderer.removeClass(document.documentElement, 'noScroll');
+    }
+  }
+
   closeDialog() {
-    this.noScroll = false;
+    this.toggleScrollBehav();
     this.translationY = 'translateY(-150%)';
     this.translationX = 'translateX(-150%)';
     this.opacity = '0';
