@@ -21,18 +21,8 @@ export class DialogDataService {
     this.renderer = rendererFactory.createRenderer(null, null);
   }
 
-  toggleScrollBehav() {
-    if (!this.noScroll) {
-      this.noScroll = true;
-      this.renderer.addClass(document.body, 'noScroll');
-    } else {
-      this.noScroll = false;
-      this.renderer.removeClass(document.body, 'noScroll');
-    }
-  }
-
   closeDialog() {
-    this.toggleScrollBehav();
+    this.noScroll = false;
     this.translationY = 'translateY(-150%)';
     this.translationX = 'translateX(-150%)';
     this.opacity = '0';

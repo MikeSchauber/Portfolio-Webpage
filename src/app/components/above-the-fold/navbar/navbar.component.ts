@@ -30,7 +30,7 @@ export class NavbarComponent {
     setTimeout(() => {
       this.dialogData.opacity = "1";
       this.dialogData.translationY = "translateY(0px)";
-      this.dialogData.toggleScrollBehav();
+      this.dialogData.noScroll = true;
     }, 21);
   }
 

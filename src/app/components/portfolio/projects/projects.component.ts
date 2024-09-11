@@ -18,7 +18,7 @@ export class ProjectsComponent {
   ) {}
 
   openDialog(project: string, index: number) {
-    this.dialogService.toggleScrollBehav();
+    this.dialogService.noScroll = true;
     this.dialogService.openProjects = true;
     setTimeout(() => {
       this.dialogService.opacity = '1';

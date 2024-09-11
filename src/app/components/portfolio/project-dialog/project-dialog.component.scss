@@ -149,13 +149,13 @@
 
   .p-dialog {
     height: auto;
-    max-height: 100vh;
+    max-height: 844px;
+    max-width: 366px;
     flex-direction: column;
     padding: 16px 12px;
     gap: 32px;
     overflow-x: hidden;
-
-    
+    border-radius: 20px;
   }
   .p-dialog::-webkit-scrollbar {
     display: none;
@@ -164,7 +164,7 @@
   .close-cont {
     width: 100%;
     @include dFlex($fd: row, $jc: flex-end);
-    >div {
+    > div {
       height: 48px;
       @include dFlex();
     }
@@ -175,5 +175,74 @@
     width: 100%;
     max-width: 342px;
     border-radius: 30px;
+  }
+
+  .name-container {
+    @include dFlex($ai: flex-start, $g: 8px);
+    > h1 {
+      font-size: 72px;
+      line-height: 72px;
+    }
+
+    > h2 {
+      font-size: 56px;
+      line-height: 44.8px;
+    }
+  }
+
+  .text-container {
+    width: 100%;
+    max-width: 366px;
+  }
+
+  .about-container {
+    width: 100%;
+    height: auto;
+    @include dFlex($ai: flex-start, $g: 20px);
+    > h3 {
+      font-size: 20px;
+      line-height: 24px;
+      color: rgba(61, 207, 182, 1);
+    }
+    > p {
+      font-size: 16px;
+      line-height: 19.2px;
+    }
+    > div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      > span {
+        > img {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+  }
+
+  .btn-container {
+    width: 100%;
+    @include dFlex($fd: row, $g: 32px);
+    justify-content: space-evenly;
+  }
+
+  .img-container {
+    width: 100%;
+
+    >div {
+      margin-right: 25px;
+      width: 100%;
+      @include dFlex($fd: row ,$jc: flex-end, $g: 8px);
+    }
+  }
+}
+
+@media (max-width: 365px) {
+  .btn-container {
+    width: 100%;
+    @include dFlex($fd: column, $g: 8px);
+    justify-content: space-evenly;
   }
 }
