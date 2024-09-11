@@ -8,6 +8,7 @@ import { SkillSetComponent } from '../components/skill-set/skill-set.component';
 import { PortfolioComponent } from '../components/portfolio/portfolio.component';
 import { ResponsiveMenuComponent } from '../components/above-the-fold/responsive-menu/responsive-menu.component';
 import { ProjectDialogComponent } from '../components/portfolio/project-dialog/project-dialog.component';
+import { ReferencesComponent } from '../components/references/references.component';
 
 @Component({
   selector: 'app-main-page',
@@ -21,6 +22,7 @@ import { ProjectDialogComponent } from '../components/portfolio/project-dialog/p
     AboutMeComponent,
     SkillSetComponent,
     PortfolioComponent,
+    ReferencesComponent,
   ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss',
