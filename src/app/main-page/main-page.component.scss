@@ -37,6 +37,7 @@
   top: 0;
   transition: all 125ms ease-in-out;
   padding: 0px 96px;
+  backdrop-filter: blur(3px);
 }
 
 @media (max-width: 1000px) {

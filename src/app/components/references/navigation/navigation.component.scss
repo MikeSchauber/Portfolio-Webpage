@@ -1,0 +1,39 @@
+@import "../../../../mixins.scss";
+
+div {
+  @include dFlex($fd: row);
+  gap: 20px;
+  > img {
+    filter: brightness(100);
+  }
+}
+
+.dot {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.active {
+  filter: brightness(1) !important;
+}
+
+.arrow {
+  cursor: pointer;
+  transition: all 125ms ease-in-out;
+}
+
+.arrow-back {
+      transition: all 125ms ease-in-out;
+  &:hover {
+    transform: translateX(-5px) scale(1.1);
+    filter: brightness(1) !important;
+  }
+}
+
+.arrow-next {
+      transition: all 125ms ease-in-out;
+  &:hover {
+    transform: translateX(5px) scale(1.1);
+    filter: brightness(1) !important;
+  }
+}

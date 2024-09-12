@@ -1,11 +1,13 @@
 <div class="quotes-container">
-    <div>
-
+    @for (quote of control.quotes; track $index; let i = $index) {
+    <div [ngStyle]="{'transform' : control.transform[quote.position]}" class="quote">
+        <img src="assets/img/quote.png" alt="">
+        <span>{{quote.quote}}</span>
+        <div class="sign-container">
+            <div></div>
+            <span>{{quote.autor}}</span>
+        </div>
     </div>
-    <div class="quote">
-        <img src="" alt="">
-    </div>
-    <div>
-
-    </div>
+    }
 </div>
+

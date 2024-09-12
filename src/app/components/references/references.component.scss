@@ -5,10 +5,12 @@
   width: 100%;
   color: white;
   @include dFlex($g: 48px);
+  gap: 90px;
   > h3 {
     font-family: "fira code";
     font-size: 32px;
     font-weight: 700;
     color: rgba(61, 207, 182, 1);
+    text-align: center;
   }
 }

@@ -1,15 +1,37 @@
 @import "../../../../mixins.scss";
 
 .quotes-container {
-  @include dFlex();
+  @include dFlex($fd: row, $g: 64px);
   width: 100%;
   height: 274px;
 }
 
 .quote {
-    @include dFlex();
-    position: relative;
-    >img {
-        position: absolute;
-    }
+  @include dFlex($g: 44px);
+  position: absolute;
+  width: 632px;
+  border: 1px solid rgba(61, 207, 182, 1);
+  border-radius: 32px;
+  padding: 48px 40px;
+  background-color: rgba(61, 207, 182, 0.3);
+  transition: all 300ms ease-in-out;
+  > img {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+  }
+}
+
+.sign-container {
+  @include dFlex($g: 16px);
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  > div {
+    border-top: 1px solid white;
+    width: 100%;
+  }
+  > span {
+    min-width: fit-content;
+  }
 }
