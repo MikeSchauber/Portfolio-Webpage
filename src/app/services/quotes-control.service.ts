@@ -32,6 +32,8 @@ export class QuotesControlService {
     'translateX(120%)',
   ];
 
+  hide: boolean[] = [false, false, false];
+
   activeQuote: number = 0;
 
   constructor() {}

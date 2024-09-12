@@ -20,26 +20,39 @@ export class NavigationComponent {
     if (this.control.activeQuote === -1) {
       this.control.activeQuote = this.control.quotes.length - 1;
     }
-    this.animatePrevious(this.control.activeQuote);
+    this.animatePrevious();
   }
 
   nextQuote() {
     this.control.activeQuote++;
     let index = this.control.activeQuote % this.control.quotes.length;
     this.control.activeQuote = index;
-    this.animateNext(index);
+    this.animateNext();
   }
 
-  animateNext(index: number) {
+  animateNext() {
     this.control.quotes.forEach((quote) => {
       quote.position--;
       if (quote.position < 0) {
         quote.position = 2;
+        this.control.transform[quote.position] = 'translateX(-250%)';
+        setTimeout(() => {
+          this.control.hide[quote.position] = true;
+          setTimeout(() => {
+            this.control.transform[quote.position] = 'translateX(150%)';
+            setTimeout(() => {
+              this.control.hide[quote.position] = false;
+              setTimeout(() => {
+                this.control.transform[quote.position] = 'translateX(120%)';
+              }, 99);
+            }, 1);
+          }, 25);
+        }, 175);
       }
     });
   }
 
-  animatePrevious(index: number) {
+  animatePrevious() {
     this.control.quotes.forEach((quote) => {
       quote.position++;
       if (quote.position >= this.control.quotes.length) {
