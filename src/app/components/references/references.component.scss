@@ -4,7 +4,7 @@
   height: 100vh;
   width: 100%;
   color: white;
-  @include dFlex();
+  @include dFlex($g: 48px);
   > h3 {
     font-family: "fira code";
     font-size: 32px;

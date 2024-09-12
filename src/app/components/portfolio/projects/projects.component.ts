@@ -12,6 +12,9 @@ import { ProjectDialogComponent } from '../project-dialog/project-dialog.compone
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
+  showImg: boolean = false;
+  imgAnimation: boolean = false;
+  imgSrcWhenHover: string = '';
   constructor(
     public dialogService: DialogDataService,
     public projectData: ProjectServiceService
@@ -28,5 +31,33 @@ export class ProjectsComponent {
     this.projectData.setProjectDataInDialog(project, index);
   }
 
- 
+  hoverProject(index: number) {
+    if (index === 0) {
+      this.imgSrcWhenHover = 'assets/img/join.png';
+    } else if (index === 1) {
+      this.imgSrcWhenHover = 'assets/img/sharky.png';
+    } else if (index === 2) {
+      this.imgSrcWhenHover = 'assets/img/pokedex.png';
+    }
+    this.hoverAnimation();
+  }
+
+  hoverAnimation() {
+    setTimeout(() => {
+      this.showImg = true;
+      setTimeout(() => {
+        this.imgAnimation = true;
+      }, 10);
+    }, 11);
+  }
+
+  leaveProject() {
+
+    setTimeout(() => {
+      this.imgAnimation = false;
+      setTimeout(() => {
+        this.showImg = false;
+      }, 1);
+    }, 2);
+  }
 }

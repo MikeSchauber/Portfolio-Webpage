@@ -1,0 +1,15 @@
+@import "../../../../mixins.scss";
+
+.quotes-container {
+  @include dFlex();
+  width: 100%;
+  height: 274px;
+}
+
+.quote {
+    @include dFlex();
+    position: relative;
+    >img {
+        position: absolute;
+    }
+}
