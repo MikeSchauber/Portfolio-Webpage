@@ -7,34 +7,46 @@ import { Quote } from '../interfaces/quote';
 export class QuotesControlService {
   quotes: Quote[] = [
     {
-      position: 2,
-      quote:
-        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur praesentium dignissimos eius! Recusandae et, error ratione quisquam ipsum tempora velit, cupiditate unde optio expedita quaerat porro consectetur, ipsa eaque itaque.',
+      position: 4,
+      quote: "4",
       autor: 'Jan Steiner - Frontend Developer',
     },
     {
-      position: 1,
-      quote:
-        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur praesentium dignissimos eius! Recusandae et, error ratione quisquam ipsum tempora velit, cupiditate unde optio expedita quaerat porro consectetur, ipsa eaque itaque.',
+      position: 3,
+      quote: "3",
       autor: 'Max Mustermann - Friend',
     },
     {
+      position: 2,
+      quote: "2",
+      autor: 'Günther Margit - Mentor',
+    },
+    {
+      position: 1,
+      quote: "1",
+      autor: 'Heinrich Friedhelm - Mentor',
+    },
+    {
       position: 0,
-      quote:
-        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur praesentium dignissimos eius! Recusandae et, error ratione quisquam ipsum tempora velit, cupiditate unde optio expedita quaerat porro consectetur, ipsa eaque itaque.',
+      quote: "0",
       autor: 'Erika Musterfrau - Mentor',
     },
+
   ];
 
   transform: string[] = [
+    'translateX(-220%)',
     'translateX(-120%)',
     'translateX(0%)',
     'translateX(120%)',
+    'translateX(220%)',
   ];
 
-  hide: boolean[] = [false, false, false];
+  transtionStyle: string = "transform 0.3s ease-in-out";
+
+  hide: boolean[] = [false, false, false, false, false];
 
   activeQuote: number = 0;
 
-  constructor() {}
+  constructor() { }
 }

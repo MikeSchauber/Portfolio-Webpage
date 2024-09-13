@@ -1,7 +1,7 @@
 <div>
     <img (click)="previousQuote()" class="arrow arrow-back" src="assets/icons/arrow_back.png" alt="">
-    <img (click)="moveToQuote(0)" class="dot" [class]="{'active' : control.activeQuote == 0}" src="assets/icons/dot.png" alt="">
-    <img (click)="moveToQuote(1)" class="dot" [class]="{'active' : control.activeQuote == 1}" src="assets/icons/dot.png" alt="">
-    <img (click)="moveToQuote(2)" class="dot" [class]="{'active' : control.activeQuote == 2}" src="assets/icons/dot.png" alt="">
+@for (item of control.quotes; track $index; let i = $index) {
+    <img (click)="moveToQuote(i)" class="dot" [class]="{'active' : control.activeQuote == i}" src="assets/icons/dot.png" alt="">
+}
     <img (click)="nextQuote()" class="arrow arrow-next" src="assets/icons/arrow-forward-green.png" alt="">
 </div>

@@ -9,7 +9,7 @@ import { QuotesControlService } from '../../../services/quotes-control.service';
   styleUrl: './navigation.component.scss',
 })
 export class NavigationComponent {
-  constructor(public control: QuotesControlService) {}
+  constructor(public control: QuotesControlService) { }
 
   moveToQuote(index: number) {
     this.control.activeQuote = index;
@@ -32,23 +32,18 @@ export class NavigationComponent {
 
   animateNext() {
     this.control.quotes.forEach((quote) => {
-      quote.position--;
-      if (quote.position < 0) {
-        quote.position = 2;
-        this.control.transform[quote.position] = 'translateX(-250%)';
+      if (quote.position > 0) {
+        quote.position--;
+      } else if (quote.position === 0) {
+        quote.position = this.control.quotes.length - 1;
+        this.control.hide[quote.position] = true;
         setTimeout(() => {
-          this.control.hide[quote.position] = true;
-          setTimeout(() => {
-            this.control.transform[quote.position] = 'translateX(150%)';
-            setTimeout(() => {
-              this.control.hide[quote.position] = false;
-              setTimeout(() => {
-                this.control.transform[quote.position] = 'translateX(120%)';
-              }, 99);
-            }, 1);
-          }, 25);
-        }, 175);
+          this.control.hide[quote.position] = false;
+        }, 300);
+      } else {
+        quote.position = this.control.quotes.length -1;
       }
+      console.log(quote.position);
     });
   }
 
