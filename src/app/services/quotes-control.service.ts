@@ -35,11 +35,11 @@ export class QuotesControlService {
   ];
 
   transform: string[] = [
-    'translateX(-220%)',
+    'translateX(-240%)',
     'translateX(-120%)',
     'translateX(0%)',
     'translateX(120%)',
-    'translateX(220%)',
+    'translateX(240%)',
   ];
 
   transtionStyle: string = "transform 0.3s ease-in-out";
@@ -47,6 +47,8 @@ export class QuotesControlService {
   hide: boolean[] = [false, false, false, false, false];
 
   activeQuote: number = 0;
+
+  controlActive: boolean = false;
 
   constructor() { }
 }
