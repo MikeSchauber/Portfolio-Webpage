@@ -35,11 +35,11 @@ export class QuotesControlService {
   ];
 
   transform: string[] = [
-    'translateX(-240%)',
-    'translateX(-120%)',
+    'translateX(-240%) scale(0.8)',
+    'translateX(-120%) scale(0.8)',
     'translateX(0%)',
-    'translateX(120%)',
-    'translateX(240%)',
+    'translateX(120%) scale(0.8)',
+    'translateX(240%) scale(0.8)',
   ];
 
   transtionStyle: string = "transform 0.3s ease-in-out";
