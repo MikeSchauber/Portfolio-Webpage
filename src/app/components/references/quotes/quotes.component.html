@@ -1,4 +1,5 @@
 <div class="quotes-container">
+
     @for (quote of control.quotes; track $index; let i = $index) {
     <div [ngClass]="{'d-none' : control.hide[quote.position]}" [ngStyle]="{'transform' : control.transform[quote.position]}" class="quote">
         <img src="assets/img/quote.png" alt="">
@@ -10,3 +11,4 @@
     </div>
     }
 </div>
+<div class="shadow-container"></div>
