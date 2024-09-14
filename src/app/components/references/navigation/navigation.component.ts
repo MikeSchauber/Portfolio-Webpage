@@ -15,10 +15,6 @@ export class NavigationComponent {
     this.quotes = this.control.quotes.length - 1;
   }
 
-  moveToQuote(index: number) {
-    this.control.activeQuote = index;
-  }
-
   previousQuote() {
     if (!this.control.controlActive) {
       this.control.controlActive = true;

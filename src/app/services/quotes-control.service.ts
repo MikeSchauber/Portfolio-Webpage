@@ -31,8 +31,9 @@ export class QuotesControlService {
       quote: "0",
       autor: 'Erika Musterfrau - Mentor',
     },
-
   ];
+
+  realQuotes: number[] = [0];
 
   transform: string[] = [
     'translateX(-240%) scale(0.8)',

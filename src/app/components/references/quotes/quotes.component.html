@@ -3,7 +3,7 @@
     @for (quote of control.quotes; track $index; let i = $index) {
     <div [ngClass]="{'d-none' : control.hide[quote.position]}" [ngStyle]="{'transform' : control.transform[quote.position]}" class="quote">
         <img src="assets/img/quote.png" alt="">
-        <span>{{quote.position}}</span>
+        <span class="text">{{quote.position}}</span>
         <div class="sign-container">
             <div></div>
             <span>{{quote.autor}}</span>
