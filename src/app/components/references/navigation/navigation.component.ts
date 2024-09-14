@@ -18,10 +18,16 @@ export class NavigationComponent {
   previousQuote() {
     if (!this.control.controlActive) {
       this.control.controlActive = true;
-      this.control.activeQuote--;
-      if (this.control.activeQuote === -1) {
-        this.control.activeQuote = this.control.quotes.length - 1;
+      if (this.control.realQuotes.length > 1) {
+        this.control.activeQuote--;
+        if (this.control.activeQuote === -1) {
+          this.control.activeQuote = this.control.realQuotes.length - 1;
+        }
+      } else {
+        this.control.activeQuote = 0;
       }
+      console.log(this.control.activeQuote);
+      
       this.animatePrevious();
     }
   }
@@ -29,9 +35,15 @@ export class NavigationComponent {
   nextQuote() {
     if (!this.control.controlActive) {
       this.control.controlActive = true;
-      this.control.activeQuote++;
-      let index = this.control.activeQuote % this.control.quotes.length;
-      this.control.activeQuote = index;
+      if (this.control.realQuotes.length > 1) {
+        this.control.activeQuote++;
+        let index = this.control.activeQuote % this.control.realQuotes.length;
+        this.control.activeQuote = index;
+      } else {
+        this.control.activeQuote = 0;
+      }
+      console.log(this.control.activeQuote);
+      
       this.animateNext();
     }
   }

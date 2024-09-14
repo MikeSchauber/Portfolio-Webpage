@@ -33,7 +33,7 @@ export class QuotesControlService {
     },
   ];
 
-  realQuotes: number[] = [0];
+  realQuotes: number[] = [0, 1];
 
   transform: string[] = [
     'translateX(-240%) scale(0.8)',
