@@ -18,7 +18,7 @@ export class ProjectsComponent {
   constructor(
     public dialogService: DialogDataService,
     public projectData: ProjectServiceService
-  ) {}
+  ) { }
 
   openDialog(project: string, index: number) {
     this.dialogService.toggleScrollBehav();
@@ -45,19 +45,18 @@ export class ProjectsComponent {
   hoverAnimation() {
     setTimeout(() => {
       this.showImg = true;
-      setTimeout(() => {
-        this.imgAnimation = true;
-      }, 10);
-    }, 11);
+    }, 1);
+    setTimeout(() => {
+      this.imgAnimation = true;
+    }, 2);
   }
 
   leaveProject() {
-
     setTimeout(() => {
       this.imgAnimation = false;
-      setTimeout(() => {
-        this.showImg = false;
-      }, 1);
     }, 2);
+    setTimeout(() => {
+      this.showImg = false;
+    }, 1);
   }
 }
