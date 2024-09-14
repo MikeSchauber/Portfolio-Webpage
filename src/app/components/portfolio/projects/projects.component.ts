@@ -54,9 +54,9 @@ export class ProjectsComponent {
   leaveProject() {
     setTimeout(() => {
       this.imgAnimation = false;
-    }, 2);
+    }, 1);
     setTimeout(() => {
       this.showImg = false;
-    }, 1);
+    }, 2);
   }
 }
