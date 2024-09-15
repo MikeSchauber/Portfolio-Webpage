@@ -9,6 +9,7 @@ import { PortfolioComponent } from '../components/portfolio/portfolio.component'
 import { ResponsiveMenuComponent } from '../components/above-the-fold/responsive-menu/responsive-menu.component';
 import { ProjectDialogComponent } from '../components/portfolio/project-dialog/project-dialog.component';
 import { ReferencesComponent } from '../components/references/references.component';
+import { FormularComponent } from '../components/formular/formular.component';
 
 @Component({
   selector: 'app-main-page',
@@ -23,6 +24,7 @@ import { ReferencesComponent } from '../components/references/references.compone
     SkillSetComponent,
     PortfolioComponent,
     ReferencesComponent,
+    FormularComponent,
   ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss',

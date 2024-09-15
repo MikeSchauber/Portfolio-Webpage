@@ -7,33 +7,41 @@ import { Quote } from '../interfaces/quote';
 export class QuotesControlService {
   quotes: Quote[] = [
     {
+      position: 5,
+      quote: 'quotes.quote_1',
+      autor: 'Jan Steiner - Frontend Developer'
+    },
+    {
       position: 4,
-      quote: "4",
-      autor: 'Jan Steiner - Frontend Developer',
+      quote: 'quotes.quote_2',
+      autor: 'Kai Schulz - Freelance Webdesigner'
     },
     {
       position: 3,
-      quote: "3",
-      autor: 'Max Mustermann - Friend',
+      quote: 'quotes.quote_3',
+      autor: 'Ertugrul K. - Frontend Developer'
     },
     {
       position: 2,
-      quote: "2",
-      autor: 'Günther Margit - Mentor',
+      quote: 'quotes.quote_1',
+      autor: 'Jan Steiner - Frontend Developer'
     },
     {
       position: 1,
-      quote: "1",
-      autor: 'Heinrich Friedhelm - Mentor',
+      quote: 'quotes.quote_2',
+      autor: 'Kai Schulz - Freelance Webdesigner'
     },
     {
       position: 0,
-      quote: "0",
-      autor: 'Erika Musterfrau - Mentor',
-    },
+      quote: 'quotes.quote_3',
+      autor: 'Ertugrul K. - Frontend Developer'
+    }
   ];
+  
+  
 
-  realQuotes: number[] = [0, 1];
+
+  realQuotes: number[] = [0, 1, 2];
 
   transform: string[] = [
     'translateX(-240%) scale(0.8)',
@@ -41,11 +49,10 @@ export class QuotesControlService {
     'translateX(0%)',
     'translateX(120%) scale(0.8)',
     'translateX(240%) scale(0.8)',
+    'translateX(360%) scale(0.8)',
   ];
 
-  transtionStyle: string = "transform 0.3s ease-in-out";
-
-  hide: boolean[] = [false, false, false, false, false];
+  hide: boolean[] = [false, false, false, false, false, false];
 
   activeQuote: number = 0;
 

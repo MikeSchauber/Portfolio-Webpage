@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { QuotesControlService } from '../../../services/quotes-control.service';
+import { Quote } from '../../../interfaces/quote';
 
 @Component({
   selector: 'app-navigation',
@@ -26,8 +27,7 @@ export class NavigationComponent {
       } else {
         this.control.activeQuote = 0;
       }
-      console.log(this.control.activeQuote);
-      
+
       this.animatePrevious();
     }
   }
@@ -42,8 +42,6 @@ export class NavigationComponent {
       } else {
         this.control.activeQuote = 0;
       }
-      console.log(this.control.activeQuote);
-      
       this.animateNext();
     }
   }
@@ -55,10 +53,7 @@ export class NavigationComponent {
       } else if (quote.position === 0) {
         quote.position = this.quotes;
         this.control.hide[quote.position] = true;
-        setTimeout(() => {
-          this.control.hide[quote.position] = false;
-          this.control.controlActive = false;
-        }, 300);
+        this.displayTimeoutReset(quote);
       } else {
         quote.position = this.quotes;
       }
@@ -72,13 +67,18 @@ export class NavigationComponent {
       } else if (quote.position === this.quotes) {
         quote.position = 0;
         this.control.hide[quote.position] = true;
-        setTimeout(() => {
-          this.control.hide[quote.position] = false;
-          this.control.controlActive = false;
-        }, 300);
+        this.displayTimeoutReset(quote);
       } else {
         quote.position = 0;
       }
     });
+  }
+
+  displayTimeoutReset(quote: Quote) {
+    console.log(quote);
+    setTimeout(() => {
+      this.control.hide[quote.position] = false;
+      this.control.controlActive = false;
+    }, 300);
   }
 }

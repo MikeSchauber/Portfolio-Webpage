@@ -46,5 +46,11 @@
   },
   "pokedex": {
     "description": "Based on the PokéAPI a simple library that provides and catalogues pokemon information."
+  },
+  "quotes": {
+    "headline": "What my colleagues say about me",
+    "quote_1": "Mike was a pleasant teammate who always listened attentively and provided valuable input. His proactive approach was particularly impressive.",
+    "quote_2": "Mike's 2D game Sharkie stands out with smooth gameplay and appealing visuals. Testing it was a lot of fun.",
+    "quote_3": "The animations in Mike's Join project were fun and creative. The option to edit tasks without drag-and-drop was a practical alternative."
   }
 }
