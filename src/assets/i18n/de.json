@@ -34,9 +34,13 @@
     "letsTalk": "Lass uns reden",
     "interest": "Ich habe ein besonderes Interesse diese Technologien zu erlernen"
   },
+  "portfolio": {
+    "title": "Portfolio",
+    "featuredProjects": "Meine Projekte",
+    "description": "Entdecken Sie hier eine Auswahl meiner Arbeiten - interagieren Sie mit den Projekten, um die Projekte zu testen."
+  },
   "projects": {
     "about": "Worum geht es bei diesem Projekt?",
-    "description": "Task-Manager, inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.",
     "next": "Nächstes Projekt"
   },
   "join": {

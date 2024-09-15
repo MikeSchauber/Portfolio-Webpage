@@ -34,6 +34,11 @@
     "letsTalk": "Let's Talk",
     "interest": "I have a special interest in learning"
   },
+  "portfolio": {
+    "title": "Portfolio",
+    "featuredProjects": "Featured Projects",
+    "description": "Explore a selection of my work here - interact with projects to see my skills in action"
+  },
   "projects": {
     "about": "What is this project about ?",
     "next": "Next project"
