@@ -35,8 +35,23 @@ form {
 }
 
 .validate-container {
-    @include dFlex($g: 16px);
+    @include dFlex($g: 48px);
     width: 100%;
+
+    >p {
+        >img {
+            margin-right: 8px;
+        }
+
+        >span {
+            transition: all 100ms ease-in-out;
+            color: #3DCFB6;
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
 }
 
 .btn-container {

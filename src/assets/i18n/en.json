@@ -65,5 +65,15 @@
     "description": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
     "frontendDeveloper": "Need a Frontend developer?",
     "talk": "Let’s talk!"
+  },
+  "input": {
+    "name": "What's your name?",
+    "email": "What's your email?",
+    "help": "How can I help you?",
+    "placeholderName": "your name goes here",
+    "placeholderEmail": "youremail@email.com",
+    "placeholderHelp": "Hello Mike, I am interested in...",
+    "privacy": "I've read the privacy policy and agree to the processing of my data as outlined.",
+    "submitButton": "Say Hello ;)"
   }
 }
