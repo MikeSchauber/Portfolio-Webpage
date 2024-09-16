@@ -15,17 +15,18 @@
   width: 100%;
   height: 100%;
   @include dFlex($g: 20px);
-  > p {
+}
+ 
+.maincont {
+  width: 100%;
+  @include dFlex($fd: row, $jc: space-evenly, $ai: flex-start);
+  >div:first-of-type {
+    @include dFlex($g: 20px, $ai: flex-start);
     width: 100%;
     font-size: 24px;
     font-weight: 700;
     color: rgba(61, 207, 182, 1);
   }
-}
-
-.maincont {
-  width: 100%;
-  @include dFlex($fd: row, $jc: space-evenly, $ai: flex-start);
 }
 
 .text {
@@ -83,6 +84,8 @@
 }
 
 .icons {
+  position: relative;
+  top: 48px;
   width: 100%;
   height: 100%;
   max-width: 632px;
