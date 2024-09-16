@@ -19,7 +19,7 @@
  
 .maincont {
   width: 100%;
-  @include dFlex($fd: row, $jc: space-evenly, $ai: flex-start);
+  @include dFlex($fd: row, $ai: flex-start);
   >div:first-of-type {
     @include dFlex($g: 20px, $ai: flex-start);
     width: 100%;
