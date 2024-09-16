@@ -1,0 +1,64 @@
+@import "../../../../mixins.scss";
+
+form {
+    @include dFlex($g: 40px);
+    width: 616px;
+}
+
+.input-container {
+    @include dFlex();
+    border-top: 1px solid #3DCFB6;
+    border-bottom: 1px solid #3DCFB6;
+    width: 100%;
+
+    >div {
+        @include dFlex($ai: flex-start, $g: 16px);
+        padding: 32px;
+        border-top: 1px solid #3DCFB6;
+        border-bottom: 1px solid #3DCFB6;
+        width: 100%;
+
+        >span {
+            font-family: "fira code";
+            font-weight: 500;
+            font-size: 24px;
+            color: #3DCFB6;
+        }
+
+        >input {
+            font-size: 18px;
+            border: 0;
+            background: 0;
+            color: white;
+        }
+    }
+}
+
+.validate-container {
+    @include dFlex($g: 16px);
+    width: 100%;
+}
+
+.btn-container {
+    @include dFlex($fd: row, $g: 48px);
+    height: 48px;
+    width: auto;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #ffffff00;
+    font-family: "karla";
+    font-size: 18px;
+    font-weight: 400;
+    min-width: fit-content;
+    border: 1px solid #ffffff;
+    border-radius: 100px;
+    padding: 0px 24px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 125ms ease-in-out;
+
+    &:hover {
+        color: rgba(61, 207, 182, 1);
+        border-color: rgba(61, 207, 182, 1);
+    }
+}

@@ -1,23 +1,26 @@
 <div class="skill-background">
     <div class="container">
-        <p>Technologies</p>
-        <div class="maincont">
-            <div class="text">
-                <h2>{{ 'skillset.skillSet' | translate }}</h2>
-                <div>
-                    <p>{{ 'skillset.description' | translate }}</p>
-                    <h3 class="another-c">
-                        {{ 'skillset.anotherSkillText' | translate }}
-                        <span>{{ 'skillset.anotherSkillSpan' | translate }}</span>
-                    </h3>
 
-                    <p class="last-text">{{ 'skillset.contactText' | translate }}</p>
+        <div class="maincont">
+            <div>
+                <p>Technologies</p>
+                <div class="text">
+                    <h2>{{ 'skillset.skillSet' | translate }}</h2>
+                    <div>
+                        <p>{{ 'skillset.description' | translate }}</p>
+                        <h3 class="another-c">
+                            {{ 'skillset.anotherSkillText' | translate }}
+                            <span>{{ 'skillset.anotherSkillSpan' | translate }}</span>
+                        </h3>
+
+                        <p class="last-text">{{ 'skillset.contactText' | translate }}</p>
+                    </div>
+                    <a (mouseenter)="animationForward()" (mouseleave)="animationReverse()" href="#">
+                        <span [ngStyle]="{transform: transformX}">
+                            {{ 'skillset.letsTalk' | translate }}
+                        </span>
+                    </a>
                 </div>
-                <a (mouseenter)="animationForward()" (mouseleave)="animationReverse()" href="#">
-                    <span [ngStyle]="{transform: transformX}">
-                        {{ 'skillset.letsTalk' | translate }}
-                    </span>
-                </a>
             </div>
             <div class="icons">
                 <div><img src="assets/skill-icons/white/html.png" alt="">HTML</div>
@@ -38,7 +41,8 @@
                             <img src="assets/skill-icons/green/vue.png" alt="">
                         </div>
                     </div>
-                    <img (mouseover)="hover('in')" (mouseout)="hover('out')" src="assets/skill-icons/green/growth.png" alt="">
+                    <img (mouseover)="hover('in')" (mouseout)="hover('out')" src="assets/skill-icons/green/growth.png"
+                        alt="">
                     Growth mindset
                 </div>
             </div>

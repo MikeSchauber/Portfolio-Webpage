@@ -1,8 +1,17 @@
 @import "../../../mixins.scss";
 
 div {
-    @include dFlex($fd: row);
+    @include dFlex($fd: row, $jc: space-evenly);
     color: white;
     height: 100vh;
     width: 100%;
+    padding: 0px 96px;
+    font-family: "karla";
+    z-index: 10;
+}
+
+@media (max-width: 1000px) {
+    div {
+        padding: 0px 16px;
+    }
 }
