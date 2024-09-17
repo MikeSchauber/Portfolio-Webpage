@@ -1,28 +1,41 @@
-<form>
+<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
     <div class="input-container">
         <div>
-            <span>{{ 'input.name' | translate }}</span>
-            <input type="text" placeholder="{{ 'input.placeholderName' | translate }}">
+            <label for="name">{{ 'input.name' | translate }}</label>
+            <input #name="ngModel" [(ngModel)]="contactData.name" type="text" required id="name" name="name"
+                placeholder="{{ 'input.placeholderName' | translate }}">
+            @if (!name.valid && name.touched) {
+            <span>{{ 'input.errorName' | translate }}</span>
+            }
         </div>
         <div>
-            <span>{{ 'input.email' | translate }}</span>
-            <input type="text" placeholder="{{ 'input.placeholderEmail' | translate }}">
+            <label for="email">{{ 'input.email' | translate }}</label>
+            <input #email="ngModel" [(ngModel)]="contactData.email" type="email" required
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" id="email" name="email"
+                placeholder="{{ 'input.placeholderEmail' | translate }}">
+            @if (!email.valid && email.touched) {
+            <span>{{ 'input.errorEmail' | translate }}</span>
+            }
         </div>
         <div>
-            <span>{{ 'input.help' | translate }}</span>
-            <textarea type="text" placeholder="{{ 'input.placeholderHelp' | translate }}"></textarea>
+            <label for="message">{{ 'input.help' | translate }}</label>
+            <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" type="text" required
+                name="message" placeholder="{{ 'input.placeholderHelp' | translate }}"></textarea>
+            @if (!message.valid && message.touched) {
+            <span>{{ 'input.errorMessage' | translate }}</span>
+            }
         </div>
     </div>
     <div class="validate-container">
         <div class="validate">
-            <div (click)="toggleCheckbox()" class="img-container">
+            <div required (click)="toggleCheckbox()" class="img-container">
                 <img [src]="checkboxUrl" alt="">
             </div>
             <div class="privacy-container">
                 <p>
                     {{ 'input.privacy1' | translate }}
                     <span>{{ 'input.privacy2' | translate }}</span>
-                    <br>
+                    <br class="show-mobile">
                     {{'input.privacy3' | translate }}
                 </p>
             </div>

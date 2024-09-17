@@ -71,12 +71,15 @@
     "email": "Wie lautet Ihre E-Mail?",
     "help": "Wie kann ich Ihnen helfen?",
     "placeholderName": "Ihr Name kommt hierhin",
-    "placeholderEmail": "ihreemail@email.com",
+    "placeholderEmail": "Ihreemail@email.com",
     "placeholderHelp": "Hallo Mike, ich bin interessiert an...",
     "privacy1": "Ich habe die",
     "privacy2": "Datenschutzerklärung",
     "privacy3": "gelesen und stimme der Verarbeitung meiner Daten gemäß den Angaben zu.",
-    "submitButton": "Sag Hallo ;)"
+    "submitButton": "Sag Hallo ;)",
+    "errorName": "Ihr Name darf nicht fehlen",
+    "errorEmail": "Hoppla! Ihre E-Mail ist erforderlich",
+    "errorMessage": "Womit kann ich Ihnen helfen?"
   },
   "footer": {
     "legalnotice": "Impressum"
