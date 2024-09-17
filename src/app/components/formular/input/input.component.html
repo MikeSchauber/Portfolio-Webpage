@@ -10,14 +10,23 @@
         </div>
         <div>
             <span>{{ 'input.help' | translate }}</span>
-            <input type="text" value="{{ 'input.placeholderHelp' | translate }}">
+            <textarea type="text" placeholder="{{ 'input.placeholderHelp' | translate }}"></textarea>
         </div>
     </div>
     <div class="validate-container">
-        <p>
-            <img src="assets/icons/checkbox.png" alt="">
-            {{ 'input.privacy' | translate }}
-        </p>
+        <div class="validate">
+            <div (click)="toggleCheckbox()" class="img-container">
+                <img [src]="checkboxUrl" alt="">
+            </div>
+            <div class="privacy-container">
+                <p>
+                    {{ 'input.privacy1' | translate }}
+                    <span>{{ 'input.privacy2' | translate }}</span>
+                    <br>
+                    {{'input.privacy3' | translate }}
+                </p>
+            </div>
+        </div>
         <button class="btn-container">
             <span>{{ 'input.submitButton' | translate }}</span>
         </button>

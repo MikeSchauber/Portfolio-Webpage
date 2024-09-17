@@ -1,37 +1,64 @@
 @import "../../../../mixins.scss";
 
 .main {
-    @include dFlex($ai: flex-start, $g: 40px);
-    width: 568px;
+  @include dFlex($ai: flex-start, $g: 40px);
+  width: 568px;
 }
 
 .headline {
-    color: #3DCFB6;
-    @include dFlex($ai: flex-start, $g: 20px);
-    >span {
-        font-size: 24px;
-        font-weight: 500;
-    }
-    >h2 {
-        font-family: "fira code";
-        font-size: 64px;
-        font-weight: 700;
-    }
+  color: #3dcfb6;
+  @include dFlex($ai: flex-start, $g: 20px);
+  > span {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  > h2 {
+    font-family: "fira code";
+    font-size: 64px;
+    font-weight: 700;
+  }
 }
 
 .sub-text {
-    @include dFlex($ai: flex-start, $g: 16px);
-    >span {
-        color: #3DCFB6;
-        font-family: "fira code";
-        font-size: 24px;
-        font-weight: 700;
+  @include dFlex($ai: flex-start, $g: 16px);
+  > span {
+    color: #3dcfb6;
+    font-family: "fira code";
+    font-size: 24px;
+    font-weight: 700;
+  }
+  > p {
+    font-size: 16px;
+    font-weight: 400;
+    > span {
+      color: #3dcfb6;
     }
-    >p {
-        font-size: 16px;
-        font-weight: 400;
-        >span {
-            color: #3DCFB6;
-        }
+  }
+}
+
+@media (max-width: 1388px) {
+  .main {
+    width: 100%;
+    max-width: 358px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .headline {
+    > span {
+      font-size: 18px;
     }
+    > h2 {
+      font-size: 56px;
+    }
+  }
+
+  .sub-text {
+    > span {
+      font-size: 20px;
+    }
+    > p {
+      font-size: 16px;
+    }
+  }
 }
