@@ -53,18 +53,18 @@
     "description": "Basierend auf der PokéAPI, eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
   },
   "quotes": {
-    "headline": "Was meine Kollegen über mich sagen",
+    "headline": "Wie meine Kollegen mich sehen",
     "quote_1": "Mike war ein angenehmer Teamkollege, der immer aufmerksam zuhörte und wertvollen Input lieferte. Seine proaktive Herangehensweise war besonders beeindruckend.",
     "quote_2": "Mikes 2D-Spiel Sharkie überzeugt durch flüssiges Gameplay und ansprechende Optik. Es hat viel Spaß gemacht, es zu testen.",
     "quote_3": "Die Animationen in Mikes Projekt Join waren unterhaltsam und kreativ. Die Möglichkeit, Aufgaben ohne Drag-and-Drop zu bearbeiten, war eine praktische Alternative."
   },
   "formular": {
-    "title": "Kontaktieren Sie mich",
-    "subtitle": "Lassen Sie uns zusammenarbeiten",
-    "problem": "Haben Sie ein Problem zu lösen?",
+    "title": "Schreiben Sie mir",
+    "subtitle": "Gemeinsam ans Werk",
+    "problem": "Brauchen Sie Hilfe bei einem Problem?",
     "description": "Kontaktieren Sie mich über dieses Formular, ich freue mich, von Ihnen zu hören, Ihre Ideen zu erfahren und zu Ihren Projekten beizutragen.",
     "frontendDeveloper": "Brauchen Sie einen Frontend-Entwickler?",
-    "talk": "Lassen Sie uns reden!"
+    "talk": "Reden wir darüber!"
   },
   "input": {
     "name": "Wie ist Ihr Name?",
