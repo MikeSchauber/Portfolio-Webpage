@@ -1,0 +1,87 @@
+@import "../../../mixins.scss";
+
+.hide-mobile {
+    display: flex;
+}
+
+.show-mobile {
+    display: none;
+}
+
+footer {
+    color: white;
+    width: 100%;
+    height: auto;
+    @include dFlex($fd: row, $jc: space-between);
+    padding: 96px 48px;
+}
+
+.first {
+    @include dFlex($ai: flex-start, $jc: space-between, $g: 16px);
+
+    >img {
+        width: 200px;
+        height: auto;
+    }
+
+    >div {
+        @include dFlex($g: 8px);
+        padding-left: 12px;
+
+        >p {
+            width: 100%;
+            text-align: start;
+            font-size: 16px;
+        }
+    }
+}
+
+.second {
+    font-family: "fira code";
+    font-size: 18px;
+    font-weight: 400;
+    word-spacing: 4px;
+    color: #3DCFB6;
+}
+
+.third {
+    @include dFlex($g: 8px, $ai: flex-start);
+    width: 100px;
+
+    >a {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 100ms ease-in-out;
+        font-size: 16px;
+        &:hover {
+            color: #3DCFB6;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .hide-mobile {
+        display: none;
+    }
+
+    .show-mobile {
+        display: flex;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .upper-container {
+        @include dFlex($fd: row, $jc: space-between);
+        width: 100%;
+    }
+
+    .first{
+        >img {
+            width: 150px;
+        }
+    }
+}
