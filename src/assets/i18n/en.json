@@ -77,5 +77,8 @@
     "privacy2": "privacy policy",
     "privacy3": "and agree to the processing of my data as outlined.",
     "submitButton": "Say Hello ;)"
+  },
+  "footer": {
+    "legalnotice": "Legal notice"
   }
 }

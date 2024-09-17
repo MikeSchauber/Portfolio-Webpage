@@ -77,5 +77,8 @@
     "privacy2": "Datenschutzerklärung",
     "privacy3": "gelesen und stimme der Verarbeitung meiner Daten gemäß den Angaben zu.",
     "submitButton": "Sag Hallo ;)"
+  },
+  "footer": {
+    "legalnotice": "Impressum"
   }
 }
