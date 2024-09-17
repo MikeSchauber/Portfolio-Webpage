@@ -13,11 +13,11 @@ footer {
     width: 100%;
     height: auto;
     @include dFlex($fd: row, $jc: space-between);
-    padding: 96px 48px;
+    padding: 48px 96px;
 }
 
 .first {
-    @include dFlex($ai: flex-start, $jc: space-between, $g: 16px);
+    @include dFlex($ai: flex-start, $g: 8px);
 
     >img {
         width: 200px;
@@ -72,6 +72,7 @@ footer {
     footer {
         flex-direction: column;
         gap: 16px;
+        padding: 48px 16px !important;
     }
 
     .upper-container {
@@ -80,6 +81,8 @@ footer {
     }
 
     .first{
+        justify-content: center;
+        gap: 16px;
         >img {
             width: 150px;
         }
