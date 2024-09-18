@@ -1,39 +1,27 @@
 @import "../../../../mixins.scss";
 
+.opacity {
+  opacity: 1 !important;
+}
+
 .effect-container {
   @include dFlex($fd: row, $jc: flex-start, $g: 20px);
-  > .img-container {
-    @include dFlex();
+
+  >.img-container {
+    @include dFlex($ai: flex-end);
     width: calc(100vw - 1186px);
     position: relative;
-    > img {
+
+    >img {
       width: 295px;
       height: 192px;
       border-radius: 16px;
+      border: 1px solid rgba(61, 207, 183);
       opacity: 0;
       position: relative;
-      // box-shadow: 5px 5px 10px rgba(61, 207, 182, 1);
+      box-shadow: 0px 0px 10px 1px rgba(61, 207, 183, 0.5);
       transition: all 125ms ease-in-out;
     }
-  }
-  .img-container::before {
-    content: "";
-    position: absolute;
-    opacity: 1;
-    z-index: -1;
-    width: 295px;
-    height: 192px;
-    top: 10px;
-    left:60px;
-    border-radius: 30px;
-    background: repeating-linear-gradient(
-      -45deg,
-      #3dcfb6,
-      #3dcfb6 1px,
-      transparent 1.5px,
-      transparent 14px
-    );
-    transition: 125ms ease-in-out;
   }
 }
 
@@ -43,7 +31,6 @@
 
 .background-animation {
   opacity: 1 !important;
-  transition: all 125ms ease-in-out;
 }
 
 .projects-cont {
@@ -73,16 +60,16 @@
     background-color: rgba(61, 207, 182, 0.3);
   }
 
-  > h3 {
+  >h3 {
     font-family: "fira code";
     font-size: 24px;
     font-weight: 700;
   }
 
-  > div {
+  >.tech-container {
     @include dFlex($fd: row);
 
-    > span {
+    >span {
       font-family: "karla";
       font-size: 18px;
       font-weight: 400;
@@ -90,13 +77,27 @@
       padding: 0px 8px;
     }
 
-    > span:first-of-type {
+    >span:first-of-type {
       padding-left: 0;
     }
 
-    > span:last-of-type {
+    >span:last-of-type {
       border: 0;
     }
+  }
+}
+
+.name-container {
+  @include dFlex($fd: row, $g: 16px);
+
+  >h3 {
+    font-size: 24px;
+    font-family: "fira code";
+    font-weight: 700;
+  }
+
+  >img {
+    opacity: 0;
   }
 }
 
@@ -110,13 +111,15 @@
   .projects-cont {
     max-height: 432px;
   }
+
   .project {
     @include dFlex($fd: column, $ai: flex-start, $jc: space-between);
-    > div {
+
+    >div {
       flex-wrap: wrap;
       justify-content: flex-start;
 
-      > span {
+      >span {
         margin: 4px 0px;
       }
     }
@@ -128,11 +131,13 @@
     max-height: 462px;
   }
 }
+
 @media (max-width: 400px) {
   .projects-cont {
     max-height: 492px;
   }
 }
+
 @media (max-width: 324px) {
   .projects-cont {
     max-height: 522px;

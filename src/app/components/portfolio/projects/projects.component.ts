@@ -14,6 +14,7 @@ import { ProjectDialogComponent } from '../project-dialog/project-dialog.compone
 export class ProjectsComponent {
   showImg: boolean = false;
   imgAnimation: boolean = false;
+  showArrowArray: boolean[] = [false, false, false];
   imgSrcWhenHover: string = '';
   constructor(
     public dialogService: DialogDataService,
@@ -39,24 +40,22 @@ export class ProjectsComponent {
     } else if (index === 2) {
       this.imgSrcWhenHover = 'assets/img/pokedex.png';
     }
-    this.hoverAnimation();
+    this.hoverAnimation(index);
+
   }
 
-  hoverAnimation() {
-    setTimeout(() => {
-      this.showImg = true;
-    }, 1);
+  hoverAnimation(index: number) {
+    this.showArrowArray[index] = true;
     setTimeout(() => {
       this.imgAnimation = true;
-    }, 2);
+    }, 1);
+
   }
 
   leaveProject() {
-    setTimeout(() => {
-      this.imgAnimation = false;
-    }, 1);
-    setTimeout(() => {
-      this.showImg = false;
-    }, 2);
+    this.imgAnimation = false;
+    this.showArrowArray.forEach((boolean, index) => {
+      this.showArrowArray[index] = false;
+    });
   }
 }
