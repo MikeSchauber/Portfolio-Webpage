@@ -67,7 +67,7 @@
   }
 
   >.tech-container {
-    @include dFlex($fd: row);
+    @include dFlex($fd: row, $jc: flex-start);
 
     >span {
       font-family: "karla";
@@ -113,7 +113,7 @@
   }
 
   .project {
-    @include dFlex($fd: column, $ai: flex-start, $jc: space-between);
+    @include dFlex($fd: column, $ai: flex-start, $jc: space-between, $g: 8px);
 
     >div {
       flex-wrap: wrap;
