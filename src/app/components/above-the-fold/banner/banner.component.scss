@@ -19,15 +19,31 @@ $blur: 4px;
   backdrop-filter: blur($blur);
   overflow: hidden;
   transform: rotate(-2deg);
-  > div {
+
+  >div {
     position: relative;
     @include dFlex($fd: row, $g: 56px);
-    animation: movement 5s infinite;
     min-width: fit-content;
-    > span {
+    animation: movement 10s linear infinite;
+    >span {
       min-width: fit-content;
     }
   }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(to right, rgba(28, 28, 28, 1), rgba(28, 28, 28, 0) 10%, rgba(28, 28, 28, 0) 90%, rgba(28, 28, 28, 0.815));
+  }
+}
+
+@keyframes movement { 
+	0%   { transform: translateX(100vw); }
+	100% { transform: translateX(-100vw); }
 }
 
 @media (max-width: 1000px) {
@@ -40,6 +56,18 @@ $blur: 4px;
       -22px 0px 0px 0px rgba(75, 75, 75, 0.226);
   }
 }
+
+// @media (max-width: 700px) {
+//   @keyframes movement { 
+//     from{
+//       right: -1300px;
+//     }
+  
+//     to {
+//       right: 1920px;
+//     }
+//   }
+// }
 
 @media (max-width: 450px) {
   .banner {

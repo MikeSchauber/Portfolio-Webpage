@@ -11,10 +11,14 @@
     "contactMe": "Contact me"
   },
   "banner": {
-    "1": "Available for remote work",
+    "1": "Remote & on-site",
     "2": "Frontend Developer",
     "3": "Based in Tübingen",
-    "4": "Open to work"
+    "4": "Seeking new opportunities",
+    "5": "Modern Web Tech",
+    "6": "User-centric",
+    "7": "Creative & solution-oriented",
+    "8": "Quick learner"
   },
   "aboutMe": {
     "whoIAm": "Who I Am",

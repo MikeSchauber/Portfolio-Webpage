@@ -1,8 +1,18 @@
 <div class="banner">
-    @for (banner of banners; track $index; let i = $index) {
-    <div #bannerContainer [ngStyle]="{'transform': getTransform(i)}">
-        <img src="assets/icons/dot.png" alt="">
-        <span>{{ banner | translate }}</span>
+    <div class="slider">
+        @for (banner of banners; track $index; let i = $index) {
+        <div #bannerContainer>
+            <img src="assets/icons/dot.png" alt="">
+            <span>{{ banner | translate }}</span>
+        </div>
+        }
     </div>
-    }
+    <div class="slider">
+        @for (banner of banners; track $index; let i = $index) {
+        <div #bannerContainer>
+            <img src="assets/icons/dot.png" alt="">
+            <span>{{ banner | translate }}</span>
+        </div>
+        }
+    </div>
 </div>

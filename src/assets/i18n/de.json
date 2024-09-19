@@ -11,10 +11,14 @@
     "contactMe": "Kontaktiere mich"
   },
   "banner": {
-    "1": "Offen für Remote-Arbeit",
+    "1": "Remote & vor Ort",
     "2": "Frontend-Entwickler",
-    "3": "Ansässig in Tübingen",
-    "4": "Offen für eine Stelle"
+    "3": "Tübingen",
+    "4": "Suche neue Stelle",
+    "5": "Moderne Webtech",
+    "6": "Nutzerzentriert",
+    "7": "Kreativ & lösungsorientiert",
+    "8": "Schnelle Auffassungsgabe"
   },
   "aboutMe": {
     "whoIAm": "Wer ich bin",
