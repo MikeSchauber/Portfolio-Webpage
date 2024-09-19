@@ -1,10 +1,7 @@
 import { CommonModule } from '@angular/common';
 import {
-  AfterViewInit,
   Component,
   OnInit,
-  ElementRef,
-  ViewChild,
 } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -15,54 +12,47 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './banner.component.html',
   styleUrl: './banner.component.scss',
 })
-export class BannerComponent {
+export class BannerComponent implements OnInit {
   banners: string[] = [
-    'banner.1', 
-    'banner.2', 
-    'banner.3', 
+    'banner.1',
+    'banner.2',
+    'banner.3',
     'banner.4',
     'banner.5',
     'banner.6',
     'banner.7',
     'banner.8'
   ];
-  
-  // positionSpeed: number = 0;
-  // transform: string = 'translateX(0px)';
-  // bannerWidth: number = 0;
-  // containerWidth: number = 0;
 
-  constructor(public translate: TranslateModule) { }
+  positionSpeed: number = 0;
+  transform_1: string = 'transformX(0px)';
+  transform_2: string = 'transformX(0px)';
+  innerWidth: number = 0;
 
-  // ngOnInit(): void {
-  //   this.getInnerWidth();
-  //   this.startBannerMovement();
-  // }
+  constructor(public translate: TranslateModule) { 
+    this.innerWidth = window.innerWidth;
 
-  // getInnerWidth(): void {
-  //   if (window.innerWidth <= 1100) {
-  //     this.containerWidth = window.innerWidth * 2;
-  //     this.positionSpeed = window.innerWidth;
-  //   } else {
-  //     this.containerWidth = window.innerWidth;
-  //     this.positionSpeed = window.innerWidth;
-  //   }
-  // }
+  }
 
-  // startBannerMovement(): void {
-  //   setInterval(() => {
-  //     this.positionSpeed -= 5;
-  //     this.transform = `translateX(${this.positionSpeed}px)`;
+  ngOnInit(): void {
+    this.startBannerMovement();
+  }
 
-  //     if (this.positionSpeed <= -this.containerWidth) {
-  //       this.positionSpeed += this.containerWidth * 2;
-  //     }
-  //   }, 1000 / 60);
-  // }
+  startBannerMovement(): void {
+    this.transform_1 = this.innerWidth;
+    setInterval(() => {
+      this.transform_1 -= 10;
+      if (this.transform_1 <= -this.innerWidth) {
+        this.transform_1 += this.innerWidth * 2;
+      }
+    }, 1000 / 60);
+  }
 
+  getPixel_1(i: number) {
+    return this.transform_1
+  }
 
-
-  // getTransform(i: number) {
-  //   return this.transform;
-  // }
+  getPixel_2(i: number) {
+    return this.transform_2
+  }
 }
