@@ -20,13 +20,17 @@ $blur: 4px;
   overflow: hidden;
   transform: rotate(-2deg);
 
-  >div {
-    position: relative;
+  > .banner-content {
     @include dFlex($fd: row, $g: 56px);
-    min-width: fit-content;
-
-    >span {
+    width: 100%;
+    >div {
+      position: relative;
+      @include dFlex($fd: row, $g: 56px);
       min-width: fit-content;
+
+      > span {
+        min-width: fit-content;
+      }
     }
   }
 
@@ -37,7 +41,13 @@ $blur: 4px;
     height: 100%;
     left: 0;
     top: 0;
-    background: linear-gradient(to right, rgba(28, 28, 28, 1), rgba(28, 28, 28, 0) 10%, rgba(28, 28, 28, 0) 90%, rgba(28, 28, 28, 0.815));
+    background: linear-gradient(
+      to right,
+      rgba(28, 28, 28, 1),
+      rgba(28, 28, 28, 0) 10%,
+      rgba(28, 28, 28, 0) 90%,
+      rgba(28, 28, 28, 0.815)
+    );
   }
 }
 
@@ -53,7 +63,7 @@ $blur: 4px;
 }
 
 // @media (max-width: 700px) {
-//   @keyframes movement { 
+//   @keyframes movement {
 //     from{
 //       right: -1300px;
 //     }

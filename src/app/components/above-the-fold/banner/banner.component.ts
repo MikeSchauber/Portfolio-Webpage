@@ -1,11 +1,5 @@
 import { CommonModule } from '@angular/common';
-import {
-  AfterViewInit,
-  Component,
-  OnInit,
-  ElementRef,
-  ViewChild,
-} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -16,43 +10,43 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './banner.component.scss',
 })
 export class BannerComponent implements OnInit {
-  banners: string[] = ['banner.1', 'banner.2', 'banner.3', 'banner.4'];
-  positionSpeed: number = 0;
-  transform: string = 'translateX(0px)';
-  bannerWidth: number = 0;
-  containerWidth: number = 0;
+  banners = [
+    'banner.1',
+    'banner.2',
+    'banner.3',
+    'banner.4',
+    'banner.5',
+    'banner.6',
+    'banner.7',
+    'banner.8',
+  ];
 
-  constructor(public translate: TranslateModule) { }
+  position_1: number = 0;
+  position_2: number = 0;
+  innerWidth!: number;
+
+  constructor(public translate: TranslateModule) {
+    this.innerWidth = window.innerWidth;
+    
+  }
 
   ngOnInit(): void {
-    this.getInnerWidth();
+    this.position_1 = this.innerWidth;
+    this.position_2 = this.innerWidth * 2;
     this.startBannerMovement();
   }
 
-  getInnerWidth(): void {
-    if (window.innerWidth <= 1100) {
-      this.containerWidth = window.innerWidth * 2;
-      this.positionSpeed = window.innerWidth;
-    } else {
-      this.containerWidth = window.innerWidth;
-      this.positionSpeed = window.innerWidth;
-    }
-  }
-
   startBannerMovement(): void {
+    const speed = 10;
     setInterval(() => {
-      this.positionSpeed -= 0.7;
-      this.transform = `translateX(${this.positionSpeed}px)`;
-
-      if (this.positionSpeed <= -this.containerWidth) {
-        this.positionSpeed += this.containerWidth * 2;
+      this.position_1 -= speed;
+      this.position_2 -= speed;
+      if (this.position_1 < -this.innerWidth) {
+        this.position_1 = this.innerWidth;
+      }
+      if (this.position_2 < -this.innerWidth) {
+        this.position_2 = this.innerWidth;
       }
     }, 1000 / 60);
-  }
-
-
-
-  getTransform() {
-    return this.transform;
   }
 }
