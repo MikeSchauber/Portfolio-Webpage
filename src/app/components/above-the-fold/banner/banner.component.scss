@@ -1,6 +1,7 @@
 @import "../../../../mixins.scss";
 
 $blur: 4px;
+$animationLength: 5s;
 
 .banner {
   padding: 12px 24px;
@@ -8,6 +9,7 @@ $blur: 4px;
   bottom: 50px;
   left: -3px;
   right: -3px;
+  width: 100%;
   max-height: 60px;
   color: rgba(61, 207, 182, 1);
   font-family: "karla";
@@ -19,21 +21,6 @@ $blur: 4px;
   backdrop-filter: blur($blur);
   overflow: hidden;
   transform: rotate(-2deg);
-
-  > .banner-content {
-    @include dFlex($fd: row, $g: 56px);
-    width: 100%;
-    >div {
-      position: relative;
-      @include dFlex($fd: row, $g: 56px);
-      min-width: fit-content;
-
-      > span {
-        min-width: fit-content;
-      }
-    }
-  }
-
   &:after {
     content: "";
     position: absolute;
@@ -51,6 +38,38 @@ $blur: 4px;
   }
 }
 
+.banner-content {
+  @include dFlex($fd: row, $g: 56px);
+  animation: movement $animationLength linear infinite;
+  min-width: max-content;
+  > div {
+    position: relative;
+    @include dFlex($fd: row, $g: 56px);
+    min-width: fit-content;
+    > span {
+      min-width: fit-content;
+    }
+  }
+}
+
+@keyframes movement {
+  from {
+    transform: translateX(1200px);
+  }
+  to {
+    transform: translateX(-2020px);
+  }
+}
+
+@keyframes movement1000 {
+  from {
+    transform: translateX(1500px);
+  }
+  to {
+    transform: translateX(-1150px);
+  }
+}
+
 @media (max-width: 1000px) {
   .banner {
     font-size: 24px;
@@ -60,19 +79,11 @@ $blur: 4px;
     box-shadow: 22px 0px 0px 0px rgba(75, 75, 75, 0.226),
       -22px 0px 0px 0px rgba(75, 75, 75, 0.226);
   }
+
+  .banner-content {
+    animation: movement1000 $animationLength linear infinite;
+  }
 }
-
-// @media (max-width: 700px) {
-//   @keyframes movement {
-//     from{
-//       right: -1300px;
-//     }
-
-//     to {
-//       right: 1920px;
-//     }
-//   }
-// }
 
 @media (max-width: 450px) {
   .banner {
