@@ -14,11 +14,14 @@
 
                         <p class="last-text">{{ 'skillset.contactText' | translate }}</p>
                     </div>
-                    <a (mouseenter)="animationForward()" (mouseleave)="animationReverse()" href="#">
-                        <span [ngStyle]="{transform: transformX}">
-                            {{ 'skillset.letsTalk' | translate }}
-                        </span>
-                    </a>
+                    <div class="btn-container">
+                        <a href="#formular">
+                            <div class="btn-content">
+                                <span>{{ 'skillset.letsTalk' | translate }}</span>
+                                <span class="btn-content-duplicate">{{ 'skillset.letsTalk' | translate }}</span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="icons">

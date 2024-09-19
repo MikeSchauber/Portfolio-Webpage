@@ -16,11 +16,11 @@
   height: 100%;
   @include dFlex($g: 20px);
 }
- 
+
 .maincont {
   width: 100%;
   @include dFlex($fd: row, $ai: flex-start);
-  >div:first-of-type {
+  > div:first-of-type {
     @include dFlex($g: 20px, $ai: flex-start);
     width: 100%;
     font-size: 24px;
@@ -37,11 +37,13 @@
   border: 1px solid rgba(61, 207, 182, 1);
   border-radius: 30px;
   color: rgba(61, 207, 182, 1);
+
   > h2 {
     font-size: 64px;
     font-weight: 700;
     font-family: "fira code";
   }
+
   > div {
     color: white;
     @include dFlex($g: 32px, $ai: flex-start);
@@ -50,6 +52,7 @@
       color: rgba(255, 255, 255, 1);
     }
   }
+
   > a {
     text-decoration: none;
     color: white;
@@ -63,10 +66,56 @@
     @include dFlex();
     overflow: hidden;
     transition: all 125ms ease-in-out;
+
     &:hover {
-      color: rgba(61, 207, 182, 1);
       border-color: rgba(61, 207, 182, 1);
+      background-color: rgba(61, 207, 182, 0.05);
     }
+  }
+}
+
+.btn-container {
+  @include dFlex($fd: row, $g: 48px);
+  min-width: fit-content;
+
+  > a {
+    @include dFlex($fd: row, $g: 48px);
+    z-index: 2;
+    height: 48px;
+    width: auto;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "karla";
+    font-size: 18px;
+    font-weight: 400;
+    min-width: fit-content;
+    border: 1px solid #ffffff;
+    border-radius: 100px;
+    padding: 0px 24px;
+    cursor: pointer;
+    position: relative;
+    transition: all 125ms ease-in-out;
+    overflow: hidden;
+
+    &:hover .btn-content {
+      transform: translateX(-150%);
+    }
+
+    &:hover {
+      border-color: rgba(61, 207, 182, 1);
+      background-color: rgba(61, 207, 182, 0.05);
+    }
+  }
+}
+
+.btn-content {
+  @include dFlex($fd: row, $jc: space-between);
+  transition: all 700ms ease-in-out;
+
+  .btn-content-duplicate {
+    position: absolute;
+    left: 150%;
+    white-space: nowrap;
   }
 }
 
@@ -78,6 +127,7 @@
 .another-c {
   font-size: 24px;
   font-family: "fira code";
+
   > span {
     color: rgba(61, 207, 182, 1);
   }
@@ -95,6 +145,7 @@
   color: white;
   font-size: 18px;
   font-family: "fira code";
+
   > div {
     @include dFlex($g: 8px);
     width: 100%;
@@ -102,12 +153,14 @@
     max-width: 104px;
     max-height: 116px;
     text-align: center;
+
     > img {
       z-index: 9;
       height: 60px;
       width: 60px;
       cursor: pointer;
       transition: all 500ms ease-in-out;
+
       &:hover {
         transform: rotateY(360deg);
         transition: transform 500ms ease-in-out;
@@ -133,15 +186,17 @@
   border-radius: 16px;
   color: rgba(61, 207, 182, 1);
   font-size: 16px;
-
   transition: all 125ms ease-in-out;
+
   > span {
     width: 172px;
     letter-spacing: -1px;
   }
+
   > div {
     @include dFlex($fd: row, $g: 16px);
   }
+
   opacity: 0;
   z-index: -2;
 }
@@ -175,6 +230,7 @@
     justify-content: flex-start;
     position: relative;
     top: -50px;
+
     > p {
       align-items: center;
       max-width: 568px;
@@ -201,11 +257,14 @@
   .container {
     padding: 0px 16px;
   }
+
   .text {
     max-width: 568px;
+
     > h2 {
       font-size: 56px;
     }
+
     > div {
       > p {
         font-size: 16px;
@@ -215,6 +274,7 @@
 
   .icons {
     font-size: 16px;
+
     > img {
       height: 48px;
       width: 48px;
@@ -248,7 +308,7 @@
   }
 
   .text {
-    >h2 {
+    > h2 {
       font-size: 44px;
       letter-spacing: -2px;
     }

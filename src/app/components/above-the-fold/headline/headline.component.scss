@@ -65,7 +65,7 @@
 
 .btn-content {
   @include dFlex($fd: row, $jc: space-between);
-  transition: all 1000ms ease-in-out;
+  transition: all 700ms ease-in-out;
 
   .btn-content-duplicate {
     position: absolute;
