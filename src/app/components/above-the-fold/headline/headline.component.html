@@ -1,22 +1,25 @@
 <div class="headline">
     <h2>{{ 'headline.title' | translate }}</h2>
     <div class="action-btn">
-        <h1>Mike Schauber</h1>
-        <div class="btn">
-            <div class="btn-container">
-                <a (mouseenter)="animationForward('work')" (mouseleave)="animationReverse('work')" href="#projects">
-                    <div class="btn-content">
-                        <span [ngStyle]="{'transform': this.workTransformX}"> {{ 'headline.checkWork' |translate
-                            }}</span>
-                    </div>
-                </a>
+      <h1>Mike Schauber</h1>
+      <div class="btn">
+        <div class="btn-container">
+          <a href="#projects">
+            <div class="btn-content">
+              <span>{{ 'headline.checkWork' | translate }}</span>
+              <span class="btn-content-duplicate">{{ 'headline.checkWork' | translate }}</span>
             </div>
-            <div class="btn-container">
-                <a (mouseenter)="animationForward('cnt')" (mouseleave)="animationReverse('cnt')" href="#formular"><span
-                        [ngStyle]="{'transform': this.cntTransformX}">{{
-                        'headline.contactMe' | translate
-                        }}</span></a>
-            </div>
+          </a>
         </div>
+        <div class="btn-container">
+          <a href="#formular">
+            <div class="btn-content">
+              <span>{{ 'headline.contactMe' | translate }}</span>
+              <span class="btn-content-duplicate">{{ 'headline.contactMe' | translate }}</span>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+  
