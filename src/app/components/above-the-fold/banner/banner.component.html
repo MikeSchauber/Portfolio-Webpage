@@ -1,6 +1,6 @@
 <div class="banner">
     @for (banner of banners; track $index; let i = $index) {
-    <div #bannerContainer [ngStyle]="{'transform': getTransform(i)}">
+    <div #bannerContainer [ngStyle]="{'transform': getTransform()}">
         <img src="assets/icons/dot.png" alt="">
         <span>{{ banner | translate }}</span>
     </div>

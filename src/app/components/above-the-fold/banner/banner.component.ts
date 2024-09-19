@@ -52,7 +52,7 @@ export class BannerComponent implements OnInit {
 
 
 
-  getTransform(i: number) {
+  getTransform() {
     return this.transform;
   }
 }
