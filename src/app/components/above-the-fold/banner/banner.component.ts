@@ -22,11 +22,21 @@ export class BannerComponent implements OnInit {
   bannerWidth: number = 0;
   containerWidth: number = 0;
 
-  constructor(public translate: TranslateModule) {}
+  constructor(public translate: TranslateModule) { }
 
   ngOnInit(): void {
     this.getInnerWidth();
     this.startBannerMovement();
+  }
+
+  getInnerWidth(): void {
+    if (window.innerWidth <= 1100) {
+      this.containerWidth = window.innerWidth * 2;
+      this.positionSpeed = window.innerWidth;
+    } else {
+      this.containerWidth = window.innerWidth;
+      this.positionSpeed = window.innerWidth;
+    }
   }
 
   startBannerMovement(): void {
@@ -40,15 +50,7 @@ export class BannerComponent implements OnInit {
     }, 1000 / 60);
   }
 
-  getInnerWidth(): void {
-    if (window.innerWidth <= 1100) {
-      this.containerWidth = window.innerWidth * 2;
-      this.positionSpeed = window.innerWidth; 
-    } else {
-      this.containerWidth = window.innerWidth;
-      this.positionSpeed = window.innerWidth; 
-    }
-  }
+
 
   getTransform(i: number) {
     return this.transform;

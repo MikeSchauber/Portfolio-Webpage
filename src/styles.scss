@@ -24,7 +24,7 @@ body {
   overflow-x: hidden;
   width: 100%;
   max-width: 1920px;
-  background: linear-gradient(55.22deg, #1c1c1c 70%, #08463b 100%);
+  background: linear-gradient(55.22deg, #1c1c1c 80%, #08463b 100%);
   background-color: #1c1c1c;
   background-repeat: no-repeat;
   cursor: url("../src/assets/cursor.png"), auto;
@@ -45,6 +45,10 @@ body {
 }
 
 @media (max-width: 1000px) {
+  body {
+    background: linear-gradient(55.22deg, #1c1c1c 88%, #08463b 100%);
+  }
+
   .mover {
     display: none;
     opacity: 0;
