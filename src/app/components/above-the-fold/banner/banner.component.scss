@@ -24,7 +24,9 @@ $blur: 4px;
     position: relative;
     @include dFlex($fd: row, $g: 56px);
     min-width: fit-content;
-    animation: movement 10s linear infinite;
+    transition: all 125ms ease-in-out;
+    animation: movement 5s linear infinite;
+
     >span {
       min-width: fit-content;
     }
@@ -41,9 +43,14 @@ $blur: 4px;
   }
 }
 
-@keyframes movement { 
-	0%   { transform: translateX(100vw); }
-	100% { transform: translateX(-100vw); }
+@keyframes movement {
+  0% {
+    right: -1325px;
+  }
+
+  100% {
+    right: 1920px;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -62,7 +69,7 @@ $blur: 4px;
 //     from{
 //       right: -1300px;
 //     }
-  
+
 //     to {
 //       right: 1920px;
 //     }
