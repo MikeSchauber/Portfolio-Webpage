@@ -21,7 +21,7 @@ export class InputComponent {
   };
   mailTest = true;
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://mike-schauber.developerakademie.net/angular-projects/portfolio/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -34,6 +34,7 @@ export class InputComponent {
   constructor(public translate: TranslateService, public http: HttpClient) {}
 
   onSubmit(ngForm: NgForm) {
+    console.log(this.contactData.name);
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.privacyChecked) {
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
