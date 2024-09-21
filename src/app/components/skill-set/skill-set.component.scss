@@ -320,3 +320,9 @@
     height: calc(100vh * 2.4);
   }
 }
+
+@media (max-width: 450px) {
+  .container {
+    justify-content: center;
+  }
+}
