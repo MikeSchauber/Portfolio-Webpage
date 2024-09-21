@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { Form, FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -18,8 +18,11 @@ export class InputComponent {
     name: '',
     email: '',
     message: '',
+    privacy: false,
   };
+  privacyWarning: boolean = false;
   mailTest = true;
+
   post = {
     endPoint:
       'https://mike-schauber.developerakademie.net/angular-projects/portfolio/sendMail.php',
@@ -35,7 +38,7 @@ export class InputComponent {
   constructor(public translate: TranslateService, public http: HttpClient) {}
 
   onSubmit(ngForm: NgForm) {
-    console.log(this.contactData.name);
+    console.log(this.contactData);
     if (
       ngForm.submitted &&
       ngForm.form.valid &&
@@ -59,14 +62,13 @@ export class InputComponent {
   }
 
   toggleCheckbox() {
-    if (!this.privacyChecked) {
+    this.privacyWarning = false;
+    if (!this.contactData.privacy) {
       this.checkboxUrl = 'assets/icons/checked.png';
-      this.privacyChecked = true;
+      this.contactData.privacy = true;
     } else {
       this.checkboxUrl = 'assets/icons/checkbox.png';
-      this.privacyChecked = false;
+      this.contactData.privacy = false;
     }
   }
-
-  privacyCheck() {}
 }

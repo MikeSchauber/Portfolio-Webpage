@@ -187,10 +187,10 @@
 
 }
 
-@media (max-height: 770px) {
+@media (max-height: 770px) and (max-width: 770px) {
   .about-me-container {
     padding: 0px 16px;
-    height: calc(100vh * 2);
+    height: calc(100vh * 2.3);
   }
 }
 
@@ -212,10 +212,10 @@
   }
 
   .img-cont {
-    width: 100%;
+    width: 115%;
 
     >div {
-      width: 100%;
+      width: 115%;
 
       >img {
         width: 100%;
@@ -223,6 +223,10 @@
       }
     }
   }
+}
 
-
+@media (max-width: 370px) {
+  .about-me-container {
+    height: calc(100vh * 1.7);
+  }
 }

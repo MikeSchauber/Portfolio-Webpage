@@ -61,7 +61,7 @@ form {
     }
 
     > span {
-      color: rgba(236, 123, 123, 0.8);
+      color: rgba(236, 123, 123, 1);
     }
   }
 }
@@ -87,14 +87,17 @@ form {
   width: 24px;
   cursor: pointer;
   transition: all 125ms ease-in-out;
-
+  > input[type="radio"] {
+    display: none;
+  }
   &:hover {
     background-color: rgba(61, 207, 182, 0.3);
   }
-
-  > img {
+  .radio-img {
+    @include dFlex();
     height: 18px;
     width: 18px;
+    cursor: pointer;
   }
 }
 
