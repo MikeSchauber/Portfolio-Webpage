@@ -24,8 +24,7 @@ export class InputComponent {
   mailTest = false;
 
   post = {
-    endPoint:
-      'https://mike-schauber.developerakademie.net/angular-projects/portfolio/sendMail.php',
+    endPoint: 'https://mike-schauber.developerakademie.net/angular-projects/portfolio/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -38,16 +37,11 @@ export class InputComponent {
   constructor(public translate: TranslateService, public http: HttpClient) {}
 
   onSubmit(ngForm: NgForm) {
-    if (!this.contactData.privacy) {
-      this.privacyWarning = true;
-      return;
-    }
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      this.http
+        .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            console.log(response);
-            
             ngForm.resetForm();
           },
           error: (error) => {
@@ -56,7 +50,6 @@ export class InputComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
       ngForm.resetForm();
     }
   }
