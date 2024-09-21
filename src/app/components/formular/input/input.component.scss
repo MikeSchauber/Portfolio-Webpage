@@ -161,36 +161,6 @@ form {
   }
 }
 
-.btn-disabled {
-  @include dFlex($fd: row, $g: 48px);
-  height: 48px;
-  width: auto;
-  text-decoration: none;
-  color: #838383;
-  background-color: #ffffff00;
-  font-family: "karla";
-  font-size: 18px;
-  font-weight: 400;
-  min-width: fit-content;
-  border: 1px solid #838383;
-  border-radius: 100px;
-  padding: 0px 24px;
-  cursor: pointer;
-  overflow: hidden;
-  position: relative;
-  transition: all 125ms ease-in-out;
-
-  .btn-content {
-    @include dFlex($fd: row, $jc: space-between);
-
-    .btn-content-duplicate {
-      position: absolute;
-      left: 150%;
-      white-space: nowrap;
-    }
-  }
-}
-
 @media (max-width: 1388px) {
   form {
     width: 100%;

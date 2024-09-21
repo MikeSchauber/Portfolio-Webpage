@@ -21,7 +21,7 @@ export class InputComponent {
     privacy: false,
   };
   privacyWarning: boolean = false;
-  mailTest = true;
+  mailTest = false;
 
   post = {
     endPoint:
@@ -38,17 +38,16 @@ export class InputComponent {
   constructor(public translate: TranslateService, public http: HttpClient) {}
 
   onSubmit(ngForm: NgForm) {
-    console.log(this.contactData);
-    if (
-      ngForm.submitted &&
-      ngForm.form.valid &&
-      !this.mailTest &&
-      this.privacyChecked
-    ) {
-      this.http
-        .post(this.post.endPoint, this.post.body(this.contactData))
+    if (!this.contactData.privacy) {
+      this.privacyWarning = true;
+      return;
+    }
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
+            console.log(response);
+            
             ngForm.resetForm();
           },
           error: (error) => {
@@ -57,18 +56,20 @@ export class InputComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+
       ngForm.resetForm();
     }
   }
 
   toggleCheckbox() {
-    this.privacyWarning = false;
     if (!this.contactData.privacy) {
       this.checkboxUrl = 'assets/icons/checked.png';
       this.contactData.privacy = true;
+      this.privacyWarning = false;
     } else {
       this.checkboxUrl = 'assets/icons/checkbox.png';
       this.contactData.privacy = false;
+      this.privacyWarning = true;
     }
   }
 }

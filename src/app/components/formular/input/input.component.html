@@ -32,7 +32,8 @@
                 <label for="privacy">
                     <img [src]="checkboxUrl" alt="Radio Button" class="radio-img">
                 </label>
-                <input required #privacy="ngModel" [(ngModel)]="contactData.privacy" type="radio" id="customRadio" name="privacy" required>
+                <input #privacy="ngModel" [(ngModel)]="contactData.privacy" type="radio" id="customRadio" name="privacy"
+                    required>
             </div>
             <div class="privacy-container">
                 <p>
@@ -43,10 +44,10 @@
                 </p>
             </div>
         </div>
-        @if (message.valid) {
+        @if (!privacy.valid || privacyWarning) {
         <span> {{'input.privacyCheck' | translate }}</span>
         }
-        <button [disabled]="!this.contactData.privacy" [ngClass]="{'btn-container': this.contactData.privacy}" class="btn-disabled">
+        <button class="btn-container">
             <div class="btn-content">
                 <span>{{ 'input.submitButton' | translate }}</span>
                 <span class="btn-content-duplicate">{{ 'input.submitButton' | translate }}</span>
