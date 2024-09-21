@@ -39,8 +39,11 @@
                     {{'input.privacy3' | translate }}
                 </p>
             </div>
+
         </div>
-        <button class="btn-container">
+        <span> {{'input.privacyCheck' | translate }}</span>
+        <button [disabled]="!this.privacyChecked" [ngClass]="{'btn-container': this.privacyChecked}"
+            (click)="privacyCheck()" class="btn-disabled">
             <div class="btn-content">
                 <span>{{ 'input.submitButton' | translate }}</span>
                 <span class="btn-content-duplicate">{{ 'input.submitButton' | translate }}</span>

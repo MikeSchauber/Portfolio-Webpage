@@ -83,7 +83,8 @@
     "submitButton": "Nachricht senden :)",
     "errorName": "Ihr Name darf nicht fehlen",
     "errorEmail": "Hoppla! Ihre E-Mail ist erforderlich",
-    "errorMessage": "Womit kann ich Ihnen helfen?"
+    "errorMessage": "Womit kann ich Ihnen helfen?",
+    "privacyCheck": "Bitte akzeptieren Sie die Datenschutzrichtlinie."
   },
   "footer": {
     "legalnotice": "Impressum"

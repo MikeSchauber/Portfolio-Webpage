@@ -83,7 +83,8 @@
     "submitButton": "Send message :)",
     "errorName": "Oops! It seems your name is missing",
     "errorEmail": "Hoppla! Your email is required",
-    "errorMessage": "What do you need to develop?"
+    "errorMessage": "What do you need to develop?",
+    "privacyCheck": "Please accept the privacy policy"
   },
   "footer": {
     "legalnotice": "Legal notice"

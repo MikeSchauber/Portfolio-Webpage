@@ -9,7 +9,7 @@
 }
 
 form {
-  @include dFlex($g: 40px);
+  @include dFlex($g: 40px, $jc: flex-start);
   width: 616px;
 }
 
@@ -69,6 +69,11 @@ form {
 .validate-container {
   @include dFlex($g: 48px);
   width: 100%;
+  > span {
+    @include dFlex($ai: flex-start);
+    width: 100%;
+    color: rgba(236, 123, 123, 1);
+  }
 }
 
 .validate {
@@ -117,13 +122,13 @@ form {
   height: 48px;
   width: auto;
   text-decoration: none;
-  color: #ffffff;
+  color: #ffffff !important;
   background-color: #ffffff00;
   font-family: "karla";
   font-size: 18px;
   font-weight: 400;
   min-width: fit-content;
-  border: 1px solid #ffffff;
+  border: 1px solid #ffffff !important;
   border-radius: 100px;
   padding: 0px 24px;
   cursor: pointer;
@@ -136,19 +141,49 @@ form {
   }
 
   &:hover {
-    border-color: rgba(61, 207, 182, 1);
+    border-color: rgba(61, 207, 182, 1) !important;
     background-color: rgba(61, 207, 182, 0.05);
   }
 
   .btn-content {
     @include dFlex($fd: row, $jc: space-between);
-    transition: all 700ms ease-in-out;
+    transition: transform 700ms ease-in-out;
 
     .btn-content-duplicate {
       position: absolute;
       left: 150%;
       white-space: nowrap;
       transition: all 700ms ease-in-out;
+    }
+  }
+}
+
+.btn-disabled {
+  @include dFlex($fd: row, $g: 48px);
+  height: 48px;
+  width: auto;
+  text-decoration: none;
+  color: #838383;
+  background-color: #ffffff00;
+  font-family: "karla";
+  font-size: 18px;
+  font-weight: 400;
+  min-width: fit-content;
+  border: 1px solid #838383;
+  border-radius: 100px;
+  padding: 0px 24px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: all 125ms ease-in-out;
+
+  .btn-content {
+    @include dFlex($fd: row, $jc: space-between);
+
+    .btn-content-duplicate {
+      position: absolute;
+      left: 150%;
+      white-space: nowrap;
     }
   }
 }
