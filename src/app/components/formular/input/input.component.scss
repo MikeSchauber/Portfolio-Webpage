@@ -108,7 +108,8 @@ form {
   > p {
     line-height: 30px;
 
-    > span {
+    > a {
+      text-decoration: none;
       transition: all 100ms ease-in-out;
       color: #3dcfb6;
       cursor: pointer;

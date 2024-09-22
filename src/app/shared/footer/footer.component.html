@@ -1,6 +1,8 @@
 <footer class="hide-mobile">
     <div class="first">
-        <img src="assets/img/logo-name.png" alt="">
+        <a href="/">
+            <img src="assets/img/logo-name.png" alt="">
+        </a>
         <div>
             <p>Web Developer</p>
             <p>Tübingen Germany</p>
@@ -13,14 +15,16 @@
         <a href="https://github.com/MikeSchauber" target="_blank">Github</a>
         <a href="https://www.linkedin.com/in/mike-schauber-b17328303/" target="_blank">LinkedIn</a>
         <a href="mailto:mike.schauber96@gmail.com">Email</a>
-        <a href="# ">Legal Notice</a>
+        <a href="/imprint" routerLink="/imprint">{{ "footer.legalnotice" | translate }}</a>
     </div>
 </footer>
 
 <footer class="show-mobile">
     <div class="upper-container">
         <div class="first">
-            <img src="assets/img/logo-name.png" alt="">
+            <a href="/">
+                <img src="assets/img/logo-name.png" alt="">
+            </a>
             <div>
                 <p>Web Developer</p>
                 <p>Tübingen Germany</p>
@@ -31,7 +35,7 @@
             <a href="https://github.com/MikeSchauber" target="_blank">Github</a>
             <a href="https://www.linkedin.com/in/mike-schauber-b17328303/" target="_blank">LinkedIn</a>
             <a href="mailto:mike.schauber96@gmail.com">Email</a>
-            <a href="# ">{{ "footer.legalnotice" | translate }}</a>
+            <a routerLink="/imprint">{{ "footer.legalnotice" | translate }}</a>
         </div>
     </div>
     <div class="second">
