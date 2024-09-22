@@ -11,7 +11,6 @@
 footer {
   color: white;
   width: 100%;
-  height: auto;
   @include dFlex($fd: row, $jc: space-between);
   padding: 48px 96px;
 }
@@ -21,7 +20,7 @@ footer {
 
   > a {
     > img {
-      width:auto;
+      width: auto;
       height: 48px;
     }
   }
@@ -73,7 +72,7 @@ footer {
 
   footer {
     flex-direction: column;
-    gap: 16px;
+    gap: 32px;
     padding: 48px 16px !important;
   }
 
@@ -85,8 +84,10 @@ footer {
   .first {
     justify-content: center;
     gap: 16px;
-    > img {
-      width: 150px;
+    > a {
+      > img {
+        height: 32px;
+      }
     }
   }
 }
