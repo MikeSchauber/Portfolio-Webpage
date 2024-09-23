@@ -24,7 +24,7 @@ export class InputComponent {
   mailTest = false;
 
   post = {
-    endPoint: 'https://mike-schauber.developerakademie.net/angular-projects/portfolio/sendMail.php',
+    endPoint: 'https://mikeschauber.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
