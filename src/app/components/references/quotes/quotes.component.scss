@@ -12,6 +12,8 @@
   top: -274px;
   left: 0;
   width: 100vw;
+  max-width: 1920px;
+  border-radius: 15px;
   height: 274px;
   z-index: 5;
   background: linear-gradient(
@@ -73,8 +75,6 @@
     top: -300px;
     height: 358px;
   }
-
-
 }
 
 @media (max-width: 420px) {
