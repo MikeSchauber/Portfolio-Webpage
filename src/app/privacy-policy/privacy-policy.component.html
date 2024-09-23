@@ -1,10 +1,8 @@
 <div class="mover"></div>
+<app-responsive-menu (click)="this.dialogData.closeDialog()" [ngClass]="{'d-none': !this.dialogData.open}"
+    [ngStyle]="{opacity: this.dialogData.opacity}" class="dialog"></app-responsive-menu>
 <main>
-    <header>
-        <a href="">
-            <img src="assets/img/logo-name.png" alt="">
-        </a>
-    </header>
+<app-navbar class="header"></app-navbar>
     <div class="impressum">
         <h1>{{ 'privacy.title' | translate }}</h1>
         <p>{{ 'privacy.date' | translate }}</p>
@@ -134,5 +132,5 @@
                 title="{{ 'privacy.privacy_generator' | translate }}" target="_blank"
                 rel="noopener noreferrer nofollow">{{ 'privacy.generated_with' | translate }}</a></p>
     </div>
-    <app-footer></app-footer>
+    <app-footer class="footer"></app-footer>
 </main>

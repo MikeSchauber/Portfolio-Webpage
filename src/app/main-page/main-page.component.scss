@@ -23,24 +23,6 @@
   }
 }
 
-.d-none {
-  display: none;
-}
-
-.dialog {
-  @include dFlex();
-  width: 100vw;
-  height: 100%;
-  background-color: #0000003d;
-  z-index: 998;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: all 125ms ease-in-out;
-  padding: 0px 96px;
-  backdrop-filter: blur(3px);
-}
-
 @media (max-width: 1000px) {
   .dialog {
     padding: 0px 16px;

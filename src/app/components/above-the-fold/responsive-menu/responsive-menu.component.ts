@@ -16,7 +16,7 @@ export class ResponsiveMenuComponent implements OnInit {
   skills: boolean = false;
   projects: boolean = false;
 
-  public dialogService = inject(DialogDataService);
+  public dialogData = inject(DialogDataService);
 
   constructor(public translate: TranslateService) {}
 

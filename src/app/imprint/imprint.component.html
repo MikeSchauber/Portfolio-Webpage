@@ -1,4 +1,6 @@
 <div class="mover"></div>
+<app-responsive-menu (click)="this.dialogData.closeDialog()" [ngClass]="{'d-none': !this.dialogData.open}"
+    [ngStyle]="{opacity: this.dialogData.opacity}" class="dialog"></app-responsive-menu>
 <main>
     <app-navbar class="header"></app-navbar>
     <div class='impressum'>
