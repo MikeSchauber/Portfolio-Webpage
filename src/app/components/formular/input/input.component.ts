@@ -34,15 +34,16 @@ export class InputComponent {
     },
   };
 
-  constructor(public translate: TranslateService, public http: HttpClient) {}
+  constructor(public translate: TranslateService, public http: HttpClient) { }
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.contactData.privacy) {
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
+            this.resetContactData();
           },
           error: (error) => {
             console.error(error);
@@ -51,7 +52,20 @@ export class InputComponent {
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
+    } else {
+      this.privacyWarning = true;
     }
+  }
+
+  resetContactData() {
+    this.contactData = {
+      name: '',
+      email: '',
+      message: '',
+      privacy: false,
+    };
+    this.privacyWarning = false;
+    this.checkboxUrl = 'assets/icons/checkbox.png';
   }
 
   toggleCheckbox() {

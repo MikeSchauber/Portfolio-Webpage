@@ -44,7 +44,7 @@
                 </p>
             </div>
         </div>
-        @if (!privacy.valid || privacyWarning) {
+        @if (privacyWarning) {
         <span> {{'input.privacyCheck' | translate }}</span>
         }
         <button class="btn-container">
