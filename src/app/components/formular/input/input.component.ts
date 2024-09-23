@@ -36,6 +36,7 @@ export class InputComponent {
 
   constructor(public translate: TranslateService, public http: HttpClient) { }
 
+ 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.contactData.privacy) {
       this.http
@@ -52,8 +53,10 @@ export class InputComponent {
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
-    } else {
+    } else if (!this.contactData.privacy) {
       this.privacyWarning = true;
+    } else {
+      this.privacyWarning = false;
     }
   }
 
