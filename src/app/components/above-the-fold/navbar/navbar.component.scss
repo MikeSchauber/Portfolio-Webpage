@@ -5,11 +5,12 @@
 }
 
 .menubar {
-  padding: 0px 96px;
+  padding: 64px 96px;
   position: absolute;
-  top: 48px;
+  top: 0;
   left: 0;
   width: 100%;
+  max-width: 1920px;
   height: 50px;
   @include dFlex($jc: space-between, $fd: row);
 

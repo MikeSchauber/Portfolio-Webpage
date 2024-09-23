@@ -1,50 +1,48 @@
 <div class="mover"></div>
 <main>
-    <header>
-        <a href="">
-            <img src="assets/img/logo-name.png" alt="">
-        </a>
-    </header>
-    <div>
-        <div class='impressum'>
-            <h1>{{ 'impressum.title' | translate }}</h1>
-            <br>
-            <p>{{ 'impressum.paragraph1' | translate }}</p>
-            <p>
-                {{ 'impressum.contactName' | translate }} <br>
-                {{ 'impressum.address' | translate }}<br>
-                {{ 'impressum.city' | translate }} <br>
-            </p>
-            <br>
-            <p><strong>{{ 'impressum.representedBy' | translate }}</strong><br>
-                {{ 'impressum.contactName' | translate }}<br>
-            </p>
-            <br>
-            <p><strong>{{ 'impressum.contact' | translate }}</strong> <br>
-                {{ 'impressum.phone' | translate }}<br>
-                E-Mail: <a href='mailto:mike.schauber96@gmail.com'>{{ 'impressum.email' | translate }}</a><br>
-            </p>
-            <p>
-                <strong>{{ 'impressum.liabilityDisclaimer' | translate }}:</strong><br><br>
-                <strong>{{ 'impressum.liabilityForContent' | translate }}</strong><br><br>
-                {{ 'impressum.contentDisclaimer' | translate }}<br><br>
-                <strong>{{ 'impressum.liabilityForLinks' | translate }}</strong><br><br>
-                {{ 'impressum.linksDisclaimer' | translate }}<br><br>
-                <strong>{{ 'impressum.copyright' | translate }}</strong><br><br>
-                {{ 'impressum.copyrightNotice' | translate }}<br>
-            </p>
-            <br>
-            <p>
-                {{ 'impressum.privacyPolicy' | translate }}<br>
-                {{ 'impressum.dataProtection' | translate }} <br>
-                {{ 'impressum.emailSecurity' | translate }} <br>
-                {{ 'impressum.adDisclaimer' | translate }}<br>
-            </p>
-            <br>
-            {{ 'impressum.generatedBy' | translate }} <a
-                href="https://www.impressum-generator.de">impressum-generator.de</a> {{ 'impressum.from' | translate }}
-            <a href="https://www.kanzlei-hasselbach.de/" rel="nofollow">Kanzlei Hasselbach</a>
-        </div>
+    <app-navbar class="header"></app-navbar>
+    <div class='impressum'>
+        <h1>{{ 'impressum.title' | translate }}</h1>
+        <br>
+        <p>{{ 'impressum.paragraph1' | translate }}</p>
+        <p>
+            {{ 'impressum.contactName' | translate }} <br>
+            {{ 'impressum.address' | translate }}<br>
+            {{ 'impressum.city' | translate }} <br>
+        </p>
+        <br>
+        <p><strong>{{ 'impressum.representedBy' | translate }}</strong><br>
+            {{ 'impressum.contactName' | translate }}<br>
+        </p>
+        <br>
+        <p><strong>{{ 'impressum.contact' | translate }}</strong> <br>
+            {{ 'impressum.phone' | translate }}<br>
+            E-Mail: <a href='mailto:mike.schauber96@gmail.com'>{{ 'impressum.email' | translate }}</a><br>
+        </p>
+        <p>
+            <strong>{{ 'impressum.liabilityDisclaimer' | translate }}:</strong><br><br>
+            <strong>{{ 'impressum.liabilityForContent' | translate }}</strong><br><br>
+            {{ 'impressum.contentDisclaimer' | translate }}<br><br>
+            <strong>{{ 'impressum.liabilityForLinks' | translate }}</strong><br><br>
+            {{ 'impressum.linksDisclaimer' | translate }}<br><br>
+            <strong>{{ 'impressum.copyright' | translate }}</strong><br><br>
+            {{ 'impressum.copyrightNotice' | translate }}<br>
+        </p>
+        <br>
+        <p>
+            {{ 'impressum.privacyPolicy' | translate }}<br>
+            {{ 'impressum.dataProtection' | translate }} <br>
+            {{ 'impressum.emailSecurity' | translate }} <br>
+            {{ 'impressum.adDisclaimer' | translate }}<br>
+        </p>
+        <br>
+        {{ 'impressum.generatedBy' | translate }} <a
+            href="https://www.impressum-generator.de">impressum-generator.de</a> {{ 'impressum.from' | translate }}
+        <a href="https://www.kanzlei-hasselbach.de/" rel="nofollow">Kanzlei Hasselbach</a>
     </div>
-    <app-footer></app-footer>
+
 </main>
+
+<div class="footer">
+    <app-footer ></app-footer>
+</div>
