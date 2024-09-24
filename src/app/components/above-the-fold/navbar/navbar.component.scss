@@ -5,15 +5,13 @@
 }
 
 .menubar {
-  padding: 64px 96px;
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   max-width: 1920px;
   height: 50px;
   @include dFlex($jc: space-between, $fd: row);
-
+  padding: 64px 96px;
   > menu {
     @include dFlex($fd: row, $g: 25px);
 
@@ -130,11 +128,8 @@
   }
 
   .mobile-view {
-    padding: 0px 16px;
-    display: block;
-    position: absolute;
-    top: 32px;
-    height: 50px;
+    padding: 48px 16px;
+    display: flex;
     left: 0;
     width: 100%;
   }

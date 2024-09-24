@@ -14,10 +14,7 @@ main {
 }
 
 .header {
-  position: absolute;
   width: 100%;
-  top: -128px;
-  left: 0;
 }
 
 .impressum {
@@ -25,7 +22,6 @@ main {
   @include dFlex($ai: flex-start);
   width: 100%;
   max-width: 1920px;
-  margin-top: 128px;
 }
 
 .footer {

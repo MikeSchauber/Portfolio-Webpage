@@ -10,6 +10,7 @@ import { ResponsiveMenuComponent } from '../components/above-the-fold/responsive
 import { ProjectDialogComponent } from '../components/portfolio/project-dialog/project-dialog.component';
 import { ReferencesComponent } from '../components/references/references.component';
 import { FormularComponent } from '../components/formular/formular.component';
+import { BackToTopComponent } from '../components/back-to-top/back-to-top.component';
 
 @Component({
   selector: 'app-main-page',
@@ -24,6 +25,7 @@ import { FormularComponent } from '../components/formular/formular.component';
     SkillSetComponent,
     PortfolioComponent,
     ReferencesComponent,
+    BackToTopComponent,
     FormularComponent,
   ],
   templateUrl: './main-page.component.html',

@@ -3,23 +3,7 @@
 .main-content {
   width: 100%;
   overflow: hidden;
-}
-
-.to-the-top {
-  height: 50px;
-  width: 50px;
-  background-color: rgba(63, 207, 183, 0.2);
-  position: sticky; /* Sticky Position */
-  top: 100px; /* Bleibt 70px vom unteren Rand des Fensters */
-  right: 20px;
-  border: 1px solid rgba(63, 207, 183, 1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
+  position: relative;
 }
 
 .block {
