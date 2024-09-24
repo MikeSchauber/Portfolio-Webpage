@@ -55,7 +55,7 @@ export class ProjectServiceService {
     technologies: [0, 1, 2],
     imgUrl: 'assets/img/sharky.png',
     githubUrl: 'https://github.com/MikeSchauber',
-    liveTestUrl: 'https://mikeschauber.de/pokedex/index.html',
+    liveTestUrl: 'https://mikeschauber.de/sharky/index.html',
   };
 
   pokedex: ProjectInterface = {
@@ -65,7 +65,7 @@ export class ProjectServiceService {
     technologies: [0, 1, 2],
     imgUrl: 'assets/img/pokedex.png',
     githubUrl: 'https://github.com/MikeSchauber',
-    liveTestUrl: 'https://mikeschauber.de/sharky/index.html',
+    liveTestUrl: 'https://mikeschauber.de/pokedex/index.html',
   };
 
   constructor() {}
