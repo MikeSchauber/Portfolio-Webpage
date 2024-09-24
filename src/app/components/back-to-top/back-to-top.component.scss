@@ -2,7 +2,6 @@
 
 div {
   width: 100%;
-
   max-width: 1920px;
   padding: 0px 96px;
   @include dFlex($fd: row, $jc: flex-end);

@@ -39,41 +39,38 @@ export class ProjectServiceService {
   ];
 
   join: ProjectInterface = {
-    number: "01",
+    number: '01',
     name: 'Join',
     description: 'join.description',
     technologies: [0, 1, 2, 3],
     imgUrl: 'assets/img/join.png',
     githubUrl: 'https://github.com/MikeSchauber',
-    liveTestUrl:
-      'https://mike-schauber.developerakademie.net/developer-akademie/join/index.html',
+    liveTestUrl: 'https://mikeschauber.de/join/index.html',
   };
 
   sharky: ProjectInterface = {
-    number: "02",
+    number: '02',
     name: 'Sharky',
     description: 'sharky.description',
     technologies: [0, 1, 2],
     imgUrl: 'assets/img/sharky.png',
     githubUrl: 'https://github.com/MikeSchauber',
-    liveTestUrl:
-      'https://mike-schauber.developerakademie.net/developer-akademie/sharky/index.html',
+    liveTestUrl: 'https://mikeschauber.de/pokedex/index.html',
   };
 
   pokedex: ProjectInterface = {
-    number: "03",
+    number: '03',
     name: 'Pokédex',
     description: 'pokedex.description',
     technologies: [0, 1, 2],
     imgUrl: 'assets/img/pokedex.png',
     githubUrl: 'https://github.com/MikeSchauber',
-    liveTestUrl:
-      'https://mike-schauber.developerakademie.net/developer-akademie/pokedex/index.html',
+    liveTestUrl: 'https://mikeschauber.de/sharky/index.html',
   };
 
-  constructor() { }
+  constructor() {}
 
-  setProjectDataInDialog(project: string, index: number){
+  setProjectDataInDialog(project: string, index: number) {
     this.currentProject = index;
     if (project === 'join') {
       this.SetJoinData();
@@ -87,12 +84,8 @@ export class ProjectServiceService {
   setTech(techNumbers: number[]) {
     for (let i = 0; i < techNumbers.length; i++) {
       const number: number = techNumbers[i];
-      this.activeProject.technologies.push(
-        this.technologiesArray[number]
-      );
-      this.activeProject.techIconUrl.push(
-        this.techIconArray[number]
-      );
+      this.activeProject.technologies.push(this.technologiesArray[number]);
+      this.activeProject.techIconUrl.push(this.techIconArray[number]);
     }
   }
 
@@ -101,13 +94,10 @@ export class ProjectServiceService {
     this.setTech(techNumbers);
     this.activeProject.number = this['join'].number;
     this.activeProject.name = this['join'].name;
-    this.activeProject.description =
-      this['join'].description;
+    this.activeProject.description = this['join'].description;
     this.activeProject.imgUrl = this['join'].imgUrl;
-    this.activeProject.githubUrl =
-      this['join'].githubUrl;
-    this.activeProject.liveTestUrl =
-      this['join'].liveTestUrl;
+    this.activeProject.githubUrl = this['join'].githubUrl;
+    this.activeProject.liveTestUrl = this['join'].liveTestUrl;
   }
 
   setPokedexData() {
@@ -115,13 +105,10 @@ export class ProjectServiceService {
     this.setTech(techNumbers);
     this.activeProject.number = this['pokedex'].number;
     this.activeProject.name = this['pokedex'].name;
-    this.activeProject.description =
-      this['pokedex'].description;
+    this.activeProject.description = this['pokedex'].description;
     this.activeProject.imgUrl = this['pokedex'].imgUrl;
-    this.activeProject.githubUrl =
-      this['pokedex'].githubUrl;
-    this.activeProject.liveTestUrl =
-      this['pokedex'].liveTestUrl;
+    this.activeProject.githubUrl = this['pokedex'].githubUrl;
+    this.activeProject.liveTestUrl = this['pokedex'].liveTestUrl;
   }
 
   setSharkyData() {
@@ -129,12 +116,9 @@ export class ProjectServiceService {
     this.setTech(techNumbers);
     this.activeProject.number = this['sharky'].number;
     this.activeProject.name = this['sharky'].name;
-    this.activeProject.description =
-      this['sharky'].description;
+    this.activeProject.description = this['sharky'].description;
     this.activeProject.imgUrl = this['sharky'].imgUrl;
-    this.activeProject.githubUrl =
-      this['sharky'].githubUrl;
-    this.activeProject.liveTestUrl =
-      this['sharky'].liveTestUrl;
+    this.activeProject.githubUrl = this['sharky'].githubUrl;
+    this.activeProject.liveTestUrl = this['sharky'].liveTestUrl;
   }
 }

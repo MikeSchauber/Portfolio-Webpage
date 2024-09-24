@@ -1,29 +1,81 @@
 @import "../../../mixins.scss";
 
-div {
+.main-container {
   @include dFlex();
   justify-content: flex-start;
   color: white;
   width: 100%;
   padding: 64px 96px;
   font-family: "karla";
+}
 
-  > main {
+main {
+  width: 100%;
+  @include dFlex($fd: row, $ai: flex-start, $jc: space-between);
+}
+
+.feedback {
+  height: 100vh;
+  width: 100%;
+  padding: 16px 96px;
+  @include dFlex();
+  position: fixed;
+  top: 100%;
+  left: 0;
+  display: none;
+  > span {
+    @include dFlex();
+    font-size: 22px;
+    font-family: "fira code";
+    text-align: center;
     width: 100%;
-    @include dFlex($fd: row, $ai: flex-start, $jc: space-between);
+    max-width: 700px;
+    height: 80px;
+    background-color: rgb(28, 105, 93, 0.8);
+    border: 1px solid rgb(61, 207, 182);
+    border-radius: 30px;
+  }
+}
+
+.feedbackAnimation {
+  display: flex;
+  animation: feedback 4s ease-in-out;
+}
+
+@keyframes feedback {
+  0% {
+    top: 100%;
+  }
+  30% {
+    top: 35%;
+  }
+  70% {
+    top: 35%;
+  }
+  100% {
+    top: 100%;
+    display: none;
   }
 }
 
 @media (max-width: 1000px) {
-  div {
+  .main-container {
     padding: 48px 16px;
     justify-content: flex-start;
     align-items: flex-start;
-    > main {
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      gap: 64px;
+  }
+
+  main {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 64px;
+  }
+
+  .feedback {
+    padding: 0px 16px;
+    > span {
+      font-size: 16px;
     }
   }
 }

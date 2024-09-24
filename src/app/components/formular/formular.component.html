@@ -1,6 +1,9 @@
-<div>
+<div class="main-container">
     <main>
-        <app-text></app-text>
-        <app-input></app-input>
+        <app-text class="animation-from-left animElement"></app-text>
+        <app-input class="animation-from-right animElement"></app-input>
     </main>
+    <div class="feedback" [ngClass]="{'feedbackAnimation': this.feedback.submitSuccess}">
+        <span>{{ 'formular.success' | translate }}</span>
+    </div>
 </div>

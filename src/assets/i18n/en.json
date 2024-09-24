@@ -68,7 +68,8 @@
     "problem": "Got a problem to solve?",
     "description": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
     "frontendDeveloper": "Need a Frontend developer?",
-    "talk": "Let’s talk!"
+    "talk": "Let’s talk!",
+    "success": "Email was sent successfully :)"
   },
   "input": {
     "name": "What's your name?",

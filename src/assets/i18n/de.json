@@ -68,7 +68,8 @@
     "problem": "Brauchen Sie Hilfe bei einem Problem?",
     "description": "Kontaktieren Sie mich über dieses Formular, ich freue mich, von Ihnen zu hören, Ihre Ideen zu erfahren und zu Ihren Projekten beizutragen.",
     "frontendDeveloper": "Brauchen Sie einen Frontend-Entwickler?",
-    "talk": "Reden wir darüber!"
+    "talk": "Reden wir darüber!",
+    "success": "Email wurde erfolgreich versendet :)"
   },
   "input": {
     "name": "Wie ist Ihr Name?",
@@ -144,7 +145,7 @@
     "purpose_6": "Erfüllung rechtlicher Verpflichtungen",
     "legal_basis": "Rechtsgrundlagen der Verarbeitung",
     "legal_basis_summary": "Die Verarbeitung personenbezogener Daten erfolgt auf Grundlage der folgenden Rechtsgrundlagen:",
-    "legal_basis_details": "Die konkrete Rechtsgrundlage für jede Verarbeitungstätigkeit hängt vom jeweiligen Kontext ab.",
+
     "contract_fulfillment": "Vertragserfüllung",
     "contract_fulfillment_details": "Die Verarbeitung ist zur Erfüllung eines Vertrages mit der betroffenen Person erforderlich.",
     "legitimate_interests": "Berechtigte Interessen",
