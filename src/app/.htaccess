@@ -1,0 +1,16 @@
+# Rewrite Engine aktivieren
+RewriteEngine On
+
+# Stellt sicher, dass der Zugriff auf die Dateien .htaccess und .htpasswd verboten ist
+<Files .ht*>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Wenn eine Datei oder ein Verzeichnis existiert, leitet die Regel die Anfrage darauf
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Alles andere wird zur index.html weitergeleitet (Angular übernimmt das Routing)
+RewriteRule ^ index.html [L]
