@@ -49,6 +49,23 @@ body {
   backdrop-filter: blur(3px);
 }
 
+.animation-from-left {
+  opacity: 0;
+  transform: translateX(-100%) rotate(25deg) scale(0.7);
+  transition: all 0.5s ease-in-out;
+}
+
+.animation-from-right {
+  opacity: 0;
+  transform: translateX(100%) rotate(-25deg) scale(0.7);
+  transition: all 0.5s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateX(0%) rotate(0deg) scale(1);
+}
+
 .mover {
   z-index: -1;
   position: fixed;
