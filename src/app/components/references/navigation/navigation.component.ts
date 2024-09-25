@@ -75,7 +75,6 @@ export class NavigationComponent {
   }
 
   displayTimeoutReset(quote: Quote) {
-    console.log(quote);
     setTimeout(() => {
       this.control.hide[quote.position] = false;
       this.control.controlActive = false;

@@ -43,12 +43,10 @@ export class ResponsiveMenuComponent implements OnInit {
   private loadLanguageFromLocalStorage(): void {
     const storedLanguage = localStorage.getItem('selectedLanguage');
     const storedIsGerman = localStorage.getItem('isGerman') === 'true';
-    
     if (storedLanguage) {
       this.translate.use(storedLanguage);
       this.isGerman = storedIsGerman;
     } else {
-      // Fallback zur Standardsprache
       this.translate.use('en');
       this.isGerman = false;
     }

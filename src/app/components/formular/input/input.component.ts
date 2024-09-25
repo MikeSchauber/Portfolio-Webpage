@@ -69,8 +69,7 @@ export class InputComponent {
         },
         error: (error) => {
           console.error(error);
-        },
-        complete: () => console.info('send post complete'),
+        }
       });
   }
 
