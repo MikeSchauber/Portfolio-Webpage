@@ -11,6 +11,8 @@ main {
   font-family: "karla";
   width: 100%;
   max-width: 1920px;
+  min-height: 100vh;
+  @include dFlex($jc: space-between, $ai: space-between);
 }
 
 .header {
