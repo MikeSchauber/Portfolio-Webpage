@@ -13,6 +13,24 @@
   }
 }
 
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+  40% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
 .action-btn {
   @include dFlex($fd: column, $g: 40px);
   width: 100%;
@@ -23,7 +41,12 @@
     font-family: "karla";
     font-weight: 700;
     font-size: 128px;
-    min-width: fit-content;
+    margin-inline: auto;
+    max-width: fit-content;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 1px solid white;
+    animation: typing 3s steps(15) forwards, blink 1s step-end infinite;
   }
 }
 
@@ -147,5 +170,27 @@
 @media (max-width: 500px) {
   .btn {
     flex-direction: column;
+    gap: 24px;
+  }
+  .headline {
+    > h2 {
+      font-size: 18px;
+    }
+  }
+
+  .action-btn {
+    > h1 {
+      font-size: 38px;
+    }
+  }
+
+  .btn-container {
+    >a {
+      height: 38px;
+    }
+  }
+
+  .btn-content {
+    font-size: 14px;
   }
 }
