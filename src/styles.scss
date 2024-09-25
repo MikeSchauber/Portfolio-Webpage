@@ -51,20 +51,22 @@ body {
 
 .animation-from-left {
   opacity: 0;
-  transform: scale(0.5) translateX(-100%);
+  transform: scale(0.6) translateX(-50%);
   transition: all 0.5s ease-in-out;
 }
 
 .animation-from-right {
   opacity: 0;
-  transform: scale(0.5) translateX(100%);
+  transform: scale(0.6) translateX(50%);
   transition: all 0.5s ease-in-out;
 }
 
-.desktop-from-right {
-  opacity: 0;
-  transform: scale(0.5);
-  transition: all 0.5s ease-in-out;
+@media (min-width:424px) {
+  .desktop-from-right {
+    opacity: 0;
+    transform: scale(0.6) translateX(50%);
+    transition: all 0.5s ease-in-out;
+  }
 }
 
 .visible {
@@ -96,7 +98,7 @@ body {
   }
 }
 
-@media (max-width: 435px) {
+@media (max-width: 423px) {
   .icon-from-left {
     opacity: 0;
     transform: scale(0.5) translateX(-150%) rotate(-10deg);

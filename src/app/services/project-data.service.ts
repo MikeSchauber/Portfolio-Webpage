@@ -44,7 +44,7 @@ export class ProjectServiceService {
     description: 'join.description',
     technologies: [0, 1, 2, 3],
     imgUrl: 'assets/img/join.png',
-    githubUrl: 'https://github.com/MikeSchauber',
+    githubUrl: 'https://github.com/Jan2810/join',
     liveTestUrl: 'https://mikeschauber.de/join/index.html',
   };
 
@@ -54,7 +54,7 @@ export class ProjectServiceService {
     description: 'sharky.description',
     technologies: [0, 1, 2],
     imgUrl: 'assets/img/sharky.png',
-    githubUrl: 'https://github.com/MikeSchauber',
+    githubUrl: 'https://github.com/MikeSchauber/Sharky-2D-Game',
     liveTestUrl: 'https://mikeschauber.de/sharky/index.html',
   };
 
@@ -64,7 +64,7 @@ export class ProjectServiceService {
     description: 'pokedex.description',
     technologies: [0, 1, 2],
     imgUrl: 'assets/img/pokedex.png',
-    githubUrl: 'https://github.com/MikeSchauber',
+    githubUrl: 'https://github.com/MikeSchauber/Pokedex',
     liveTestUrl: 'https://mikeschauber.de/pokedex/index.html',
   };
 
