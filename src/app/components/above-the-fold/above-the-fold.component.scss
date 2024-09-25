@@ -44,7 +44,7 @@
 
 .above-container {
   font-family: "Fira Code";
-  @include dFlex($jc: space-between);
+  @include dFlex();
   position: relative;
   height: 100vh;
   width: 100%;
