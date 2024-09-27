@@ -133,10 +133,14 @@
   }
 
   .mobile-view {
-    padding: 48px 16px;
+    background:  linear-gradient(0deg, #1c1c1c00 50%, #08463b 100%);
+    padding: 28px 16px;
     display: flex;
     left: 0;
     width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 99;
   }
 
   .mobile-bar {
