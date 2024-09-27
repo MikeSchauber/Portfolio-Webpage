@@ -16,8 +16,12 @@
   display: none;
 }
 
-.dot {
+.social-dot {
   transition: all 125ms ease-in-out;
+  right: 0;
+  position: absolute;
+  top: 9px;
+  z-index: -1;
 }
 
 .socials-and-nav {
@@ -42,6 +46,7 @@
     &:hover {
       background-color: #08463ba4;
     }
+
     > img {
       animation: moveDown 2s infinite;
       transition: all 100ms ease-in-out;
@@ -53,6 +58,14 @@
   > div {
     height: 240px;
     border: 1px solid #3dcfb6;
+  }
+}
+
+.socials {
+  >a {
+    &:hover .social-dot {
+      right: -20px;
+    }
   }
 }
 
@@ -105,12 +118,6 @@
     height: 186px;
     border: 1px solid #ffffff;
   }
-}
-
-.social-dot {
-  position: absolute;
-  right: -20px;
-  top: 9px;
 }
 
 @media (max-width: 1215px) {
@@ -174,5 +181,13 @@
 @media (max-width: 1000px) {
   .socials-and-nav {
     padding: 0px 16px;
+  }
+
+  .socials {
+    >a {
+      &:hover .social-dot {
+        right:40px;
+      }
+    }
   }
 }
