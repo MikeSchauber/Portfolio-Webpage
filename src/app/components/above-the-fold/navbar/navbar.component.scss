@@ -2,6 +2,8 @@
 
 .dot {
   transition: all 125ms ease-in-out;
+  top: 0;
+  z-index: 98;
 }
 
 .menubar {
@@ -27,10 +29,13 @@
       &:hover {
         transform: scale(1.1);
       }
+      &:hover .dot {
+        top: 25px;
+      }
 
       >img {
         position: absolute;
-        top: 30px;
+        top: 10px;
       }
     }
   }
