@@ -11,14 +11,12 @@
     "contactMe": "Kontaktiere mich"
   },
   "banner": {
-    "1": "Remote & vor Ort",
-    "2": "Frontend-Entwickler",
+    "1": "Frontend-Entwickler",
+    "2": "Remote & vor Ort",
     "3": "Tübingen",
-    "4": "Suche neue Stelle",
-    "5": "Moderne Webtech",
-    "6": "Nutzerzentriert",
-    "7": "Kreativ & lösungsorientiert",
-    "8": "Schnelle Auffassungsgabe"
+    "4": "Moderne Webtech",
+    "5": "Nutzerorientiert",
+    "6": "Kreativ & lösungsorientiert"
   },
   "aboutMe": {
     "whoIAm": "Wer ich bin",
@@ -133,7 +131,6 @@
     "data_types_4": "Inhaltsdaten (z.B. Nachrichten, Kommentare)",
     "data_types_5": "Kommunikationsdaten",
     "data_types_6": "Meta-/Kommunikationsdaten",
-    "data_subjects": "Kategorien betroffener Personen",
     "subjects_1": "Nutzer des Dienstes",
     "subjects_2": "Besucher der Website",
     "processing_purposes": "Verarbeitungszwecke",
@@ -143,9 +140,7 @@
     "purpose_4": "Analyse und Statistik",
     "purpose_5": "Sicherheitsmaßnahmen",
     "purpose_6": "Erfüllung rechtlicher Verpflichtungen",
-    "legal_basis": "Rechtsgrundlagen der Verarbeitung",
     "legal_basis_summary": "Die Verarbeitung personenbezogener Daten erfolgt auf Grundlage der folgenden Rechtsgrundlagen:",
-
     "contract_fulfillment": "Vertragserfüllung",
     "contract_fulfillment_details": "Die Verarbeitung ist zur Erfüllung eines Vertrages mit der betroffenen Person erforderlich.",
     "legitimate_interests": "Berechtigte Interessen",

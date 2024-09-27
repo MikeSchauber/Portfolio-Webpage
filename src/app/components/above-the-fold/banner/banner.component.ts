@@ -1,11 +1,5 @@
 import { CommonModule } from '@angular/common';
-import {
-  AfterViewInit,
-  Component,
-  OnInit,
-  ElementRef,
-  ViewChild,
-} from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -17,17 +11,13 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class BannerComponent {
   banners: string[] = [
-    'banner.1', 
-    'banner.2', 
-    'banner.3', 
+    'banner.1',
+    'banner.2',
+    'banner.3',
     'banner.4',
     'banner.5',
     'banner.6',
-    'banner.7',
-    'banner.8'
   ];
 
-  constructor(public translate: TranslateModule) { }
-
-  
+  constructor(public translate: TranslateModule) {}
 }

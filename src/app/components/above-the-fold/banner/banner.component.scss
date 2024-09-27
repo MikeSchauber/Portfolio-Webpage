@@ -55,10 +55,10 @@ $animationLength: 40s;
 
 @keyframes movement {
   from {
-    transform: translateX(1150px);
+    transform: translateX(1550px);
   }
   to {
-    transform: translateX(-2020px);
+    transform: translateX(-730px);
   }
 }
 
@@ -71,13 +71,13 @@ $animationLength: 40s;
   }
   @keyframes movement1000 {
     from {
-      transform: translateX(1500px);
+      transform: translateX(1550px);
     }
     to {
-      transform: translateX(-1150px);
+      transform: translateX(-340px);
     }
   }
   .banner-content {
-    animation: movement1000 40s linear infinite;
+    animation: movement1000 $animationLength linear infinite;
   }
 }
