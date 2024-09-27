@@ -51,7 +51,7 @@
   display: inline-block;
   width: 84px;
   height: 28px;
-  color: hsla(170, 60%, 53%, 0.5);
+  color: rgb(41, 136, 120);
   transition: all 125ms ease-in-out;
 
   &:hover {
@@ -83,10 +83,10 @@
   background: #9fccfa00;
   border-radius: 100px;
   transition: all 125ms ease-in-out;
-  border: 1px solid hsla(170, 60%, 53%, 0.5);
+  border: 1px solid white;
 
   &:hover {
-    border: 1px solid white;
+    border: 1px solid hsla(170, 60%, 53%, 0.5);
   }
 }
 
@@ -98,9 +98,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 26.5px;
-  width: 46px;
-  inset: 0;
+  height: 27.5px;
+  width: 48px;
+  inset: -1px;
   background-color: #3dcfb6;
   border-radius: 50px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
