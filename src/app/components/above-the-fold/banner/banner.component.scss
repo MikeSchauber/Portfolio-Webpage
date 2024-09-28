@@ -1,17 +1,16 @@
 @import "../../../../mixins.scss";
 
 $blur: 4px;
-$animationLength: 40s;
+$animationLength: 20s;
 
 .banner {
   padding: 12px 24px;
   position: absolute;
   bottom: 50px;
-  left: 0px;
-  right: 0px;
+  left: 3px;
+  right: 3px;
   width: 100%;
   max-height: 60px;
-  border-radius: 10px;
   color: rgba(61, 207, 182, 1);
   font-family: "karla";
   font-weight: 400;
@@ -55,10 +54,10 @@ $animationLength: 40s;
 
 @keyframes movement {
   from {
-    transform: translateX(1550px);
+    transform: translateX(1050px);
   }
   to {
-    transform: translateX(-730px);
+    transform: translateX(-1230px);
   }
 }
 
@@ -71,10 +70,10 @@ $animationLength: 40s;
   }
   @keyframes movement1000 {
     from {
-      transform: translateX(1550px);
+      transform: translateX(1050px);
     }
     to {
-      transform: translateX(-340px);
+      transform: translateX(-840px);
     }
   }
   .banner-content {
