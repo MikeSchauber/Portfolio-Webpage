@@ -24,6 +24,8 @@
       border-radius: 30px;
       height: 568px;
       width: 568px;
+      filter: grayscale(100%);
+      transition: all 300ms ease-in-out;
     }
   }
 
@@ -44,11 +46,14 @@
         #3dcfb6 1.5px,
         transparent 3px,
         transparent 15px);
-    transition: all 0.3s ease;
+    transition: all 300ms ease;
   }
 }
 
 .img-cont {
+  &:hover .img {
+    filter: grayscale(0%);
+  }
   >div:hover::before {
     top: 25px;
     right: 25px;
