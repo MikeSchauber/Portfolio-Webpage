@@ -26,7 +26,13 @@
 }
 
 @keyframes blink {
+  0% {
+    border-color: transparent;
+  }
   50% {
+    border-color: white;
+  }
+  100% {
     border-color: transparent;
   }
 }
@@ -45,8 +51,9 @@
     max-width: fit-content;
     overflow: hidden;
     white-space: nowrap;
-    border-right: 1px solid white;
+    border-right: 1px solid transparent;
     animation: typing 3s steps(15) forwards, blink 1s step-end infinite;
+    animation-iteration-count: 1, 5;
   }
 }
 
@@ -185,7 +192,7 @@
   }
 
   .btn-container {
-    >a {
+    > a {
       height: 38px;
     }
   }
