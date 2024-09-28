@@ -1,7 +1,7 @@
 @import "../../../../mixins.scss";
 
 $blur: 4px;
-$animationLength: 20s;
+$animationLength: 7s;
 
 .banner {
   padding: 12px 24px;
@@ -57,7 +57,7 @@ $animationLength: 20s;
     transform: translateX(1050px);
   }
   to {
-    transform: translateX(-1230px);
+    transform: translateX(-1250px);
   }
 }
 
