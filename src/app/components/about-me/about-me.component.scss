@@ -51,6 +51,7 @@
 }
 
 .img-cont {
+  margin-bottom: 200px;
   &:hover .img {
     filter: grayscale(0%);
   }
@@ -131,6 +132,7 @@
   }
 
   .img-cont {
+    margin: 0;
     >img {
       max-height: 358px;
       max-width: 358px;

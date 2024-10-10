@@ -16,6 +16,7 @@
   height: 50px;
   @include dFlex($jc: space-between, $fd: row);
   padding: 48px 96px;
+  transition: all 125ms ease-in-out;
   >menu {
     @include dFlex($fd: row, $g: 25px);
 
