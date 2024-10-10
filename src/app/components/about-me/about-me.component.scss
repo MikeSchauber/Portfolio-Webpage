@@ -9,7 +9,7 @@
 
   >div {
     width: 100%;
-    @include dFlex($fd: row, $jc: space-between);
+    @include dFlex($fd: row, $jc: space-between, $ai: flex-end);
   }
 }
 
@@ -51,7 +51,7 @@
 }
 
 .img-cont {
-  margin-bottom: 200px;
+  margin-bottom: 180px;
   &:hover .img {
     filter: grayscale(0%);
   }
