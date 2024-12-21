@@ -54,6 +54,9 @@
   "pokedex": {
     "description": "Basierend auf der PokéAPI, eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
   },
+  "dabubble": {
+    "description": "DABubble ist eine moderne Chat-App, die einfache Kommunikation und effiziente Zusammenarbeit ermöglicht, mit Funktionen wie Channels, Direktnachrichten und Echtzeit-Reaktionen."
+  },
   "quotes": {
     "headline": "Wie meine Kollegen mich sehen",
     "quote_1": "Mike war ein angenehmer Teamkollege, der immer aufmerksam zuhörte und wertvollen Input lieferte. Seine proaktive Herangehensweise war besonders beeindruckend.",

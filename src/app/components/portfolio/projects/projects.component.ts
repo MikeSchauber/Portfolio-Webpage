@@ -34,11 +34,11 @@ export class ProjectsComponent {
 
   hoverProject(index: number) {
     if (index === 0) {
-      this.imgSrcWhenHover = 'assets/img/join.png';
+      this.imgSrcWhenHover = 'assets/img/dabubble.png';
     } else if (index === 1) {
-      this.imgSrcWhenHover = 'assets/img/sharky.png';
+      this.imgSrcWhenHover = 'assets/img/join.png';
     } else if (index === 2) {
-      this.imgSrcWhenHover = 'assets/img/pokedex.png';
+      this.imgSrcWhenHover = 'assets/img/sharky.png';
     }
     this.hoverAnimation(index);
 

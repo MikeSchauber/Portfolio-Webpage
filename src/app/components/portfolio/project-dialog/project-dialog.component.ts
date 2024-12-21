@@ -63,11 +63,11 @@ export class ProjectDialogComponent {
 
   checkAndSetProject(index: number) {
     index === 0
-      ? this.projectData.setProjectDataInDialog('join', index)
+      ? this.projectData.setProjectDataInDialog('dabubble', index)
       : index === 1
-      ? this.projectData.setProjectDataInDialog('sharky', index)
+      ? this.projectData.setProjectDataInDialog('join', index)
       : index === 2
-      ? this.projectData.setProjectDataInDialog('pokedex', index)
+      ? this.projectData.setProjectDataInDialog('sharky', index)
       : console.error('No next Project exists!');
     this.scrollToTop();
   }
