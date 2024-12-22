@@ -66,7 +66,7 @@ export class ProjectServiceService {
       technologies: [3, 4, 6],
       imgUrl: 'assets/img/sharky.png',
       githubUrl: 'https://github.com/MikeSchauber/Sharky-2D-Game',
-      liveTestUrl: 'https://sharky.mikeschauber.de',
+      liveTestUrl: 'https://sharky-game.mikeschauber.de',
     },
     pokedex: {
       number: '04',
