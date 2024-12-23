@@ -9,6 +9,9 @@
         <a (click)="this.dialogData.closeDialog()" href="#projects">
             {{ 'menu.projects' | translate }}
         </a>
+        <a (click)="this.dialogData.closeDialog()" href="#references">
+            {{ 'menu.references' | translate }}
+        </a>
         <label class="switch">
             <input type="checkbox">
             <span class="slider" (click)="this.toggleLanguage()" [ngClass]="{de: this.isGerman, 'slide' : this.isGerman}"></span>

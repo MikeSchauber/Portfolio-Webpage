@@ -55,6 +55,12 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
+.animation-from-left {
+  opacity: 0;
+  transform: scale(0.6) translateX(-50%);
+  transition: all 0.5s ease-in-out;
+}
+
 .animation-from-right {
   opacity: 0;
   transform: scale(0.6) translateX(50%);

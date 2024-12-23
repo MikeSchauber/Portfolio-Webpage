@@ -81,14 +81,13 @@
   transform: translateX(36px);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1045px) {
 
   .responsive-menu {
     background: linear-gradient(35deg, #1c1c1c 50%, #08463b 100%);
     padding: 40px 77px;
     @include dFlex();
     border-radius: 30px;
-    height: 252px;
     width: 238px;
     font-family: "fira code";
     font-weight: 400;

@@ -15,6 +15,7 @@ export class NavbarComponent implements OnInit {
   about: boolean = false;
   skills: boolean = false;
   projects: boolean = false;
+  references: boolean = false;
   dialogOpen: boolean = false;
   public dialogData = inject(DialogDataService);
 
@@ -51,12 +52,14 @@ export class NavbarComponent implements OnInit {
     e === 'about' ? (this.about = true) : null;
     e === 'skills' ? (this.skills = true) : null;
     e === 'projects' ? (this.projects = true) : null;
+    e === 'references' ? (this.references = true) : null;
   }
 
   mouseout(e: string) {
     e === 'about' ? (this.about = false) : null;
     e === 'skills' ? (this.skills = false) : null;
     e === 'projects' ? (this.projects = false) : null;
+    e === 'references' ? (this.references = false) : null;
   }
 
   private loadLanguageFromLocalStorage(): void {
