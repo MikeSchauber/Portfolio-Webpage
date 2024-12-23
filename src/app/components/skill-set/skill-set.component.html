@@ -25,17 +25,28 @@
                 </div>
             </div>
             <div class="icons desktop-from-right animElement">
-                <div class="icon-from-left animElement"><img src="assets/skill-icons/white/html.png" alt="">HTML</div>
-                <div class="icon-from-right animElement"><img src="assets/skill-icons/white/css.png" alt="">CSS</div>
-                <div class="icon-from-left animElement"><img src="assets/skill-icons/white/javascript.png" alt="">JavaScript</div>
-                <div class="icon-from-right animElement"><img src="assets/skill-icons/white/material.png" alt="">Material Design</div>
-                <div class="icon-from-left animElement"><img src="assets/skill-icons/white/typescript.png" alt="">TypeScript</div>
-                <div class="icon-from-right animElement"><img src="assets/skill-icons/white/angular.png" alt="">Angular</div>
-                <div class="icon-from-left animElement"><img src="assets/skill-icons/white/firebase.png" alt="">Firebase</div>
-                <div class="icon-from-right animElement"><img src="assets/skill-icons/white/git.png" alt="">GIT</div>
-                <div class="icon-from-left animElement"><img src="assets/skill-icons/white/api.png" alt="">Rest-Api</div>
-                <div class="icon-from-right animElement"><img src="assets/skill-icons/white/scrum.png" alt="">Scrum</div>
-                <div class="speech-cont icon-from-left animElement">
+                <div class="icon-from-left animElement backdrop-shadow"><img src="assets/skill-icons/white/html.png"
+                        alt="">HTML</div>
+                <div class="icon-from-right animElement backdrop-shadow"><img src="assets/skill-icons/white/css.png"
+                        alt="">CSS</div>
+                <div class="icon-from-left animElement backdrop-shadow"><img
+                        src="assets/skill-icons/white/javascript.png" alt="">JavaScript</div>
+                <div class="icon-from-right animElement backdrop-shadow"><img
+                        src="assets/skill-icons/white/material.png" alt="">Material Design</div>
+                <div class="icon-from-left animElement backdrop-shadow"><img
+                        src="assets/skill-icons/white/typescript.png" alt="">TypeScript</div>
+                <div class="icon-from-right animElement backdrop-shadow"><img src="assets/skill-icons/white/angular.png"
+                        alt="">Angular</div>
+                <div class="icon-from-left animElement backdrop-shadow"><img src="assets/skill-icons/white/firebase.png"
+                        alt="">Firebase</div>
+                <div class="icon-from-right animElement backdrop-shadow"><img src="assets/skill-icons/white/git.png"
+                        alt="">GIT</div>
+                <div class="icon-from-left animElement backdrop-shadow"><img src="assets/skill-icons/white/api.png"
+                        alt="">Rest-Api</div>
+                <div class="icon-from-right animElement backdrop-shadow"><img src="assets/skill-icons/white/scrum.png"
+                        alt="">Scrum</div>
+                <div (mouseover)="hover('in')" (mouseout)="hover('out')"
+                    class="speech-cont icon-from-left animElement backdrop-shadow">
                     <div [ngClass]="{'speech-show': this.mind}" class="speech sb">
                         <span> {{ 'skillset.interest' | translate }}</span>
                         <div>
@@ -43,8 +54,7 @@
                             <img src="assets/skill-icons/green/vue.png" alt="">
                         </div>
                     </div>
-                    <img (mouseover)="hover('in')" (mouseout)="hover('out')" src="assets/skill-icons/green/growth.png"
-                        alt="">
+                    <img src="assets/skill-icons/green/growth.png" alt="">
                     Growth mindset
                 </div>
             </div>
