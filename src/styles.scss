@@ -10,6 +10,14 @@
   display: none !important;
 }
 
+.mobile-view {
+  display: none;
+}
+
+.desktop-view {
+  display: flex;
+}
+
 .noScroll {
   overflow: hidden !important;
 }
@@ -72,6 +80,16 @@ body {
   opacity: 0;
   transform: scale(0.6) translateX(50%);
   transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 1000px) {
+  .mobile-view {
+    display: flex;
+  }
+  
+  .desktop-view {
+    display: none;
+  }
 }
 
 @media (min-width: 424px) {
