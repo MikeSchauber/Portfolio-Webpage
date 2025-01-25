@@ -10,5 +10,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
-  constructor(public translate: TranslateService) {}
+  year: number;
+
+  constructor(public translate: TranslateService) {
+    this.year = new Date().getFullYear();
+    console.log(this.year);
+    
+  }
 }
