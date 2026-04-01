@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 import { Form, FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { FormularFeedbackService } from '../../../services/formular-feedback.service';
+import { SupabaseService } from '../../../services/supabase.service';
 
 @Component({
   selector: 'app-input',
@@ -38,17 +39,19 @@ export class InputComponent {
   constructor(
     public translate: TranslateService,
     public http: HttpClient,
-    private feedback: FormularFeedbackService
+    private feedback: FormularFeedbackService,
+    public supabaseService: SupabaseService,
   ) {}
 
-  onSubmit(ngForm: NgForm) {
+  async onSubmit(ngForm: NgForm) {
     if (
       ngForm.submitted &&
       ngForm.form.valid &&
       !this.mailTest &&
       this.contactData.privacy
     ) {
-      this.sendMail(ngForm);
+      //this.sendMail(ngForm);
+      await this.supabaseService.sendMail();
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
     } else if (!this.contactData.privacy) {
@@ -69,7 +72,7 @@ export class InputComponent {
         },
         error: (error) => {
           console.error(error);
-        }
+        },
       });
   }
 
