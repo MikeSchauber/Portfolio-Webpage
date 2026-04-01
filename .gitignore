@@ -43,4 +43,6 @@ Thumbs.db
 
 .codegpt
 
+# env files
 .env
+/src/environments
