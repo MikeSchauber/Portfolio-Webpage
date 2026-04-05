@@ -52,17 +52,17 @@ main {
 }
 .feedbackAnimation {
   display: flex;
-  animation: feedback 4s ease-in-out;
+  animation: feedback 8s ease-in-out;
 }
 
 @keyframes feedback {
   0% {
     top: 100%;
   }
-  30% {
+  10% {
     top: 35%;
   }
-  70% {
+  90% {
     top: 35%;
   }
   100% {

@@ -63,44 +63,19 @@ export class InputComponent {
   async sendMail(ngForm: NgForm) {
     const { data, error } = await this.supabaseService.sendMail(ngForm);
 
-    if (data) {
-      ngForm.resetForm();
-      this.feedbackAnimation('good');
-      this.resetContactData();
-    }
+    ngForm.resetForm();
+    this.resetContactData();
 
     if (error) {
-      ngForm.resetForm();
-      this.feedbackAnimation('bad');
-      this.resetContactData();
+      this.triggerFeedback(false);
+    } else {
+      this.triggerFeedback(true);
     }
-
-    // this.http
-    //   .post(this.post.endPoint, this.post.body(this.contactData))
-    //   .subscribe({
-    //     next: (response) => {
-    //       ngForm.resetForm();
-    //       this.feedbackAnimation();
-    //       this.resetContactData();
-    //     },
-    //     error: (error) => {
-    //       console.error(error);
-    //     },
-    //   });
   }
 
-  feedbackAnimation(success: string) {
-    if (success === 'good') {
-      this.feedback.submitSuccess = true;
-      this.feedback.responseSuccess = true;
-    } else {
-      this.feedback.submitSuccess = true;
-      this.feedback.responseSuccess = false;
-    }
-
-    setTimeout(() => {
-      this.feedback.submitSuccess = false;
-    }, 4000);
+  triggerFeedback(success: boolean) {
+    this.feedback.responseSuccess = success;
+    this.feedback.submitSuccess = true;
   }
 
   resetContactData() {
