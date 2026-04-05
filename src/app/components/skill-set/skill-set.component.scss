@@ -190,6 +190,10 @@
 
   > div {
     @include dFlex($fd: row, $g: 16px);
+    > img {
+      height: 48px;
+      width: auto;
+    }
   }
 
   opacity: 0;
@@ -215,6 +219,13 @@
   display: flex;
 }
 
+.desktop-header {
+  display: block;
+}
+
+.mobile-header {
+  display: none;
+}
 @media (max-width: 1375px) {
   .container {
     padding: 48px 16px;
@@ -226,6 +237,14 @@
       align-items: center;
       max-width: 568px;
     }
+  }
+
+  .desktop-header {
+    display: none;
+  }
+
+  .mobile-header {
+    display: block;
   }
 
   .maincont {
