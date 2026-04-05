@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { environment } from '../../environments/environment';
+import { NgForm } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root',
@@ -23,9 +24,15 @@ export class SupabaseService {
     return this.supabase.from('todos').select('*');
   }
 
-  async sendMail() {
-    const { data, error } = await this.supabase.functions.invoke('hello-world');
-    console.log(data); // { message: 'Hello from Supabase!' }
-    if (error) console.error(error);
+  async sendMail(ngForm: NgForm) {
+    const formular = ngForm.value;
+    const { data, error } = await this.supabase.functions.invoke('send-mail', {
+      body: {
+        userName: formular.name,
+        userMail: formular.email,
+        message: formular.message,
+      },
+    });
+    return { data, error };
   }
 }

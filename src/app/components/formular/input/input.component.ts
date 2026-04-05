@@ -50,8 +50,7 @@ export class InputComponent {
       !this.mailTest &&
       this.contactData.privacy
     ) {
-      //this.sendMail(ngForm);
-      await this.supabaseService.sendMail();
+      await this.sendMail(ngForm);
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
     } else if (!this.contactData.privacy) {
@@ -61,23 +60,44 @@ export class InputComponent {
     }
   }
 
-  sendMail(ngForm: NgForm) {
-    this.http
-      .post(this.post.endPoint, this.post.body(this.contactData))
-      .subscribe({
-        next: (response) => {
-          ngForm.resetForm();
-          this.feedbackAnimation();
-          this.resetContactData();
-        },
-        error: (error) => {
-          console.error(error);
-        },
-      });
+  async sendMail(ngForm: NgForm) {
+    const { data, error } = await this.supabaseService.sendMail(ngForm);
+
+    if (data) {
+      ngForm.resetForm();
+      this.feedbackAnimation('good');
+      this.resetContactData();
+    }
+
+    if (error) {
+      ngForm.resetForm();
+      this.feedbackAnimation('bad');
+      this.resetContactData();
+    }
+
+    // this.http
+    //   .post(this.post.endPoint, this.post.body(this.contactData))
+    //   .subscribe({
+    //     next: (response) => {
+    //       ngForm.resetForm();
+    //       this.feedbackAnimation();
+    //       this.resetContactData();
+    //     },
+    //     error: (error) => {
+    //       console.error(error);
+    //     },
+    //   });
   }
 
-  feedbackAnimation() {
-    this.feedback.submitSuccess = true;
+  feedbackAnimation(success: string) {
+    if (success === 'good') {
+      this.feedback.submitSuccess = true;
+      this.feedback.responseSuccess = true;
+    } else {
+      this.feedback.submitSuccess = true;
+      this.feedback.responseSuccess = false;
+    }
+
     setTimeout(() => {
       this.feedback.submitSuccess = false;
     }, 4000);
