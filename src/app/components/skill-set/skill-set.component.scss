@@ -22,7 +22,7 @@
     @include dFlex($g: 20px, $ai: flex-start);
     width: 100%;
     font-size: 24px;
-    font-weight: 700;
+    // font-weight: 700;
     color: rgba(61, 207, 182, 1);
   }
 }
@@ -38,7 +38,7 @@
 
   > h2 {
     font-size: 64px;
-    font-weight: 700;
+    // font-weight: 700;
     font-family: "fira code";
   }
 

@@ -22,10 +22,10 @@
   "aboutMe": {
     "whoIAm": "Who I Am",
     "aboutMeTitle": "About Me",
-    "intro": "I am a German-speaking Web Developer based in Tübingen. With first hands-on experience in web development, I focus on building functional and user-friendly software solutions.",
-    "flexibleLocation": "I am flexible regarding my working environment and can work effectively both on-site and remotely. However, working on-site is my preferred way of collaboration.",
+    "intro": "I am a German speaking Web Developer based in Tübingen. With first hands-on experience in web development, I focus on building functional and userfriendly software solutions.",
+    "flexibleLocation": "I am flexible regarding my working environment and can work effectively both on site and remotely. However, working on site is my preferred way of collaboration.",
     "openMinded": "As an aspiring Web Developer, I bring fresh perspectives and am consistently motivated to expand my knowledge and learn new technologies.",
-    "creativeProblemSolving": "To me, programming means structured problem-solving. I have learned to translate technical requirements into practical solutions and continue to build on that foundation through my daily work."
+    "creativeProblemSolving": "To me, programming means structured problem solving. I have learned to translate technical requirements into practical solutions and continue to build on that foundation through my daily work."
   },
   "skillset": {
     "skills": "Technologies",
