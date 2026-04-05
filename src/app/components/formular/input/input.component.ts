@@ -76,6 +76,10 @@ export class InputComponent {
   triggerFeedback(success: boolean) {
     this.feedback.responseSuccess = success;
     this.feedback.submitSuccess = true;
+    setTimeout(() => {
+      this.feedback.submitSuccess = false;
+      this.feedback.responseSuccess = false;
+    }, 8000);
   }
 
   resetContactData() {
