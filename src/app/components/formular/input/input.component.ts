@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 import { Form, FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { FormularFeedbackService } from '../../../services/formular-feedback.service';
+import { SupabaseService } from '../../../services/supabase.service';
 
 @Component({
   selector: 'app-input',
@@ -38,17 +39,18 @@ export class InputComponent {
   constructor(
     public translate: TranslateService,
     public http: HttpClient,
-    private feedback: FormularFeedbackService
+    private feedback: FormularFeedbackService,
+    public supabaseService: SupabaseService,
   ) {}
 
-  onSubmit(ngForm: NgForm) {
+  async onSubmit(ngForm: NgForm) {
     if (
       ngForm.submitted &&
       ngForm.form.valid &&
       !this.mailTest &&
       this.contactData.privacy
     ) {
-      this.sendMail(ngForm);
+      await this.sendMail(ngForm);
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
     } else if (!this.contactData.privacy) {
@@ -58,26 +60,22 @@ export class InputComponent {
     }
   }
 
-  sendMail(ngForm: NgForm) {
-    this.http
-      .post(this.post.endPoint, this.post.body(this.contactData))
-      .subscribe({
-        next: (response) => {
-          ngForm.resetForm();
-          this.feedbackAnimation();
-          this.resetContactData();
-        },
-        error: (error) => {
-          console.error(error);
-        }
-      });
+  async sendMail(ngForm: NgForm) {
+    const { data, error } = await this.supabaseService.sendMail(ngForm);
+
+    ngForm.resetForm();
+    this.resetContactData();
+
+    if (error) {
+      this.triggerFeedback(false);
+    } else {
+      this.triggerFeedback(true);
+    }
   }
 
-  feedbackAnimation() {
+  triggerFeedback(success: boolean) {
+    this.feedback.responseSuccess = success;
     this.feedback.submitSuccess = true;
-    setTimeout(() => {
-      this.feedback.submitSuccess = false;
-    }, 4000);
   }
 
   resetContactData() {

@@ -14,7 +14,5 @@ export class FooterComponent {
 
   constructor(public translate: TranslateService) {
     this.year = new Date().getFullYear();
-    console.log(this.year);
-    
   }
 }

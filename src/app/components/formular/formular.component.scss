@@ -23,6 +23,7 @@ main {
   top: 100%;
   left: 0;
   display: none;
+
   > span {
     @include dFlex();
     font-size: 22px;
@@ -31,25 +32,37 @@ main {
     width: 100%;
     max-width: 700px;
     height: 80px;
+    border-radius: 30px;
+    transition:
+      background-color 0.3s,
+      border-color 0.3s;
+  }
+
+  // ✅ Success
+  > span.success {
     background-color: rgb(28, 105, 93, 0.8);
     border: 1px solid rgb(61, 207, 182);
-    border-radius: 30px;
+  }
+
+  // ✅ Error
+  > span.error {
+    background-color: rgb(105, 28, 28, 0.8);
+    border: 1px solid rgb(207, 61, 61);
   }
 }
-
 .feedbackAnimation {
   display: flex;
-  animation: feedback 4s ease-in-out;
+  animation: feedback 8s ease-in-out;
 }
 
 @keyframes feedback {
   0% {
     top: 100%;
   }
-  30% {
+  10% {
     top: 35%;
   }
-  70% {
+  90% {
     top: 35%;
   }
   100% {

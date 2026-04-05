@@ -72,7 +72,8 @@
     "description": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
     "frontendDeveloper": "Need a Frontend developer?",
     "talk": "Let’s talk!",
-    "success": "Email was sent successfully :)"
+    "success": "Email was sent successfully :)",
+    "error": "Something went wrong. Feel free to reach out directly. → kontakt@mikeschauber.de"
   },
   "input": {
     "name": "What's your name?",
