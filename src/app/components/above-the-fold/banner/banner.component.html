@@ -1,21 +1,22 @@
 <div class="banner">
-    <div class="banner-content">
-        @for (banner of banners; track $index; let i = $index) {
-
-        <div #bannerContainer>
-            @if (i !== 0)
-            { <img src="assets/icons/dot.png" alt="">}
-
-            <span>{{ banner | translate }}</span>
+  <div class="banner-track" #track>        
+    <div class="banner-content" #copy1>     
+      @for (banner of banners; track $index; let i = $index) {
+        <div>
+          @if (i !== 0) { <img src="assets/icons/dot.png" alt=""> }
+          <span>{{ banner | translate }}</span>
+          @if (i === banners.length - 1) { <img src="assets/icons/dot.png" alt=""> }
         </div>
-        }
+      }
     </div>
-    <!-- <div class="banner-content">
-        @for (banner of banners; track $index; let i = $index) {
-        <div #bannerContainer>
-            <img src="assets/icons/dot.png" alt="">
-            <span>{{ banner | translate }}</span>
+    <div class="banner-content" aria-hidden="true">  
+      @for (banner of banners; track $index; let i = $index) {
+        <div>
+          @if (i !== 0) { <img src="assets/icons/dot.png" alt=""> }
+          <span>{{ banner | translate }}</span>
+          @if (i === banners.length - 1) { <img src="assets/icons/dot.png" alt=""> }
         </div>
-        }
-    </div> -->
+      }
+    </div>
+  </div>
 </div>

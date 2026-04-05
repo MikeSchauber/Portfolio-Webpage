@@ -1,7 +1,7 @@
 @import "../../../../mixins.scss";
 
 $blur: 4px;
-$animationLength: 20s;
+$animationLength: 5s;
 
 .banner {
   padding: 12px 24px;
@@ -15,19 +15,17 @@ $animationLength: 20s;
   font-family: "karla";
   font-weight: 400;
   font-size: 32px;
-  @include dFlex($fd: row, $g: 54px);
+  overflow: hidden;
+  transform: rotate(-2deg);
   background-color: rgba(75, 75, 75, 0.226);
   -webkit-backdrop-filter: blur($blur);
   backdrop-filter: blur($blur);
-  overflow: hidden;
-  transform: rotate(-2deg);
-  &:after {
+
+  &::after {
     content: "";
     position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
+    inset: 0;
+    z-index: 1;
     background: linear-gradient(
       to right,
       rgba(28, 28, 28, 1),
@@ -38,63 +36,33 @@ $animationLength: 20s;
   }
 }
 
-.banner-content {
-  @include dFlex($fd: row, $g: 56px);
+.banner-track {
+  display: flex;
+  width: max-content;
   animation: movement $animationLength linear infinite;
-  min-width: max-content;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 56px;
+  width: max-content;
+  margin-right: 56px;
+
   > div {
-    position: relative;
-    @include dFlex($fd: row, $g: 56px);
-    min-width: fit-content;
-    > span {
-      min-width: fit-content;
-    }
+    display: flex;
+    align-items: center;
+    gap: 56px;
+    white-space: nowrap;
   }
 }
 
 @keyframes movement {
-  from {
-    transform: translateX(500%);
-  }
-  to {
-    transform: translateX(-500%);
-  }
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(var(--copy-width) * -1 - 56px)); }
 }
 
 @media (max-width: 1000px) {
-  .banner {
-    font-size: 24px;
-    overflow: hidden;
-    box-shadow:
-      22px 0px 0px 0px rgba(75, 75, 75, 0.226),
-      -22px 0px 0px 0px rgba(75, 75, 75, 0.226);
-  }
-
-  .banner-content {
-    animation: movement1000 $animationLength linear infinite;
-  }
-
-  @keyframes movement1000 {
-    from {
-      transform: translateX(300%);
-    }
-    to {
-      transform: translateX(-300%);
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  .banner-content {
-    animation: movement600 $animationLength linear infinite;
-  }
-
-  @keyframes movement600 {
-    from {
-      transform: translateX(300%);
-    }
-    to {
-      transform: translateX(-300%);
-    }
-  }
+  .banner { font-size: 24px; }
 }

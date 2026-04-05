@@ -1,5 +1,5 @@
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -9,7 +9,7 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './banner.component.html',
   styleUrl: './banner.component.scss',
 })
-export class BannerComponent {
+export class BannerComponent implements AfterViewInit {
   banners: string[] = [
     'banner.1',
     'banner.2',
@@ -18,5 +18,14 @@ export class BannerComponent {
     'banner.5',
   ];
 
-  constructor(public translate: TranslateModule) {}
+  @ViewChild('copy1') copy1!: ElementRef;
+  @ViewChild('track') track!: ElementRef;
+
+ngAfterViewInit() {
+  setTimeout(() => {
+    const w = this.copy1.nativeElement.offsetWidth;
+    console.log('copy width:', w);
+    this.track.nativeElement.style.setProperty('--copy-width', `${w}px`);
+  }, 500);
+}
 }
