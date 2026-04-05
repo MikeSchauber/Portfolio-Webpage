@@ -7,7 +7,7 @@
   font-family: "karla";
   color: #3dcfb6;
 
-  >div {
+  > div {
     width: 100%;
     @include dFlex($fd: row, $jc: space-between, $ai: flex-end);
   }
@@ -19,8 +19,8 @@
   @include dFlex($jc: flex-start);
   height: 100%;
 
-  >div {
-    >img {
+  > div {
+    > img {
       border-radius: 30px;
       height: 568px;
       width: 568px;
@@ -28,11 +28,10 @@
       transition: all 300ms ease-in-out;
     }
   }
-
 }
 
 .img-cont {
-  >div::before {
+  > div::before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -41,11 +40,13 @@
     top: 0px;
     right: 0px;
     border-radius: 30px;
-    background: repeating-linear-gradient(-45deg,
-        #3dcfb6,
-        #3dcfb6 1.5px,
-        transparent 3px,
-        transparent 15px);
+    background: repeating-linear-gradient(
+      -45deg,
+      #3dcfb6,
+      #3dcfb6 1.5px,
+      transparent 3px,
+      transparent 15px
+    );
     transition: all 300ms ease;
   }
 }
@@ -55,12 +56,11 @@
   &:hover .img {
     filter: grayscale(0%);
   }
-  >div:hover::before {
+  > div:hover::before {
     top: 25px;
     right: 25px;
   }
 }
-
 
 .aboutme-cont {
   width: 100%;
@@ -74,7 +74,7 @@
   max-width: 568px;
   @include dFlex($ai: flex-start, $g: 20px);
 
-  >p {
+  > p {
     font-size: 24px;
     font-weight: 500;
   }
@@ -89,7 +89,7 @@
   border-radius: 30px;
   background-color: rgba(61, 207, 183, 0.1);
 
-  >h2 {
+  > h2 {
     font-size: 64px;
     font-weight: 700;
     letter-spacing: -5px;
@@ -100,11 +100,11 @@
   color: #ffffff;
   @include dFlex($g: 32px);
 
-  >div {
+  > div {
     @include dFlex($g: 32px);
   }
 
-  >span {
+  > span {
     font-size: 18px;
   }
 }
@@ -112,57 +112,56 @@
 .icon-text {
   @include dFlex($fd: row, $g: 24px);
 
-  >img {
+  > img {
     height: 32px;
     width: 32px;
   }
 
-  >p {
+  > p {
     max-width: 446px;
     font-size: 18px;
     color: rgba(255, 255, 255, 0.8);
   }
 }
 
-@media (max-width: 1400px) {
+
+
+@media (max-width: 1375px) {
   .about-all {
-    >p {
-      font-size: 18px;
+    > p {
+      font-size: 24px;
     }
   }
 
   .img-cont {
     margin: 0;
-    >img {
+    > img {
       max-height: 358px;
       max-width: 358px;
     }
   }
 
   .about-text {
-    >h2 {
+    > h2 {
       font-size: 56px;
     }
   }
 
   .text-cont {
-    >span {
-      font-size: 16px;
+    > span {
+      font-size: 18px;
     }
   }
 
   .icon-text {
-    >p {
-      font-size: 16px;
+    > p {
+      font-size: 18px;
     }
   }
-}
-
-@media (max-width: 1400px) {
   .about-me-container {
-    padding: 48px 16px;
+    padding: 48px 18px;
 
-    >div {
+    > div {
       @include dFlex($fd: column, $g: 40px, $jc: center);
     }
   }
@@ -170,7 +169,7 @@
   .img-cont {
     @include dFlex($jc: center, $ai: center);
 
-    >img {
+    > img {
       height: auto;
       width: 100%;
       height: 100%;
@@ -182,22 +181,20 @@
   .img-cont::before {
     border-radius: 15px;
   }
-
 }
 
 @media (max-width: 750px) {
   .img-cont {
-    >div::before {
+    > div::before {
       opacity: 0;
     }
   }
 }
 
 @media (max-width: 600px) {
-
   .about-me-container {
     width: 100%;
-    >div:first-of-type {
+    > div:first-of-type {
       width: 100%;
     }
   }
@@ -205,10 +202,10 @@
   .img-cont {
     width: 115%;
 
-    >div {
+    > div {
       width: 115%;
 
-      >img {
+      > img {
         width: 100%;
         height: auto;
       }

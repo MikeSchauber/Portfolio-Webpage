@@ -22,7 +22,7 @@
     @include dFlex($g: 20px, $ai: flex-start);
     width: 100%;
     font-size: 24px;
-    font-weight: 700;
+    // font-weight: 700;
     color: rgba(61, 207, 182, 1);
   }
 }
@@ -38,7 +38,7 @@
 
   > h2 {
     font-size: 64px;
-    font-weight: 700;
+    // font-weight: 700;
     font-family: "fira code";
   }
 
@@ -190,6 +190,10 @@
 
   > div {
     @include dFlex($fd: row, $g: 16px);
+    > img {
+      height: 48px;
+      width: auto;
+    }
   }
 
   opacity: 0;
@@ -215,6 +219,13 @@
   display: flex;
 }
 
+.desktop-header {
+  display: block;
+}
+
+.mobile-header {
+  display: none;
+}
 @media (max-width: 1375px) {
   .container {
     padding: 48px 16px;
@@ -226,6 +237,14 @@
       align-items: center;
       max-width: 568px;
     }
+  }
+
+  .desktop-header {
+    display: none;
+  }
+
+  .mobile-header {
+    display: block;
   }
 
   .maincont {
