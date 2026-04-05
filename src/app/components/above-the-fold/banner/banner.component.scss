@@ -1,7 +1,7 @@
 @import "../../../../mixins.scss";
 
 $blur: 4px;
-$animationLength: 40s;
+$animationLength: 20s;
 
 .banner {
   padding: 12px 24px;
@@ -15,7 +15,7 @@ $animationLength: 40s;
   font-family: "karla";
   font-weight: 400;
   font-size: 32px;
-  @include dFlex($fd: row, $g: 56px);
+  @include dFlex($fd: row, $g: 54px);
   background-color: rgba(75, 75, 75, 0.226);
   -webkit-backdrop-filter: blur($blur);
   backdrop-filter: blur($blur);
@@ -54,10 +54,10 @@ $animationLength: 40s;
 
 @keyframes movement {
   from {
-    transform: translateX(1050px);
+    transform: translateX(500%);
   }
   to {
-    transform: translateX(-1250px);
+    transform: translateX(-500%);
   }
 }
 
@@ -65,18 +65,36 @@ $animationLength: 40s;
   .banner {
     font-size: 24px;
     overflow: hidden;
-    box-shadow: 22px 0px 0px 0px rgba(75, 75, 75, 0.226),
+    box-shadow:
+      22px 0px 0px 0px rgba(75, 75, 75, 0.226),
       -22px 0px 0px 0px rgba(75, 75, 75, 0.226);
   }
-  @keyframes movement1000 {
-    from {
-      transform: translateX(1050px);
-    }
-    to {
-      transform: translateX(-840px);
-    }
-  }
+
   .banner-content {
     animation: movement1000 $animationLength linear infinite;
+  }
+
+  @keyframes movement1000 {
+    from {
+      transform: translateX(300%);
+    }
+    to {
+      transform: translateX(-300%);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .banner-content {
+    animation: movement600 $animationLength linear infinite;
+  }
+
+  @keyframes movement600 {
+    from {
+      transform: translateX(300%);
+    }
+    to {
+      transform: translateX(-300%);
+    }
   }
 }

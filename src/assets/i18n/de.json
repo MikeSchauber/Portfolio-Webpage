@@ -6,18 +6,17 @@
     "references": "Referenzen"
   },
   "headline": {
-    "title": "Frontend Entwickler",
+    "title": "Web Entwickler",
     "name": "Mike Schauber",
     "checkWork": "Zu meinen Projekten",
     "contactMe": "Kontaktiere mich"
   },
   "banner": {
-    "1": "Frontend-Entwickler",
-    "2": "Remote & vor Ort",
-    "3": "Tübingen",
-    "4": "Moderne Webtech",
-    "5": "Nutzerorientiert",
-    "6": "Kreativ & lösungsorientiert"
+    "1": "Web Applikationen von der Idee bis zum Launch",
+    "2": "Vue 3 · TypeScript · Supabase",
+    "3": "Remote & vor Ort · Tübingen",
+    "4": "Sauberer Code, durchdachte UX",
+    "5": "Vom Legacy-System zur modernen Lösung"
   },
   "aboutMe": {
     "whoIAm": "Wer ich bin",

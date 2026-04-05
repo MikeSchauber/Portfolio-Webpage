@@ -16,7 +16,6 @@ export class BannerComponent {
     'banner.3',
     'banner.4',
     'banner.5',
-    'banner.6',
   ];
 
   constructor(public translate: TranslateModule) {}
