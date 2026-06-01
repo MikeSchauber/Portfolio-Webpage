@@ -79,7 +79,7 @@ export class ProjectServiceService {
       number: '04',
       name: 'Martin-rs.de',
       dataName: "martin_rs",
-      description: 'pokedex.description',
+      description: 'martin_rs.description',
       technologies: [3, 6, 4, 7],
       imgUrl: 'assets/img/martin-rs.png',
       githubUrl: '',

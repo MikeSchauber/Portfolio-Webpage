@@ -51,6 +51,9 @@
   "sharky": {
     "description": "Ein einfaches Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Hilf Sharkie, Münzen und Giftflaschen zu finden, um gegen den Killerwal zu kämpfen."
   },
+  "martin_rs": {
+    "description": "Für dieses Projekt habe ich die Website des Kunden auf eine neue Domain umgezogen und sie anschließend auf Basis eines WordPress-Templates neu gestaltet. Zusätzlich wurden ein Kontaktformular sowie Google reCAPTCHA integriert, um die Benutzerinteraktion und Sicherheit zu verbessern."
+  },
   "pokedex": {
     "description": "Basierend auf der PokéAPI, eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
   },
