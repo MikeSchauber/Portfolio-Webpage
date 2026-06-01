@@ -70,8 +70,8 @@ export class NavbarComponent implements OnInit {
         this.isGerman = true;
       }
     } else {
-      this.translate.use('en');
-      this.isGerman = false;
+      this.translate.use('de');
+      this.isGerman = true;
     }
   }
 
