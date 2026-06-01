@@ -19,43 +19,6 @@
         }
         }
 
-
-        <!-- <div (mouseover)="hoverProject(0)" (mouseleave)="leaveProject()" (click)="openDialog('dabubble', 0)"
-            class="project">
-            <div class="name-container">
-                <h3>DABubble</h3>
-                <img [ngClass]="{'opacity': this.showArrowArray[0]}" src="assets/icons/arrow-outward-white.png" alt="">
-            </div>
-            <div class="tech-container">
-                @for (techIndex of projectDataService.projects["dabubble"].technologies; track $index; let i = $index) {
-                <span>{{projectDataService.technologiesArray[techIndex]}}</span>
-                }
-            </div>
-        </div>
-        <div (mouseover)="hoverProject(1)" (mouseleave)="leaveProject()" (click)="openDialog('join', 1)"
-            class="project">
-            <div class="name-container">
-                <h3>Join</h3>
-                <img [ngClass]="{'opacity': this.showArrowArray[1]}" src="assets/icons/arrow-outward-white.png" alt="">
-            </div>
-            <div class="tech-container">
-                @for (techIndex of projectDataService.projects["join"].technologies; track $index; let i = $index) {
-                <span>{{projectDataService.technologiesArray[techIndex]}}</span>
-                }
-            </div>
-        </div>
-        <div (mouseover)="hoverProject(2)" (mouseleave)="leaveProject()" (click)="openDialog('sharky', 2)"
-            class="project">
-            <div class="name-container">
-                <h3>Sharky - The Game</h3>
-                <img [ngClass]="{'opacity': this.showArrowArray[2]}" src="assets/icons/arrow-outward-white.png" alt="">
-            </div>
-            <div class="tech-container">
-                @for (techIndex of projectDataService.projects["sharky"].technologies; track $index; let i = $index) {
-                <span>{{projectDataService.technologiesArray[techIndex]}}</span>
-                }
-            </div>
-        </div> -->
     </div>
     <div [ngClass]="{
         'background-animation' : this.imgAnimation

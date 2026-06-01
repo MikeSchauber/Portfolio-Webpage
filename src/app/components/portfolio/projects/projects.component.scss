@@ -37,7 +37,7 @@
   width: 100%;
   border-top: 2px solid #3dcfb6;
   max-width: 1000px;
-  max-height: 342px;
+  // max-height: 342px;
   transition: all 125ms ease-in-out;
 }
 
@@ -106,7 +106,7 @@
 
 @media (max-width: 600px) {
   .projects-cont {
-    max-height: 432px;
+    // max-height: 432px;
   }
 
   .project {
@@ -125,18 +125,18 @@
 
 @media (max-width: 410px) {
   .projects-cont {
-    max-height: 462px;
+   // max-height: 462px;
   }
 }
 
 @media (max-width: 400px) {
   .projects-cont {
-    max-height: 492px;
+   // max-height: 492px;
   }
 }
 
 @media (max-width: 324px) {
   .projects-cont {
-    max-height: 522px;
+    // max-height: 522px;
   }
 }
