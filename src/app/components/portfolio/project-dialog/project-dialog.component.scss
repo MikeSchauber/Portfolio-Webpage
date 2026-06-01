@@ -61,6 +61,10 @@
     @include dFlex($fd: row, $g: 16px);
     > span {
       @include dFlex($fd: row, $g: 6px);
+      > img {
+        height: 20px;
+        width: 20px;
+      }
     }
   }
 }

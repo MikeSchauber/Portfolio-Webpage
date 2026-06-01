@@ -1,9 +1,10 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, CurrencyPipe } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { DialogDataService } from '../../../services/dialog-data.service';
 import { ProjectServiceService } from '../../../services/project-data.service';
 import { ProjectsComponent } from '../projects/projects.component';
+import { ProjectInterface } from '../../../interfaces/project-interface';
 
 @Component({
   selector: 'app-project-dialog',
@@ -18,7 +19,7 @@ export class ProjectDialogComponent {
     public translate: TranslateService,
     public dialogService: DialogDataService,
     public projectData: ProjectServiceService
-  ) {}
+  ) { }
 
   scrollToTop(): void {
     if (this.scrollContainer && this.scrollContainer.nativeElement) {
@@ -31,12 +32,27 @@ export class ProjectDialogComponent {
   }
 
   nextProject() {
-    this.projectData.currentProject++;
-    let index =
-      this.projectData.currentProject %
-      this.projectData.availableProjects.length;
-    this.projectData.currentProject = index;
-    this.moveProjectContainer(this.projectData.currentProject);
+    const projects = this.projectArray;
+    const length = projects.length;
+
+    let startIndex = this.projectData.currentProject;
+
+    for (let i = 1; i <= length; i++) {
+      const nextIndex = (startIndex + i) % length;
+      const nextProject = projects[nextIndex];
+
+      if (nextProject?.active) {
+        this.projectData.currentProject = nextIndex;
+        this.moveProjectContainer(nextIndex);
+        return;
+      }
+    }
+
+    console.warn("No next Project exists!");
+  }
+
+  get projectArray(): ProjectInterface[] {
+    return Object.values(this.projectData.projects);
   }
 
   moveProjectContainer(index: number) {
@@ -62,13 +78,14 @@ export class ProjectDialogComponent {
   }
 
   checkAndSetProject(index: number) {
-    index === 0
-      ? this.projectData.setProjectDataInDialog('dabubble', index)
-      : index === 1
-      ? this.projectData.setProjectDataInDialog('join', index)
-      : index === 2
-      ? this.projectData.setProjectDataInDialog('sharky', index)
-      : console.error('No next Project exists!');
+    const project = this.projectArray[index];
+
+    if (!project) {
+      console.error('Project not found at index', index);
+      return;
+    }
+
+    this.projectData.setProjectDataInDialog(project.dataName, index);
     this.scrollToTop();
   }
 }
