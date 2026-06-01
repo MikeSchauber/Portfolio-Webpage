@@ -3,6 +3,7 @@ import { DialogDataService } from '../../../services/dialog-data.service';
 import { CommonModule } from '@angular/common';
 import { ProjectServiceService } from '../../../services/project-data.service';
 import { ProjectDialogComponent } from '../project-dialog/project-dialog.component';
+import { ProjectInterface } from '../../../interfaces/project-interface';
 
 @Component({
   selector: 'app-projects',
@@ -16,10 +17,16 @@ export class ProjectsComponent {
   imgAnimation: boolean = false;
   showArrowArray: boolean[] = [false, false, false];
   imgSrcWhenHover: string = '';
+  projectList: ProjectInterface[] = []
+
   constructor(
     public dialogService: DialogDataService,
-    public projectData: ProjectServiceService
+    public projectDataService: ProjectServiceService
   ) { }
+
+  ngOnInit() {
+    this.projectList = Object.values(this.projectDataService.projects);
+  }
 
   openDialog(project: string, index: number) {
     this.dialogService.toggleScrollBehav();
@@ -28,18 +35,12 @@ export class ProjectsComponent {
       this.dialogService.opacity = '1';
       this.dialogService.translationX = 'translateX(0px)';
     }, 21);
-    this.projectData.currentProject = index;
-    this.projectData.setProjectDataInDialog(project, index);
+    this.projectDataService.currentProject = index;
+    this.projectDataService.setProjectDataInDialog(project, index);
   }
 
   hoverProject(index: number) {
-    if (index === 0) {
-      this.imgSrcWhenHover = 'assets/img/dabubble.png';
-    } else if (index === 1) {
-      this.imgSrcWhenHover = 'assets/img/join.png';
-    } else if (index === 2) {
-      this.imgSrcWhenHover = 'assets/img/sharky.png';
-    }
+    this.imgSrcWhenHover = this.projectList[index].imgUrl
     this.hoverAnimation(index);
 
   }

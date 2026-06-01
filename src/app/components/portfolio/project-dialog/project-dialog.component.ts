@@ -18,7 +18,7 @@ export class ProjectDialogComponent {
     public translate: TranslateService,
     public dialogService: DialogDataService,
     public projectData: ProjectServiceService
-  ) {}
+  ) { }
 
   scrollToTop(): void {
     if (this.scrollContainer && this.scrollContainer.nativeElement) {
@@ -32,11 +32,13 @@ export class ProjectDialogComponent {
 
   nextProject() {
     this.projectData.currentProject++;
-    let index =
-      this.projectData.currentProject %
-      this.projectData.availableProjects.length;
+    let index = this.projectData.currentProject % this.getProjectsLength()
     this.projectData.currentProject = index;
     this.moveProjectContainer(this.projectData.currentProject);
+  }
+
+  getProjectsLength(): number {
+    return Object.keys(this.projectData.projects).length;
   }
 
   moveProjectContainer(index: number) {
@@ -65,10 +67,10 @@ export class ProjectDialogComponent {
     index === 0
       ? this.projectData.setProjectDataInDialog('dabubble', index)
       : index === 1
-      ? this.projectData.setProjectDataInDialog('join', index)
-      : index === 2
-      ? this.projectData.setProjectDataInDialog('sharky', index)
-      : console.error('No next Project exists!');
+        ? this.projectData.setProjectDataInDialog('join', index)
+        : index === 2
+          ? this.projectData.setProjectDataInDialog('sharky', index)
+          : console.error('No next Project exists!');
     this.scrollToTop();
   }
 }

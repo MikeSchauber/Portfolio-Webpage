@@ -7,7 +7,6 @@ import { ActiveProject } from '../interfaces/active-project';
 })
 export class ProjectServiceService {
   currentProject: number = 0;
-  availableProjects: string[] = ['dabubble', 'join', 'sharky'];
 
   activeProject: ActiveProject = {
     number: '',
@@ -28,6 +27,7 @@ export class ProjectServiceService {
     'HTML',
     'SCSS',
     'CSS',
+    'Wordpress'
   ];
 
   techIconArray: string[] = [
@@ -38,48 +38,69 @@ export class ProjectServiceService {
     'assets/skill-icons/green/html.png',
     'assets/skill-icons/green/css.png',
     'assets/skill-icons/green/css.png',
+    'assets/skill-icons/white/wordpress.png',
   ];
 
   projects: { [key: string]: ProjectInterface } = {
     dabubble: {
       number: '01',
       name: 'DABubble',
+      dataName: "dabubble",
       description: 'dabubble.description',
       technologies: [0, 1, 5, 4, 2],
       imgUrl: 'assets/img/dabubble.png',
       githubUrl: 'https://github.com/MikeSchauber/DABubbleGr',
       liveTestUrl: 'https://dabubble.mikeschauber.de',
+      active: true
     },
     join: {
       number: '02',
       name: 'Join',
+      dataName: "join",
       description: 'join.description',
       technologies: [3, 6, 4, 2],
       imgUrl: 'assets/img/join.png',
       githubUrl: 'https://github.com/Jan2810/join',
       liveTestUrl: 'https://join.mikeschauber.de',
+      active: true
     },
     sharky: {
       number: '03',
       name: 'Sharky',
+      dataName: "sharky",
       description: 'sharky.description',
       technologies: [3, 6, 4],
       imgUrl: 'assets/img/sharky.png',
       githubUrl: 'https://github.com/MikeSchauber/Sharky-2D-Game',
       liveTestUrl: 'https://sharky-game.mikeschauber.de',
+      active: true
+    },
+    martin_rs: {
+      number: '04',
+      name: 'Martin-rs.de',
+      dataName: "martin_rs",
+      description: 'pokedex.description',
+      technologies: [3, 6, 4, 7],
+      imgUrl: 'assets/img/martin-rs.png',
+      githubUrl: '',
+      liveTestUrl: 'https://martin-rs.de/',
+      active: true
     },
     pokedex: {
-      number: '04',
+      number: '05',
       name: 'Pokédex',
+      dataName: "pokedex",
       description: 'pokedex.description',
       technologies: [0, 1, 2],
       imgUrl: 'assets/img/pokedex.png',
       githubUrl: 'https://github.com/MikeSchauber/Pokedex',
       liveTestUrl: 'https://mikeschauber.de/pokedex/index.html',
+      active: false
     },
+
   };
 
-  constructor() {}
+  constructor() { }
 
   /**
    * Sets the project data based on the selected project and updates the current index.
