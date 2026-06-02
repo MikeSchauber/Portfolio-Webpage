@@ -11,48 +11,62 @@ export class QuotesControlService {
    */
   quotes: Quote[] = [
     {
-      position: 7,
+      position: 9,
       quote: 'quotes.quote_1',
       autor: 'Jan Steiner - Frontend Developer',
+    },
+    {
+      position: 8,
+      quote: 'quotes.quote_2',
+      autor: 'Kai Schulz - Freelance Webdesigner',
+    },
+    {
+      position: 7,
+      quote: 'quotes.quote_3',
+      autor: 'Ertugrul K. - Frontend Developer',
     },
     {
       position: 6,
-      quote: 'quotes.quote_2',
-      autor: 'Kai Schulz - Freelance Webdesigner',
-    },
-    {
-      position: 5,
-      quote: 'quotes.quote_3',
-      autor: 'Ertugrul K. - Frontend Developer',
-    },
-    {
-      position: 4,
       quote: 'quotes.quote_4',
       autor: 'Roman Kabukov - Frontend Developer',
     },
     {
-      position: 3,
+      position: 5,
+      quote: 'quotes.quote_5',
+      autor: 'Elias Martin - Lokführer',
+    },
+    {
+      position: 4,
       quote: 'quotes.quote_1',
       autor: 'Jan Steiner - Frontend Developer',
     },
     {
-      position: 2,
+      position: 3,
       quote: 'quotes.quote_2',
       autor: 'Kai Schulz - Freelance Webdesigner',
     },
     {
-      position: 1,
+      position: 2,
       quote: 'quotes.quote_3',
       autor: 'Ertugrul K. - Frontend Developer',
     },
     {
-      position: 0,
+      position: 1,
       quote: 'quotes.quote_4',
       autor: 'Roman Kabukov - Frontend Developer',
     },
+    {
+      position: 0,
+      quote: 'quotes.quote_5',
+      autor: 'Elias Martin - Lokführer',
+    },
   ];
 
-  realQuotes: number[] = [0, 1, 2, 3];
+
+  /**
+   * Put more dots into this array if more quotes comes into it
+   */
+  realQuotes: number[] = [0, 1, 2, 3, 4];
 
   /**
    * Put more of the 240% values into the array if more quotes comes into it
@@ -66,13 +80,18 @@ export class QuotesControlService {
     'translateX(240%) scale(0.8)',
     'translateX(240%) scale(0.8)',
     'translateX(240%) scale(0.8)',
+    'translateX(240%) scale(0.8)',
+    'translateX(240%) scale(0.8)',
   ];
 
-  hide: boolean[] = [false, false, false, false, false, false, false, false];
+  /**
+   * Put more booleans into this array if more quotes comes into it
+   */
+  hide: boolean[] = [false, false, false, false, false, false, false, false, false];
 
   activeQuote: number = 0;
 
   controlActive: boolean = false;
 
-  constructor() {}
+  constructor() { }
 }
