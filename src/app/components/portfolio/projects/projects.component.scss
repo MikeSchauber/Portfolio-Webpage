@@ -12,7 +12,8 @@
     width: calc(100vw - 1186px);
     position: relative;
 
-    >img {
+    >img,
+    >video {
       width: 385px;
       height: auto;
       border-radius: 16px;

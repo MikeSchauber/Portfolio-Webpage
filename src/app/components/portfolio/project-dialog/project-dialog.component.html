@@ -35,7 +35,11 @@
     </div>
     <div class="img-container">
         <img (click)="dialogService.closeDialog()" class="close" src="assets/icons/close.png" alt="">
+        @if (this.projectData.activeProject.imgUrl.endsWith('.mp4')) {
+        <video class="project" [src]="this.projectData.activeProject.imgUrl" autoplay muted loop playsinline></video>
+        } @else {
         <img class="project" [src]="this.projectData.activeProject.imgUrl" alt="">
+        }
         <div (click)="nextProject()">
             <span>{{ "projects.next" | translate}}</span>
             <img src="assets/icons/arrow-forward.png" alt="">
@@ -86,7 +90,11 @@
         </div>
     </div>
     <div class="img-container">
-
+        @if (this.projectData.activeProject.imgUrl.endsWith('.mp4')) {
+        <video class="project" [src]="this.projectData.activeProject.imgUrl" autoplay muted loop playsinline></video>
+        } @else {
+        <img class="project" [src]="this.projectData.activeProject.imgUrl" alt="">
+        }
 
         <div (click)="nextProject()">
             <span>{{ "projects.next" | translate}}</span>

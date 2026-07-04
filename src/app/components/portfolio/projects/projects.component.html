@@ -21,10 +21,16 @@
 
     </div>
     <div [ngClass]="{
-        'background-animation' : this.imgAnimation
-    }" class="img-container">
+    'background-animation' : this.imgAnimation
+}" class="img-container">
+        @if (imgSrcWhenHover.endsWith('.mp4')) {
+        <video [ngClass]="{
+            'img-animation' : this.imgAnimation
+        }" [src]="imgSrcWhenHover" autoplay muted loop playsinline></video>
+        } @else {
         <img [ngClass]="{
             'img-animation' : this.imgAnimation
         }" [src]="imgSrcWhenHover" alt="Project-Image">
+        }
     </div>
 </div>

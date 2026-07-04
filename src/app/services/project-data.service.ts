@@ -27,7 +27,10 @@ export class ProjectServiceService {
     'HTML',
     'SCSS',
     'CSS',
-    'Wordpress'
+    'Wordpress',
+    "Linux Ubuntu",
+    "Python", 
+    "Vue.js"
   ];
 
   techIconArray: string[] = [
@@ -75,8 +78,19 @@ export class ProjectServiceService {
       liveTestUrl: 'https://sharky-game.mikeschauber.de',
       active: true
     },
-    martin_rs: {
+    rcCar: {
       number: '04',
+      name: 'Web RC-Car',
+      dataName: "rccar",
+      description: 'rc_car.description',
+      technologies: [8,9,10],
+      imgUrl: 'assets/video/LTE_RC_car-1.mp4',
+      githubUrl: 'https://github.com/MikeSchauber/Rc-Car-Control-Panel',
+      liveTestUrl: '',
+      active: true
+    },
+    martin_rs: {
+      number: '05',
       name: 'Martin-rs.de',
       dataName: "martin_rs",
       description: 'martin_rs.description',
@@ -87,7 +101,7 @@ export class ProjectServiceService {
       active: true
     },
     pokedex: {
-      number: '05',
+      number: '06',
       name: 'Pokédex',
       dataName: "pokedex",
       description: 'pokedex.description',
@@ -95,8 +109,9 @@ export class ProjectServiceService {
       imgUrl: 'assets/img/pokedex.png',
       githubUrl: 'https://github.com/MikeSchauber/Pokedex',
       liveTestUrl: 'https://mikeschauber.de/pokedex/index.html',
-      active: false
+      active: true
     },
+
 
   };
 
