@@ -5,7 +5,7 @@
     <div class="text-container">
         <div class="name-container">
             <h1>{{this.projectData.activeProject.number}}</h1>
-            <h2>{{this.projectData.activeProject.name}}</h2>
+            <h2>{{this.projectData.activeProject.name}} </h2>
         </div>
         <div class="about-container">
             <h3>{{ "projects.about" | translate}}</h3>
@@ -26,17 +26,18 @@
                 <img src="assets/icons/arrow-outward.png" alt="">
             </a>
             }
-
+            @if (this.projectData.activeProject.liveTestUrl.length > 0) {
             <a [href]="this.projectData.activeProject.liveTestUrl" target="_blank" class="btn">
                 <span>Live Test</span>
                 <img src="assets/icons/arrow-outward.png" alt="">
             </a>
+            }
         </div>
     </div>
     <div class="img-container">
         <img (click)="dialogService.closeDialog()" class="close" src="assets/icons/close.png" alt="">
         @if (this.projectData.activeProject.imgUrl.endsWith('.mp4')) {
-        <video class="project" [src]="this.projectData.activeProject.imgUrl" autoplay muted loop playsinline></video>
+   <video class="project" [src]="this.projectData.activeProject.imgUrl" controls muted loop playsinline></video>
         } @else {
         <img class="project" [src]="this.projectData.activeProject.imgUrl" alt="">
         }
@@ -48,7 +49,6 @@
 </div>
 
 <!-- Mobile version : -->
-
 <div #scrollContainer (click)="handleClick($event)" [ngStyle]="{
     'transform': dialogService.translationX,
     'opacity': dialogService.containerOpacity
@@ -58,7 +58,11 @@
             <img (click)="dialogService.closeDialog()" class="close" src="assets/icons/close.png" alt="">
         </div>
     </div>
+    @if (this.projectData.activeProject.imgUrl.endsWith('.mp4')) {
+    <video class="project" [src]="this.projectData.activeProject.imgUrl" controls muted loop playsinline></video>
+    } @else {
     <img class="project" [src]="this.projectData.activeProject.imgUrl" alt="">
+    }
     <div class="text-container">
         <div class="name-container">
             <h1>{{this.projectData.activeProject.number}}</h1>
@@ -83,19 +87,16 @@
                 <img src="assets/icons/arrow-outward.png" alt="">
             </a>
             }
+
+            @if (this.projectData.activeProject.liveTestUrl.length > 0) {
             <a [href]="this.projectData.activeProject.liveTestUrl" target="_blank" class="btn">
                 <span>Live Test</span>
                 <img src="assets/icons/arrow-outward.png" alt="">
             </a>
+            }
         </div>
     </div>
     <div class="img-container">
-        @if (this.projectData.activeProject.imgUrl.endsWith('.mp4')) {
-        <video class="project" [src]="this.projectData.activeProject.imgUrl" autoplay muted loop playsinline></video>
-        } @else {
-        <img class="project" [src]="this.projectData.activeProject.imgUrl" alt="">
-        }
-
         <div (click)="nextProject()">
             <span>{{ "projects.next" | translate}}</span>
             <img src="assets/icons/arrow-forward.png" alt="">

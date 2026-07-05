@@ -54,6 +54,9 @@
   "martin_rs": {
     "description": "Für dieses Projekt habe ich die Website des Kunden auf eine neue Domain umgezogen und sie anschließend auf Basis eines WordPress-Templates neu gestaltet. Zusätzlich wurden ein Kontaktformular sowie Google reCAPTCHA integriert, um die Benutzerinteraktion und Sicherheit zu verbessern."
   },
+  "rc_car": {
+    "description": "Ein ferngesteuertes RC-Car mit Raspberry Pi 5 als Steuerzentrale, das per Webapp weltweit über Mobilfunk steuerbar ist. Der Livestream der Onboard-Kamera und die präzise Steuerung per PS4-Controller ermöglichen ein Echtzeit-Fahrerlebnis von jedem Standort aus."
+  },
   "pokedex": {
     "description": "Basierend auf der PokéAPI, eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
   },

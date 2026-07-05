@@ -54,6 +54,9 @@
   "martin_rs": {
     "description": "For this project, I migrated the client's website to a new domain and redesigned it using a WordPress template. Additionally, a contact form and Google reCAPTCHA were implemented to improve user interaction and enhance security."
   },
+  "rc_car": {
+    "description": "A remote-controlled RC car powered by a Raspberry Pi 5 as its control unit, drivable via a web app worldwide over mobile networks. The onboard camera livestream combined with precise PS4 controller input enables a real-time driving experience from anywhere in the world."
+  },
   "pokedex": {
     "description": "Based on the PokéAPI a simple library that provides and catalogues pokemon information."
   },

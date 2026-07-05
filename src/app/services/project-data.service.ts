@@ -29,7 +29,7 @@ export class ProjectServiceService {
     'CSS',
     'Wordpress',
     "Linux Ubuntu",
-    "Python", 
+    "Python",
     "Vue.js"
   ];
 
@@ -42,6 +42,9 @@ export class ProjectServiceService {
     'assets/skill-icons/green/css.png',
     'assets/skill-icons/green/css.png',
     'assets/skill-icons/white/wordpress.png',
+    "assets/skill-icons/white/linux.png",
+    "assets/skill-icons/white/python.png",
+    "assets/skill-icons/white/vue.png"
   ];
 
   projects: { [key: string]: ProjectInterface } = {
@@ -78,12 +81,12 @@ export class ProjectServiceService {
       liveTestUrl: 'https://sharky-game.mikeschauber.de',
       active: true
     },
-    rcCar: {
+    rc_car: {
       number: '04',
       name: 'Web RC-Car',
-      dataName: "rccar",
+      dataName: "rc_car",
       description: 'rc_car.description',
-      technologies: [8,9,10],
+      technologies: [8, 9, 10],
       imgUrl: 'assets/video/LTE_RC_car-1.mp4',
       githubUrl: 'https://github.com/MikeSchauber/Rc-Car-Control-Panel',
       liveTestUrl: '',
@@ -132,6 +135,8 @@ export class ProjectServiceService {
    * @param project - The key of the project to load.
    */
   setProjectData(project: string) {
+    console.log(project);
+
     const projectData = this.projects[project];
     if (!projectData) {
       console.warn(`Project "${project}" not found.`);

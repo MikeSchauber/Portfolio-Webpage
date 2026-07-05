@@ -78,6 +78,7 @@ export class ProjectDialogComponent {
   }
 
   checkAndSetProject(index: number) {
+
     const project = this.projectArray[index];
 
     if (!project) {
