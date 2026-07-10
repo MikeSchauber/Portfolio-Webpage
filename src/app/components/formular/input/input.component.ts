@@ -1,15 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { Form, FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { FormularFeedbackService } from '../../../services/formular-feedback.service';
 import { SupabaseService } from '../../../services/supabase.service';
-
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-input',
   standalone: true,
-  imports: [TranslateModule, CommonModule, FormsModule],
+  imports: [TranslateModule, CommonModule, FormsModule ,RouterLink],
   templateUrl: './input.component.html',
   styleUrl: './input.component.scss',
 })
