@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -9,6 +9,11 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './headline.component.html',
   styleUrl: './headline.component.scss',
 })
-export class HeadlineComponent {
- 
+export class HeadlineComponent implements OnInit {
+  name: string = 'Mike Schauber';
+  letters: string[] = [];
+
+  ngOnInit() {
+    this.letters = this.name.split('');
+  }
 }
