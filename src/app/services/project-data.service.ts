@@ -135,8 +135,6 @@ export class ProjectServiceService {
    * @param project - The key of the project to load.
    */
   setProjectData(project: string) {
-    console.log(project);
-
     const projectData = this.projects[project];
     if (!projectData) {
       console.warn(`Project "${project}" not found.`);
