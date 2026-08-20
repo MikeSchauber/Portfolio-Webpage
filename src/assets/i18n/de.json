@@ -12,11 +12,11 @@
     "contactMe": "Kontaktiere mich"
   },
   "banner": {
-    "1": "Vom Führerstand ins Terminal. Kompletter Neuanfang, volle Konsequenz.",
-    "2": "TypeScript-Ökosystem, Vue, Nuxt, PostgreSQL, Docker",
-    "3": "Ich baue das komplette Haus, von der Datenbank bis zum Interface",
-    "4": "Verantwortung übernehme ich auch dann, wenn niemand zuschaut",
-    "5": "Neue Sprache, neues Framework? Gib mir eine Woche und ich liefere."
+    "1": "Web Applikationen von der Idee bis zum Launch",
+    "2": "Moderne Web-Frameworks · TypeScript · PostgreSQL",
+    "3": "Remote arbeiten möglich",
+    "4": "Sauberer Code, durchdachte UX",
+    "5": "Vom Legacy-System zur modernen Lösung"
   },
   "aboutMe": {
     "whoIAm": "Wer ich bin",
