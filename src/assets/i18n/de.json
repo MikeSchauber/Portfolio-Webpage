@@ -6,62 +6,62 @@
     "references": "Referenzen"
   },
   "headline": {
-    "title": "Web Entwickler",
+    "title": "Full Stack Web Developer",
     "name": "Mike Schauber",
     "checkWork": "Zu meinen Projekten",
     "contactMe": "Kontaktiere mich"
   },
   "banner": {
-    "1": "Web Applikationen von der Idee bis zum Launch",
-    "2": "Vue 3 · TypeScript · Supabase",
-    "3": "Remote & vor Ort · Tübingen",
-    "4": "Sauberer Code, durchdachte UX",
-    "5": "Vom Legacy-System zur modernen Lösung"
+    "1": "Vom Führerstand ins Terminal. Kompletter Neuanfang, volle Konsequenz.",
+    "2": "TypeScript-Ökosystem, Vue, Nuxt, PostgreSQL, Docker",
+    "3": "Ich baue das komplette Haus, von der Datenbank bis zum Interface",
+    "4": "Verantwortung übernehme ich auch dann, wenn niemand zuschaut",
+    "5": "Neue Sprache, neues Framework? Gib mir eine Woche und ich liefere."
   },
   "aboutMe": {
     "whoIAm": "Wer ich bin",
     "aboutMeTitle": "Über mich",
-    "intro": "Ich bin ein deutschsprachiger Web Developer mit Sitz in Tübingen. Mit ersten praktischen Erfahrungen in der Webentwicklung konzentriere ich mich darauf, funktionale und benutzerfreundliche Softwarelösungen zu entwickeln.",
-    "flexibleLocation": "Ich bin flexibel in Bezug auf die Arbeitsumgebung und arbeite sowohl vor Ort als auch remote. Vor Ort zu sein ist dabei meine bevorzugte Arbeitsweise.",
-    "openMinded": "Als aufstrebender Web Developer bringe ich frische Perspektiven mit und bin stets motiviert, mein Wissen kontinuierlich auszubauen und neue Technologien zu erlernen.",
-    "creativeProblemSolving": "Programmieren bedeutet für mich strukturiertes Problemlösen. Ich habe gelernt, technische Anforderungen in praxistaugliche Lösungen zu übersetzen, und baue dieses Fundament während meiner Täglichen Arbeit weiter aus."
+    "intro": "Fünf Jahre lang habe ich Züge durch den Nahverkehr gesteuert. Ein Job, in dem Konzentration, Verantwortung und ruhige Entscheidungen unter Druck nicht verhandelbar sind. Dann habe ich den Hebel umgelegt: raus aus dem Führerstand, rein in den Code. Kein Hobby und kein Nebenprojekt, sondern ein kompletter Neuanfang ohne Netz. Es war die beste Entscheidung meines Berufslebens.",
+    "flexibleLocation": "Am stärksten bin ich dort, wo eine Anwendung von der Datenbank bis zum Interface komplett durchdacht werden muss. Backend-Logik, Datenmodelle, Authentifizierung, Frontend und Deployment. Ich beherrsche das ganze Bild, nicht nur einen Ausschnitt. Andere spezialisieren sich auf eine Ecke, ich baue das komplette Haus.",
+    "openMinded": "Ich lerne schneller als die meisten. Den Großteil meines Stacks habe ich mir nicht in einem Kurs abgeholt, sondern am echten Projekt erarbeitet, unter realen Anforderungen und mit echten Konsequenzen. Eine neue Sprache oder ein neues Framework ist für mich kein Risiko, sondern Alltag. Gib mir eine Woche und ich liefere.",
+    "creativeProblemSolving": "Ich denke in Systemen, nicht in Tickets. Bevor ich baue, verstehe ich, warum etwas so sein soll und wie es sich in einem Jahr anfühlt. Meine Architekturentscheidungen sind bewusst getroffen und so dokumentiert, dass die Person nach mir nichts raten muss. Sorgfalt rüstet man nicht später nach, bei mir ist sie von Anfang an drin."
   },
   "skillset": {
     "skills": "Technologien",
     "skillSet": "Stärken",
-    "description": "Mein Weg hat mich durch verschiedene Projekte geführt, bei denen ich eine Reihe von Frontend- sowie Backend-Technologien und Konzepten angewendet habe. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Welt der Webentwicklung vorne zu bleiben.",
+    "description": "Technisch zu Hause bin ich im TypeScript-Ökosystem mit Vue, Nuxt und Angular im Frontend, dazu PostgreSQL, containerisierte Backends mit Docker und moderne Auth-Flows über OAuth 2.0 und Microsoft Entra ID. Neue Werkzeuge kommen laufend dazu. Ich bleibe nicht stehen, ich ziehe das Feld mit.",
     "anotherSkillText": "Brauchen Sie",
     "anotherSkillSpan": "andere Fähigkeiten ?",
-    "contactText": "Kontaktieren Sie mich gerne. Ich freue mich darauf, mein Wissen zu erweitern.",
+    "contactText": "Reden wir darüber. Feedback ist mir lieber als Applaus, und eine neue Herausforderung ist genau mein Ding.",
     "letsTalk": "Lass uns reden",
     "interest": "Diese Technologien interessieren mich momentan besonders"
   },
   "portfolio": {
     "title": "Portfolio",
     "featuredProjects": "Meine Projekte",
-    "description": "Entdecken Sie hier eine Auswahl meiner Arbeiten - interagieren Sie mit den Projekten, um die Projekte zu testen."
+    "description": "Eine Auswahl meiner Arbeiten. Interagiere direkt mit den Projekten und teste sie selbst."
   },
   "projects": {
     "about": "Worum geht es bei diesem Projekt?",
     "next": "Nächstes Projekt"
   },
   "join": {
-    "description": "Task-Manager, inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu."
+    "description": "Task-Manager nach dem Kanban-Prinzip. Aufgaben per Drag-and-Drop erstellen und organisieren, Benutzer und Kategorien zuweisen. Durchdacht von der Logik bis zur Oberfläche."
   },
   "sharky": {
-    "description": "Ein einfaches Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Hilf Sharkie, Münzen und Giftflaschen zu finden, um gegen den Killerwal zu kämpfen."
+    "description": "Ein Jump-and-Run-Spiel auf Basis eines sauberen objektorientierten Ansatzes. Hilf Sharkie, Münzen und Giftflaschen zu sammeln, um gegen den Killerwal zu bestehen."
   },
   "martin_rs": {
-    "description": "Für dieses Projekt habe ich die Website des Kunden auf eine neue Domain umgezogen und sie anschließend auf Basis eines WordPress-Templates neu gestaltet. Zusätzlich wurden ein Kontaktformular sowie Google reCAPTCHA integriert, um die Benutzerinteraktion und Sicherheit zu verbessern."
+    "description": "Kundenprojekt von A bis Z. Die Website habe ich auf eine neue Domain umgezogen, auf Basis eines WordPress-Templates neu aufgebaut und um ein Kontaktformular sowie Google reCAPTCHA erweitert, für mehr Sicherheit und bessere Benutzerinteraktion."
   },
   "rc_car": {
-    "description": "Ein ferngesteuertes RC-Car mit Raspberry Pi 5 als Steuerzentrale, das per Webapp weltweit über Mobilfunk steuerbar ist. Der Livestream der Onboard-Kamera und die präzise Steuerung per PS4-Controller ermöglichen ein Echtzeit-Fahrerlebnis von jedem Standort aus."
+    "description": "Ein ferngesteuertes RC-Car mit Raspberry Pi 5 als Steuerzentrale, weltweit per Webapp über Mobilfunk steuerbar. Livestream der Onboard-Kamera und präzise Steuerung per PS4-Controller ermöglichen ein Echtzeit-Fahrerlebnis von jedem Standort aus. Hardware, Netzwerk und Software aus einer Hand."
   },
   "pokedex": {
-    "description": "Basierend auf der PokéAPI, eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
+    "description": "Auf Basis der PokéAPI. Eine Bibliothek, die Pokémon-Informationen sauber abruft, aufbereitet und katalogisiert."
   },
   "dabubble": {
-    "description": "DABubble ist eine moderne Chat-App, die einfache Kommunikation und effiziente Zusammenarbeit ermöglicht, mit Funktionen wie Channels, Direktnachrichten und Echtzeit-Reaktionen."
+    "description": "DABubble ist eine moderne Chat-App für einfache Kommunikation und effiziente Zusammenarbeit, mit Channels, Direktnachrichten und Echtzeit-Reaktionen."
   },
   "quotes": {
     "headline": "Referenzen von Kunden und Kollegen",
@@ -69,14 +69,14 @@
     "quote_2": "Mikes 2D-Spiel Sharkie überzeugt durch flüssiges Gameplay und ansprechende Optik. Es hat viel Spaß gemacht, es zu testen.",
     "quote_3": "Die Animationen in Mikes Projekt Join waren unterhaltsam und kreativ. Die Möglichkeit, Aufgaben ohne Drag-and-Drop zu bearbeiten, war eine praktische Alternative.",
     "quote_4": "Mike war ein äußerst zuverlässiges Mitglied unseres Projekts. Er hat proaktiv Verantwortung übernommen, zum Beispiel für die Versionskontrolle des Main Branches, und seine Aufgaben stets zufriedenstellend innerhalb der vereinbarten Zeit erledigt.",
-    "quote_5": "Mike hat mit sehr großem Engagement den ihm gegebenen gestalterischen Spielraum genutzt und auch neue Ideen mit eingebracht. Gemeinsam konnten wir so zum idealen Ergebnis gelangen. Anpassungswünsche setzte er -auch im Nachhinein-besonders schnell um und war immer mit großer Begeisterung dabei. Vielen Dank für dieses tolle Projekt!"
+    "quote_5": "Mike hat mit sehr großem Engagement den ihm gegebenen gestalterischen Spielraum genutzt und auch neue Ideen mit eingebracht. Gemeinsam konnten wir so zum idealen Ergebnis gelangen. Anpassungswünsche setzte er, auch im Nachhinein, besonders schnell um und war immer mit großer Begeisterung dabei. Vielen Dank für dieses tolle Projekt!"
   },
   "formular": {
     "title": "Schreiben Sie mir",
     "subtitle": "Gemeinsam ans Werk",
-    "problem": "Brauchen Sie Hilfe bei einem Problem?",
-    "description": "Kontaktieren Sie mich über dieses Formular, ich freue mich, von Ihnen zu hören, Ihre Ideen zu erfahren und zu Ihren Projekten beizutragen.",
-    "frontendDeveloper": "Brauchen Sie einen Frontend-Entwickler?",
+    "problem": "Sie suchen jemanden, der sich reinbeißt und Dinge zu Ende bringt?",
+    "description": "Dann reden wir darüber. Kontaktieren Sie mich über dieses Formular. Ich freue mich, von Ihnen zu hören, Ihre Ideen kennenzulernen und zu Ihrem Projekt beizutragen.",
+    "frontendDeveloper": "Brauchen Sie einen Full Stack Developer, der mitdenkt?",
     "talk": "Reden wir darüber!",
     "success": "Email wurde erfolgreich versendet :)",
     "error": "Da ist ein Fehler aufgetreten. Sende doch eine Email direkt an mich. -> kontakt@mikeschauber.de"
