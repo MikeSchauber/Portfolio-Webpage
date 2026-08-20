@@ -37,7 +37,7 @@
     <div class="img-container">
         <img (click)="dialogService.closeDialog()" class="close" src="assets/icons/close.png" alt="">
         @if (this.projectData.activeProject.imgUrl.endsWith('.mp4')) {
-   <video class="project" [src]="this.projectData.activeProject.imgUrl" controls muted loop playsinline></video>
+        <video class="project" [src]="this.projectData.activeProject.imgUrl" controls muted loop playsinline></video>
         } @else {
         <img class="project" [src]="this.projectData.activeProject.imgUrl" alt="">
         }
@@ -58,11 +58,6 @@
             <img (click)="dialogService.closeDialog()" class="close" src="assets/icons/close.png" alt="">
         </div>
     </div>
-    @if (this.projectData.activeProject.imgUrl.endsWith('.mp4')) {
-    <video class="project" [src]="this.projectData.activeProject.imgUrl" controls muted loop playsinline></video>
-    } @else {
-    <img class="project" [src]="this.projectData.activeProject.imgUrl" alt="">
-    }
     <div class="text-container">
         <div class="name-container">
             <h1>{{this.projectData.activeProject.number}}</h1>
@@ -80,6 +75,12 @@
                 }
             </div>
         </div>
+
+        @if (this.projectData.activeProject.imgUrl.endsWith('.mp4')) {
+        <video class="project" [src]="this.projectData.activeProject.imgUrl" controls muted loop playsinline></video>
+        } @else {
+        <img class="project" [src]="this.projectData.activeProject.imgUrl" alt="">
+        }
         <div class="btn-container">
             @if (this.projectData.activeProject.githubUrl.length > 0) {
             <a [href]="this.projectData.activeProject.githubUrl" target="_blank" class="btn">
