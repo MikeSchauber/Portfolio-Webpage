@@ -24,7 +24,6 @@ export class BannerComponent implements AfterViewInit {
 ngAfterViewInit() {
   setTimeout(() => {
     const w = this.copy1.nativeElement.offsetWidth;
-    console.log('copy width:', w);
     this.track.nativeElement.style.setProperty('--copy-width', `${w}px`);
   }, 500);
 }

@@ -20,8 +20,6 @@ export class HeadlineComponent implements OnInit {
   }
 
   scaleIt(index: number) {
-    console.log(this.scaledLetter, index);
-    
     if (this.scaledLetter === index) {
       this.scaledLetter = null;
     } else {
