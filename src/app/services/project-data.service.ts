@@ -28,9 +28,10 @@ export class ProjectServiceService {
     'SCSS',
     'CSS',
     'Wordpress',
-    "Linux Ubuntu",
-    "Python",
-    "Vue.js"
+    'Linux Ubuntu',
+    'Python',
+    'Vue.js',
+    'Supabase'
   ];
 
   techIconArray: string[] = [
@@ -42,83 +43,93 @@ export class ProjectServiceService {
     'assets/skill-icons/green/css.png',
     'assets/skill-icons/green/css.png',
     'assets/skill-icons/white/wordpress.png',
-    "assets/skill-icons/color-icons/linux.png",
-    "assets/skill-icons/color-icons/python.png",
-    "assets/skill-icons/white/vue.png"
+    'assets/skill-icons/color-icons/linux.png',
+    'assets/skill-icons/color-icons/python.png',
+    'assets/skill-icons/white/vue.png',
+    'assets/skill-icons/white/Supabase.png'
   ];
 
   projects: { [key: string]: ProjectInterface } = {
     dabubble: {
       number: '01',
       name: 'DABubble',
-      dataName: "dabubble",
+      dataName: 'dabubble',
       description: 'dabubble.description',
       technologies: [0, 1, 5, 4, 2],
       imgUrl: 'assets/img/dabubble.png',
       githubUrl: 'https://github.com/MikeSchauber/DABubbleGr',
       liveTestUrl: 'https://dabubble.mikeschauber.de',
-      active: true
+      active: true,
     },
     join: {
       number: '02',
       name: 'Join',
-      dataName: "join",
+      dataName: 'join',
       description: 'join.description',
       technologies: [3, 6, 4, 2],
       imgUrl: 'assets/img/join.png',
       githubUrl: 'https://github.com/Jan2810/join',
       liveTestUrl: 'https://join.mikeschauber.de',
-      active: true
+      active: true,
     },
     sharky: {
       number: '03',
       name: 'Sharky',
-      dataName: "sharky",
+      dataName: 'sharky',
       description: 'sharky.description',
       technologies: [3, 6, 4],
       imgUrl: 'assets/img/sharky.png',
       githubUrl: 'https://github.com/MikeSchauber/Sharky-2D-Game',
       liveTestUrl: 'https://sharky-game.mikeschauber.de',
-      active: true
+      active: true,
+    },
+    portfolio: {
+      number: '04',
+      name: 'Portfolio Homepage',
+      dataName: 'portfolio',
+      description: 'portfolio.description',
+      technologies: [0, 1, 5, 4, 11],
+      imgUrl: 'assets/img/Portfolio.png',
+      githubUrl: 'https://github.com/MikeSchauber/Portfolio-Webpage',
+      liveTestUrl: 'https://mikeschauber.de/',
+      active: true,
     },
     rc_car: {
-      number: '04',
+      number: '05',
       name: 'Web RC-Car',
-      dataName: "rc_car",
+      dataName: 'rc_car',
       description: 'rc_car.description',
       technologies: [10, 8, 9],
       imgUrl: 'assets/video/LTE_RC_car-1.mp4',
       githubUrl: 'https://github.com/MikeSchauber/Rc-Car-Control-Panel',
       liveTestUrl: '',
-      active: true
+      active: true,
     },
     martin_rs: {
-      number: '05',
+      number: '06',
       name: 'Martin-rs.de',
-      dataName: "martin_rs",
+      dataName: 'martin_rs',
       description: 'martin_rs.description',
       technologies: [3, 6, 4, 7],
       imgUrl: 'assets/img/martin-rs.png',
       githubUrl: '',
       liveTestUrl: 'https://martin-rs.de/',
-      active: true
+      active: true,
     },
     pokedex: {
-      number: '06',
+      number: '07',
       name: 'Pokédex',
-      dataName: "pokedex",
+      dataName: 'pokedex',
       description: 'pokedex.description',
       technologies: [0, 1, 2],
       imgUrl: 'assets/img/pokedex.png',
       githubUrl: 'https://github.com/MikeSchauber/Pokedex',
       liveTestUrl: 'https://mikeschauber.de/pokedex/index.html',
-      active: true
+      active: true,
     },
-
-
   };
 
-  constructor() { }
+  constructor() {}
 
   /**
    * Sets the project data based on the selected project and updates the current index.
@@ -160,10 +171,10 @@ export class ProjectServiceService {
    */
   setTech(techNumbers: number[]) {
     this.activeProject.technologies = techNumbers.map(
-      (number) => this.technologiesArray[number]
+      (number) => this.technologiesArray[number],
     );
     this.activeProject.techIconUrl = techNumbers.map(
-      (number) => this.techIconArray[number]
+      (number) => this.techIconArray[number],
     );
   }
 }
