@@ -13,7 +13,19 @@ export class HeadlineComponent implements OnInit {
   name: string = 'Mike Schauber';
   letters: string[] = [];
 
+  scaledLetter: number | null = null;
+
   ngOnInit() {
     this.letters = this.name.split('');
+  }
+
+  scaleIt(index: number) {
+    console.log(this.scaledLetter, index);
+    
+    if (this.scaledLetter === index) {
+      this.scaledLetter = null;
+    } else {
+      this.scaledLetter = index;
+    }
   }
 }

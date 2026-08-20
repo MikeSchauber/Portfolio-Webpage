@@ -1,25 +1,34 @@
 <div class="headline">
   <h2>{{ 'headline.title' | translate }}</h2>
+
   <div class="action-btn">
     <h1>
       @for (letter of letters; track $index) {
-      <span class="hover-effekt">{{ letter === ' ' ? '\u00A0' : letter }}</span>
+      <span class="hover-effekt" [class.scale-letter]="scaledLetter === $index" (mousedown)="scaleIt($index)">
+        {{ letter === ' ' ? '\u00A0' : letter }}
+      </span>
       }
     </h1>
+
     <div class="btn">
       <div class="btn-container">
         <a href="#projects">
           <div class="btn-content">
             <span>{{ 'headline.checkWork' | translate }}</span>
-            <span class="btn-content-duplicate">{{ 'headline.checkWork' | translate }}</span>
+            <span class="btn-content-duplicate">
+              {{ 'headline.checkWork' | translate }}
+            </span>
           </div>
         </a>
       </div>
+
       <div class="btn-container">
         <a href="#formular">
           <div class="btn-content">
             <span>{{ 'headline.contactMe' | translate }}</span>
-            <span class="btn-content-duplicate">{{ 'headline.contactMe' | translate }}</span>
+            <span class="btn-content-duplicate">
+              {{ 'headline.contactMe' | translate }}
+            </span>
           </div>
         </a>
       </div>

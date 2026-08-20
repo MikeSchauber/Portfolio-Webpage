@@ -14,11 +14,19 @@
 }
 
 .hover-effekt {
-  transition: all 225ms ease-in-out;
+  display: inline-block;
+  transition:
+    transform 125ms ease-in-out,
+    color 225ms ease-in-out;
+
   &:hover {
-    color: rgba(61, 207, 182, 1) !important;
-    transform: scale(1.1) !important;
+    color: rgba(61, 207, 182, 1);
+    transform: rotate(10deg);
   }
+}
+
+.scale-letter {
+  text-transform: uppercase;
 }
 
 @keyframes typing {
