@@ -124,7 +124,7 @@ export class ProjectServiceService {
       technologies: [0, 1, 2],
       imgUrl: 'assets/img/pokedex.png',
       githubUrl: 'https://github.com/MikeSchauber/Pokedex',
-      liveTestUrl: 'https://mikeschauber.de/pokedex/index.html',
+      liveTestUrl: 'https://pokedex.mikeschauber.de',
       active: true,
     },
   };
